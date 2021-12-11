@@ -3,6 +3,7 @@
 use App\Http\Controllers\Api\Auth\LoginController;
 use App\Http\Controllers\Api\Auth\RegisterController;
 use App\Http\Controllers\Api\LessonController;
+use App\Http\Controllers\Api\ExerciseController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -23,6 +24,7 @@ Route::post('refresh', [LoginController::class, 'refresh']);
 
 Route::group(['middleware' => 'auth:api'], function () {
     Route::apiResource('lesson', LessonController::class);
+    Route::apiResource('exercise', ExerciseController::class);
     Route::apiResource('users', ProfileController::class);
     Route::post('logout', [LoginController::class, 'logout']);
 });
