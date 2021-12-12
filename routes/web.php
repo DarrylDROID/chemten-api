@@ -43,3 +43,29 @@ Route::middleware(['auth'])->group(function () {
         redirect('/');
     });
 });
+
+//tes
+Route::get('/homepage', function () {
+    return view('homepage');
+});
+Route::get('/profile', function () {
+    return view('profile');
+});
+Route::get('/login', function () {
+    return view('login');
+});
+Route::get('/register', function () {
+    return view('register');
+});
+Route::get('/lesson', function () {
+    return view('level.lesson.lesson');
+});
+Route::get('/sublesson', function () {
+    return view('level.lesson.sublesson');
+});
+Route::get('/startquiz', function () {
+    return view('level.quiz.startquiz');
+});
+Route::get('/question', function () {
+    return view('level.quiz.question');
+});
