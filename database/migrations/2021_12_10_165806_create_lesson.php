@@ -14,17 +14,12 @@ class CreateLesson extends Migration
     public function up()
     {
         Schema::create('lesson', function (Blueprint $table) {
-            $table->string('lesson_id');
+            $table->id();
             $table->string('lesson_topic');
             $table->string('lesson_level');
             $table->string('lesson_image');
             $table->string('lesson_description');
             $table->timestamps();
-        });
-
-        Schema::table('lesson', function (Blueprint $table) {
-            //
-            $table->primary('lesson_id');
         });
     }
 

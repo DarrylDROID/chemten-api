@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateExercise extends Migration
+class CreateSublesson extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,12 @@ class CreateExercise extends Migration
      */
     public function up()
     {
-        Schema::create('exercise', function (Blueprint $table) {
+        Schema::create('sublesson', function (Blueprint $table) {
             $table->id();
-            $table->string('exercise_topic');
-            $table->string('exercise_level');
-            $table->string('exercise_image');
-            $table->string('exercise_description');
+            $table->string('lesson_id');
+            $table->string('sublesson_topic');
+            $table->string('sublesson_image');
+            $table->string('sublesson_description');
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ class CreateExercise extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('exercise');
+        Schema::dropIfExists('sublesson');
     }
 }

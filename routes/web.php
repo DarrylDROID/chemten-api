@@ -22,6 +22,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+Route::resource('sublesson', SubLessonController::class);
 Route::resource('lesson', LessonController::class);
 Route::resource('exercise', ExerciseController::class);
 

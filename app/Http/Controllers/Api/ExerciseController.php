@@ -31,7 +31,6 @@ class ExerciseController extends Controller
     {
         //
         Exercise::create([
-            'exercise_id' => $request->exercise_id,
             'exercise_topic' => $request->exercise_topic,
             'exercise_level' => $request->exercise_level,
             'exercise_image' => $request->exercise_image,
@@ -51,7 +50,7 @@ class ExerciseController extends Controller
     {
         //
         $code = Str::upper($id);
-        $exercise = Exercise::all()->where('exercise_id', $code);
+        $exercise = Exercise::all()->where('id', $code);
         return ['exercise' => ExerciseResource::collection($exercise)];
     }
 
@@ -67,7 +66,6 @@ class ExerciseController extends Controller
         $code = Str::upper($id);
         $exercise = Exercise::findOrFail($code);
         $exercise->update([
-            'exercise_id' => $request->exercise_id,
             'exercise_topic' => $request->exercise_topic,
             'exercise_level' => $request->exercise_level,
             'exercise_image' => $request->exercise_image,

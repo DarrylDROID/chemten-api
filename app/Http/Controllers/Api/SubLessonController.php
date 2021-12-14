@@ -3,12 +3,12 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Http\Resources\LessonResource;
-use App\Models\Lesson;
+use App\Http\Resources\SubLessonResource;
+use App\Models\SubLesson;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
-class LessonController extends Controller
+class SubLessonController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,8 +17,8 @@ class LessonController extends Controller
      */
     public function index()
     {
-        $lesson = Lesson::all();
-        return ['lesson' => LessonResource::collection($lesson)];
+        $sublesson = SubLesson::all();
+        return ['sublesson' => SubLessonResource::collection($sublesson)];
     }
 
     /**
@@ -30,11 +30,12 @@ class LessonController extends Controller
     public function store(Request $request)
     {
         //
-        Lesson::create([
-            'lesson_topic' => $request->lesson_topic,
-            'lesson_level' => $request->lesson_level,
-            'lesson_image' => $request->lesson_image,
-            'lesson_description' => $request->lesson_description
+        SubLesson::create([
+            'sublesson_id' => $request->sublesson_id,
+            'lesson_id' => $request->lesson_id,
+            'sublesson_topic' => $request->sublesson_topic,
+            'sublesson_image' => $request->sublesson_image,
+            'sublesson_description' => $request->sublesson_description
         ]);
 
         return ['message' => 'data has been saved'];
@@ -50,8 +51,8 @@ class LessonController extends Controller
     {
         //
         $code = Str::upper($id);
-        $lesson = Lesson::all()->where('id', $code);
-        return ['lesson' => LessonResource::collection($lesson)];
+        $sublesson = SubLesson::all()->where('sublesson_id', $code);
+        return ['sublesson' => SubLessonResource::collection($sublesson)];
     }
 
     /**
@@ -64,12 +65,13 @@ class LessonController extends Controller
     public function update(Request $request, $id)
     {
         $code = Str::upper($id);
-        $lesson = Lesson::findOrFail($code);
-        $lesson->update([
-            'lesson_topic' => $request->lesson_topic,
-            'lesson_level' => $request->lesson_level,
-            'lesson_image' => $request->lesson_image,
-            'lesson_description' => $request->lesson_description
+        $sublesson = SubLesson::findOrFail($code);
+        $sublesson->update([
+            'sublesson_id' => $request->sublesson_id,
+            'lesson_id' => $request->lesson_id,
+            'sublesson_topic' => $request->sublesson_topic,
+            'sublesson_image' => $request->sublesson_image,
+            'sublesson_description' => $request->sublesson_description
         ]);
 
         return ['message' => 'data has been updated'];
@@ -84,8 +86,8 @@ class LessonController extends Controller
     public function destroy($id)
     {
         //
-        $lesson = Lesson::findOrFail($id);
-        $lesson->delete();
+        $sublesson = SubLesson::findOrFail($id);
+        $sublesson->delete();
         return ['message' => 'data has been deleted'];
     }
 }
