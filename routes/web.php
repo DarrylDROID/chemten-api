@@ -51,10 +51,10 @@ Route::get('/homepage', function () {
 Route::get('/profile', function () {
     return view('profile');
 });
-Route::get('/login', function () {
+Route::get('/userlogin', function () {
     return view('login');
 });
-Route::get('/register', function () {
+Route::get('/userregister', function () {
     return view('register');
 });
 Route::get('/lesson', function () {
@@ -68,4 +68,7 @@ Route::get('/startquiz', function () {
 });
 Route::get('/question', function () {
     return view('level.quiz.question');
+});
+Route::get('/dashboard', function () {
+    return view('dashboard.index');
 });

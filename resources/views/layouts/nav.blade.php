@@ -2,6 +2,6 @@
     <img src="img/logo.png" alt="" width="120">        
     <div class="">
         <a href="">Home</a>
-        <a href="">Profile</a>
+        <a href="" class="ml-2">Profile</a>
     </div>
 </nav>
