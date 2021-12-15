@@ -498,7 +498,7 @@ class QuestionSeeder extends Seeder
             'question_topic' => 'Hukum Gay Lussac',
             'question_description' => 'Sepuluh liter gas hidrogen bromida terurai sebagai berikut,
             2 HBr(g) → H2(g) + Br2(g)
-            Pada suhu dan tekanan yang sama, tentukan volume gas hidrogen dan volume gas bromin yang dihasilkan!',
+            Pada suhu dan tekanan yang sama, tentukan volume gas hidrogen yang dihasilkan!',
             'qchoice1' => '10 L',
             'qchoice2' => '1,5 L',
             'qchoice3' => '5 L',
