@@ -19,7 +19,7 @@ class SubLessonResource extends JsonResource
             'lesson_id' => $this->lesson_id,
             'sublesson_topic' => $this->sublesson_topic,
             'sublesson_image' => $this->sublesson_image,
-            'aublesson_description' => $this->sublesson_description
+            'sublesson_description' => $this->sublesson_description
         ];
     }
 }

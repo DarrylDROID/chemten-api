@@ -9,7 +9,7 @@ class Leaderboard extends Model
 {
     use HasFactory;
 
-    protected $table = 'leaderboard';
+    protected $table = 'kim10_leaderboard';
     protected $primaryKey = 'leaderboard_id';
     protected $keyType = 'string';
 

@@ -16,7 +16,7 @@ class ExerciseSeeder extends Seeder
     public function run()
     {
         // Level 1 Lavoisier
-        DB::table('exercise')->insert([
+        DB::table('kim10_exercise')->insert([
             'exercise_topic' => 'Hukum Lavoisier',
             'exercise_level' => "Level 1",
             'exercise_image' => 'Photo',
@@ -26,7 +26,7 @@ class ExerciseSeeder extends Seeder
         ]);
 
         // Level 2 Proust
-        DB::table('exercise')->insert([
+        DB::table('kim10_exercise')->insert([
             'exercise_topic' => 'Hukum Proust',
             'exercise_level' => "Level 2",
             'exercise_image' => 'Photo',
@@ -36,7 +36,7 @@ class ExerciseSeeder extends Seeder
         ]);
 
         // Level 3 Dalton
-        DB::table('exercise')->insert([
+        DB::table('kim10_exercise')->insert([
             'exercise_topic' => 'Hukum Dalton',
             'exercise_level' => "Level 3",
             'exercise_image' => 'Photo',
@@ -46,7 +46,7 @@ class ExerciseSeeder extends Seeder
         ]);
 
         // Level 4 Gay Lussac
-        DB::table('exercise')->insert([
+        DB::table('kim10_exercise')->insert([
             'exercise_topic' => 'Hukum Gay Lussac',
             'exercise_level' => "Level 4",
             'exercise_image' => 'Photo',
@@ -56,7 +56,7 @@ class ExerciseSeeder extends Seeder
         ]);
 
         // Level 5 Avogadro
-        DB::table('exercise')->insert([
+        DB::table('kim10_exercise')->insert([
             'exercise_topic' => 'Hukum Avogadro',
             'exercise_level' => "Level 5",
             'exercise_image' => 'Photo',

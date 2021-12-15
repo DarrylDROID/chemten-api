@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\LessonController;
+use App\Http\Controllers\SubLessonController;
 use App\Http\Controllers\ExerciseController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
@@ -22,7 +23,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
+Route::resource('user', UserController::class);
 Route::resource('sublesson', SubLessonController::class);
 Route::resource('lesson', LessonController::class);
 Route::resource('exercise', ExerciseController::class);

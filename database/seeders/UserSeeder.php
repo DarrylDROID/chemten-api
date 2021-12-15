@@ -15,14 +15,14 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('users')->insert([
-            'name' => 'User',
+        DB::table('kim10_users')->insert([
+            'nama' => 'User',
             'username' => 'User123',
             'email' => 'user@gmail.com',
             'password' => Hash::make('12345678'),
             'sekolah' => 'sekolah123',
             'kota' => 'kota123',
-            'tanggal lahir' => 'mm/dd/yyyy',
+            'tanggal_lahir' => 'mm/dd/yyyy',
             'role' => 'user',
             'created_at' => \Carbon\Carbon::now(),
             'email_verified_at' => \Carbon\Carbon::now()

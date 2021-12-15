@@ -13,9 +13,9 @@ class CreateQuestion extends Migration
      */
     public function up()
     {
-        Schema::create('question', function (Blueprint $table) {
+        Schema::create('kim10_question', function (Blueprint $table) {
             $table->id();
-            $table->string('exercise_id');
+            $table->unsignedBigInteger('exercise_id');
             $table->string('question_topic');
             $table->string('question_description');
             $table->string('qchoice1');
@@ -35,6 +35,6 @@ class CreateQuestion extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('question');
+        Schema::dropIfExists('kim10_question');
     }
 }

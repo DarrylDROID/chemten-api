@@ -9,7 +9,7 @@ class Lesson extends Model
 {
     use HasFactory;
 
-    protected $table = 'lesson';
+    protected $table = 'kim10_lesson';
     protected $primaryKey = 'lesson_id';
     protected $keyType = 'string';
 

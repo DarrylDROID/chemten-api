@@ -13,10 +13,10 @@ class RelationTableSublessonLesson extends Migration
      */
     public function up()
     {
-        Schema::table('sublesson', function (Blueprint $table) {
+        Schema::table('kim10_sublesson', function (Blueprint $table) {
             //
-            $table->foreign('id')
-                ->references('lesson_id')->on('lesson')
+            $table->foreign('lesson_id')
+                ->references('id')->on('lesson')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
         });
@@ -29,7 +29,7 @@ class RelationTableSublessonLesson extends Migration
      */
     public function down()
     {
-        Schema::table('sublesson', function (Blueprint $table) {
+        Schema::table('kim10_sublesson', function (Blueprint $table) {
             //
         });
     }

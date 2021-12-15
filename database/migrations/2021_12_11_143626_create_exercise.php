@@ -13,8 +13,8 @@ class CreateExercise extends Migration
      */
     public function up()
     {
-        Schema::create('exercise', function (Blueprint $table) {
-            $table->id();
+        Schema::create('kim10_exercise', function (Blueprint $table) {
+            $table->string('exercise_id');
             $table->string('exercise_topic');
             $table->string('exercise_level');
             $table->string('exercise_image');
@@ -30,6 +30,6 @@ class CreateExercise extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('exercise');
+        Schema::dropIfExists('kim10_exercise');
     }
 }

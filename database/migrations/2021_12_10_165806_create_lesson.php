@@ -13,8 +13,8 @@ class CreateLesson extends Migration
      */
     public function up()
     {
-        Schema::create('lesson', function (Blueprint $table) {
-            $table->id();
+        Schema::create('kim10_lesson', function (Blueprint $table) {
+            $table->string('lesson_id');
             $table->string('lesson_topic');
             $table->string('lesson_level');
             $table->string('lesson_image');
@@ -30,6 +30,6 @@ class CreateLesson extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('lesson');
+        Schema::dropIfExists('kim10_lesson');
     }
 }

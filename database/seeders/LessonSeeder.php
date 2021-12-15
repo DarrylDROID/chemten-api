@@ -16,7 +16,7 @@ class LessonSeeder extends Seeder
     public function run()
     {
         //
-        DB::table('lesson')->insert([
+        DB::table('kim10_lesson')->insert([
             'lesson_topic' => 'Hukum Lavoisier',
             'lesson_level' => "Level 1",
             'lesson_image' => 'Photo',
@@ -26,7 +26,7 @@ class LessonSeeder extends Seeder
             'updated_at' => \Carbon\Carbon::now()
         ]);
 
-        DB::table('lesson')->insert([
+        DB::table('kim10_lesson')->insert([
             'lesson_topic' => 'Hukum Proust',
             'lesson_level' => "Level 2",
             'lesson_image' => 'Photo',
@@ -35,7 +35,7 @@ class LessonSeeder extends Seeder
             'updated_at' => \Carbon\Carbon::now()
         ]);
 
-        DB::table('lesson')->insert([
+        DB::table('kim10_lesson')->insert([
             'lesson_topic' => 'Hukum Dalton',
             'lesson_level' => "Level 3",
             'lesson_image' => 'Photo',
@@ -46,7 +46,7 @@ class LessonSeeder extends Seeder
             'updated_at' => \Carbon\Carbon::now()
         ]);
 
-        DB::table('lesson')->insert([
+        DB::table('kim10_lesson')->insert([
             'lesson_topic' => 'Hukum Gay Lussac',
             'lesson_level' => "Level 4",
             'lesson_image' => 'Photo',
@@ -56,7 +56,7 @@ class LessonSeeder extends Seeder
             'updated_at' => \Carbon\Carbon::now()
         ]);
 
-        DB::table('lesson')->insert([
+        DB::table('kim10_lesson')->insert([
             'lesson_topic' => 'Hukum Avogadro',
             'lesson_level' => "Level 5",
             'lesson_image' => 'Photo',

@@ -13,10 +13,10 @@ class RelationTableQuestionExercise extends Migration
      */
     public function up()
     {
-        Schema::table('question', function (Blueprint $table) {
+        Schema::table('kim10_question', function (Blueprint $table) {
             //
-            $table->foreign('id')
-                ->references('exercise_id')->on('exercise')
+            $table->foreign('exercise_id')
+                ->references('id')->on('exercise')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
         });
@@ -29,7 +29,7 @@ class RelationTableQuestionExercise extends Migration
      */
     public function down()
     {
-        Schema::table('question', function (Blueprint $table) {
+        Schema::table('kim10_question', function (Blueprint $table) {
             //
         });
     }

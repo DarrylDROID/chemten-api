@@ -16,7 +16,7 @@ class SubLessonSeeder extends Seeder
     public function run()
     {
         //
-        DB::table('sublesson')->insert([
+        DB::table('kim10_sublesson')->insert([
             'lesson_id' => '1',
             'sublesson_topic' => 'Hukum Lavoisier',
             'sublesson_description' => 'Hukum kekekalan massa atau dikenal juga sebagai hukum Lomonosov-Lavoisier adalah suatu hukum 
@@ -41,7 +41,7 @@ class SubLessonSeeder extends Seeder
             'updated_at' => \Carbon\Carbon::now()
         ]);
 
-        DB::table('sublesson')->insert([
+        DB::table('kim10_sublesson')->insert([
             'lesson_id' => '2',
             'sublesson_topic' => 'Hukum Proust',
             'sublesson_description' => 'Dalam kimia, hukum perbandingan tetap atau hukum Proust (diambil dari nama kimiawan Prancis 
@@ -61,7 +61,7 @@ class SubLessonSeeder extends Seeder
             'updated_at' => \Carbon\Carbon::now()
         ]);
 
-        DB::table('sublesson')->insert([
+        DB::table('kim10_sublesson')->insert([
             'lesson_id' => '3',
             'sublesson_topic' => 'Hukum Dalton',
             'sublesson_description' => 'Dalam kimia, hukum perbandingan berganda adalah salah satu hukum dasar stoikiometri. 
@@ -93,7 +93,7 @@ class SubLessonSeeder extends Seeder
             'updated_at' => \Carbon\Carbon::now()
         ]);
 
-        DB::table('sublesson')->insert([
+        DB::table('kim10_sublesson')->insert([
             'lesson_id' => '4',
             'sublesson_topic' => 'Hukum Gay Lussac',
             'sublesson_description' => 'Hukum perbandingan volume atau hukum Gay Lussac adalah sebuah hukum kimia yang menyatakan 
@@ -121,7 +121,7 @@ class SubLessonSeeder extends Seeder
             'updated_at' => \Carbon\Carbon::now()
         ]);
 
-        DB::table('sublesson')->insert([
+        DB::table('kim10_sublesson')->insert([
             'lesson_id' => '5',
             'sublesson_topic' => 'Hukum Avogadro',
             'sublesson_description' => 'Hukum Avogadro (terkadang dirujuk sebagai hipotesis Avogadro atau prinsip Avogadro) adalah 

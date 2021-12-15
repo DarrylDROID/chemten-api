@@ -9,7 +9,7 @@ class Question extends Model
 {
     use HasFactory;
 
-    protected $table = 'question';
+    protected $table = 'kim10_question';
     protected $primaryKey = 'question_id';
     protected $keyType = 'string';
 

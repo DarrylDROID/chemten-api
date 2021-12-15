@@ -9,7 +9,7 @@ class SubLesson extends Model
 {
     use HasFactory;
 
-    protected $table = 'sublesson';
+    protected $table = 'kim10_sublesson';
     protected $primaryKey = 'sublesson_id';
     protected $keyType = 'string';
 

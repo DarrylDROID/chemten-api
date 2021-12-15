@@ -37,7 +37,7 @@ class UserController extends Controller
             'username' => $request->username,
             'sekolah' => $request->sekolah,
             'kota' => $request->kota,
-            'tanggal lahir' => $request->tanggal_lahir
+            'tanggal_lahir' => $request->tanggal_lahir
         ]);
 
         return ['message' => 'data has been saved'];
@@ -75,7 +75,7 @@ class UserController extends Controller
             'username' => $request->username,
             'sekolah' => $request->sekolah,
             'kota' => $request->kota,
-            'tanggal lahir' => $request->tanggal_lahir
+            'tanggal_lahir' => $request->tanggal_lahir
         ]);
 
         return ['message' => 'data has been updated'];
