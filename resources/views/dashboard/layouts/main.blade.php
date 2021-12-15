@@ -8,14 +8,14 @@
         <meta name="author" content="" />
         <title>Dashboard - Chemten</title>
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
-        <link href="css/styles.css" rel="stylesheet" />
+        <link href="{{ asset('css/styles.css') }}" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
     </head>
     <body class="sb-nav-fixed">
         @include('dashboard.layouts.nav')
         <div id="layoutSidenav">
             @include('dashboard.layouts.sidebar')
-            <div id="layoutSidenav_content">
+            <div id="layoutSidenav_content" style="overflow-x: hidden">
                 @yield('main_content')
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid px-4">

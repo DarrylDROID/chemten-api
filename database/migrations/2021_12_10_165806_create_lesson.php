@@ -14,7 +14,7 @@ class CreateLesson extends Migration
     public function up()
     {
         Schema::create('kim10_lesson', function (Blueprint $table) {
-            $table->string('lesson_id');
+            $table->id();
             $table->string('lesson_topic');
             $table->string('lesson_level');
             $table->string('lesson_image');

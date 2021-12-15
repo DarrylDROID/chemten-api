@@ -75,3 +75,10 @@ Route::get('/question', function () {
 Route::get('/dashboard', function () {
     return view('dashboard.index');
 });
+
+Route::get('/dashboard/lesson', function () {
+    return view('dashboard.lesson');
+});
+Route::get('/dashboard/createsublesson', function () {
+    return view('dashboard.form.createsublesson');
+});

@@ -16,7 +16,7 @@ class RelationTableQuestionExercise extends Migration
         Schema::table('kim10_question', function (Blueprint $table) {
             //
             $table->foreign('exercise_id')
-                ->references('id')->on('exercise')
+                ->references('id')->on('kim10_exercise')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
         });

@@ -16,7 +16,7 @@ class RelationTableSublessonLesson extends Migration
         Schema::table('kim10_sublesson', function (Blueprint $table) {
             //
             $table->foreign('lesson_id')
-                ->references('id')->on('lesson')
+                ->references('id')->on('kim10_lesson')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
         });

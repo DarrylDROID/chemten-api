@@ -18,7 +18,7 @@ class CreateSublesson extends Migration
             $table->unsignedBigInteger('lesson_id');
             $table->string('sublesson_topic');
             $table->string('sublesson_image');
-            $table->string('sublesson_description');
+            $table->text('sublesson_description');
             $table->timestamps();
         });
     }

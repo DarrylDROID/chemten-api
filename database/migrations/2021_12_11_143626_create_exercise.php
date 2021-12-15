@@ -14,7 +14,7 @@ class CreateExercise extends Migration
     public function up()
     {
         Schema::create('kim10_exercise', function (Blueprint $table) {
-            $table->string('exercise_id');
+            $table->id();
             $table->string('exercise_topic');
             $table->string('exercise_level');
             $table->string('exercise_image');
