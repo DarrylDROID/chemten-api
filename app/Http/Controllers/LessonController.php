@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Lesson;
+use App\Models\SubLesson;
 use Illuminate\Http\Request;
 
 class LessonController extends Controller
@@ -17,9 +18,9 @@ class LessonController extends Controller
         $active_welcome = "";
         $active_lessons = "active";
 
-        $lesson = Lesson::all();
+        $lessons = Lesson::all();
 
-        return view('lesson', compact('active_welcome', 'active_lessons', 'lesson'));
+        return view('dashboard.lesson', compact('active_welcome', 'active_lessons', 'lessons'));
     }
 
     /**
@@ -47,7 +48,6 @@ class LessonController extends Controller
 
         //
         Lesson::create([
-            'lesson_id' => $request->lesson_id,
             'lesson_topic' => $request->lesson_topic,
             'lesson_level' => $request->lesson_level,
             'lesson_image' => $request->lesson_image,
@@ -64,9 +64,8 @@ class LessonController extends Controller
      */
     public function show($id)
     {
-
-        $lesson = Lesson::where('lesson_id', $id)->first();
-        return view('lessonView', compact('lesson'));
+        $sublessons = SubLesson::where('lesson_id', $id)->get();
+        return view('dashboard.sublesson', compact('sublessons'));
     }
 
     /**
@@ -93,7 +92,6 @@ class LessonController extends Controller
         //
         $lesson = Lesson::findOrFail($id);
         $lesson->update([
-            'lesson_id' => $request->lesson_id,
             'lesson_topic' => $request->lesson_topic,
             'lesson_level' => $request->lesson_level,
             'lesson_image' => $request->lesson_image,

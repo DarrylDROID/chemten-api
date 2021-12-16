@@ -47,6 +47,9 @@ Route::middleware(['auth'])->group(function () {
     });
 });
 
+Route::resource('lessons', LessonController::class);
+Route::resource('sublesson', SubLessonController::class);
+
 //tes
 Route::get('/homepage', function () {
     return view('homepage');
@@ -75,10 +78,6 @@ Route::get('/question', function () {
 Route::get('/dashboard', function () {
     return view('dashboard.index');
 });
-
-Route::get('/dashboard/lesson', function () {
-    return view('dashboard.lesson');
-});
-Route::get('/dashboard/createsublesson', function () {
+Route::get('/create', function () {
     return view('dashboard.form.createsublesson');
 });

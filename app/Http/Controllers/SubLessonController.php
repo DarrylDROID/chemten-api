@@ -47,7 +47,6 @@ class SubLessonController extends Controller
 
         //
         SubLesson::create([
-            'sublesson_id' => $request->sublesson_id,
             'lesson_id' => $request->lesson_id,
             'sublesson_topic' => $request->sublesson_topic,
             'sublesson_image' => $request->sublesson_image,
@@ -64,9 +63,8 @@ class SubLessonController extends Controller
      */
     public function show($id)
     {
-
-        $sublesson = SubLesson::where('sublesson_id', $id)->first();
-        return view('sublessonView', compact('sublesson'));
+        $sublesson = SubLesson::where('id', $id)->first();
+        return view('dashboard.sublessondetail', compact('sublesson'));
     }
 
     /**
