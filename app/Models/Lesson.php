@@ -10,14 +10,13 @@ class Lesson extends Model
     use HasFactory;
 
     protected $table = 'kim10_lesson';
-    protected $primaryKey = 'lesson_id';
+    protected $primaryKey = 'id';
     protected $keyType = 'string';
 
     protected $fillable = [
-        'lesson_id',
+        'id',
         'lesson_topic',
         'lesson_level',
-        'lesson_image',
         'lesson_description'
     ];
 }

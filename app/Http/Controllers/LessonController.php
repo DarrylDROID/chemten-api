@@ -50,7 +50,6 @@ class LessonController extends Controller
         Lesson::create([
             'lesson_topic' => $request->lesson_topic,
             'lesson_level' => $request->lesson_level,
-            'lesson_image' => $request->lesson_image,
             'lesson_description' => $request->lesson_description
         ]);
         return redirect(route('lesson.index'));
@@ -77,7 +76,7 @@ class LessonController extends Controller
     public function edit($id)
     {
         $lesson = Lesson::findOrFail($id);
-        return view('lessonEdit', compact('lesson'));
+        return view('dashboard.form.editlesson', compact('lesson'));
     }
 
     /**
@@ -94,7 +93,6 @@ class LessonController extends Controller
         $lesson->update([
             'lesson_topic' => $request->lesson_topic,
             'lesson_level' => $request->lesson_level,
-            'lesson_image' => $request->lesson_image,
             'lesson_description' => $request->lesson_description
         ]);
         return redirect(route('lesson.index'));

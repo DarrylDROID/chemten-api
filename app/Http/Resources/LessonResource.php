@@ -18,7 +18,6 @@ class LessonResource extends JsonResource
             'lesson_id' => $this->lesson_id,
             'lesson_topic' => $this->lesson_topic,
             'lesson_level' => $this->lesson_level,
-            'lesson_image' => $this->lesson_image,
             'lesson_description' => $this->lesson_description
         ];
     }

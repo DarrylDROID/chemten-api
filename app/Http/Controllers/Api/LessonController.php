@@ -33,7 +33,6 @@ class LessonController extends Controller
         Lesson::create([
             'lesson_topic' => $request->lesson_topic,
             'lesson_level' => $request->lesson_level,
-            'lesson_image' => $request->lesson_image,
             'lesson_description' => $request->lesson_description
         ]);
 
@@ -68,7 +67,6 @@ class LessonController extends Controller
         $lesson->update([
             'lesson_topic' => $request->lesson_topic,
             'lesson_level' => $request->lesson_level,
-            'lesson_image' => $request->lesson_image,
             'lesson_description' => $request->lesson_description
         ]);
 

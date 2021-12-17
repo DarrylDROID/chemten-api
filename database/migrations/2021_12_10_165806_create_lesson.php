@@ -17,7 +17,6 @@ class CreateLesson extends Migration
             $table->id();
             $table->string('lesson_topic');
             $table->string('lesson_level');
-            $table->string('lesson_image');
             $table->string('lesson_description');
             $table->timestamps();
         });

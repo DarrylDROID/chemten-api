@@ -12,7 +12,7 @@
             <th>Description</th>
             <th>Action</th>
         </tr>
-        @foreach ($lessons as $lesson)
+    @foreach ($lessons as $lesson)
         <tr>
             <td>
                 <a href="{{ route('lessons.show', $lesson->id) }}">{{ $lesson['lesson_topic'] }}</a>
@@ -20,7 +20,7 @@
             <td>{{ $lesson['lesson_level'] }}</td>
             <td>{{ $lesson['lesson_description'] }}</td>
             <td>
-                
+                <a href="{{ route('lessons.edit', $lesson->id) }}" class="btn btn-dark mt-3">Edit</a>
             </td>
         </tr>
         @endforeach        

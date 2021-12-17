@@ -5,7 +5,7 @@
 <div class="mt-5 mx-5 d-flex justify-content-between">
     <h2 class="">Sublesson</h2>
 
-    <a href="dashboard.form.createsublesson" class="btn btn-dark">Create</a>
+    <a href="{{ URL('/lessons') }}" class="btn btn-warning">Go Back</a>
 </div>
 
 
@@ -20,7 +20,14 @@
             <td>
                 <a href="{{ route('sublesson.show', $sublesson['id']) }}">{{ $sublesson['sublesson_topic'] }}</a>
             </td>
-            <td><a href="" class="btn btn-danger">Delete</a></td>
+            <td>
+                <form action="{{ route('sublesson.destroy', $sublesson['id']) }}" method="POST">
+                    @csrf
+                    @method('DELETE')
+                    <a href="{{ route('sublesson.create') }}" class="btn btn-dark">Create</a>
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
+            </td>
         </tr>
         @endforeach
         

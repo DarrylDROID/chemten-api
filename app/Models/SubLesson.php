@@ -10,11 +10,9 @@ class SubLesson extends Model
     use HasFactory;
 
     protected $table = 'kim10_sublesson';
-    protected $primaryKey = 'sublesson_id';
-    protected $keyType = 'string';
+    protected $primaryKey = 'id';
 
     protected $fillable = [
-        'sublesson_id',
         'lesson_id',
         'sublesson_topic',
         'sublesson_image',

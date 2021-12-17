@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\SubLesson;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class SubLessonController extends Controller
 {
@@ -30,7 +31,7 @@ class SubLessonController extends Controller
     public function create()
     {
         //
-        return view('sublessonCreate');
+        return view('dashboard.form.createsublesson');
     }
 
     /**
@@ -41,18 +42,19 @@ class SubLessonController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, [
-            'sublesson_topic' => 'required|min:5|max:50',
-        ]);
+        // $this->validate($request, [
+        //     'sublesson_topic' => 'required|min:5|max:50',
+        // ]);
 
         //
+        $lesson_id = $request->lesson_id;
         SubLesson::create([
             'lesson_id' => $request->lesson_id,
             'sublesson_topic' => $request->sublesson_topic,
-            'sublesson_image' => $request->sublesson_image,
+            'sublesson_image' => $request->file('sublesson_image')->store('sublesson_image'),
             'sublesson_description' => $request->sublesson_description
         ]);
-        return redirect(route('sublesson.index'));
+        return redirect()->route('lessons.show', ['lesson' => $lesson_id]);
     }
 
     /**
@@ -76,7 +78,7 @@ class SubLessonController extends Controller
     public function edit($id)
     {
         $sublesson = SubLesson::findOrFail($id);
-        return view('sublessonEdit', compact('sublesson'));
+        return view('dashboard.form.editsublessondetail', compact('sublesson'));
     }
 
     /**
@@ -90,13 +92,25 @@ class SubLessonController extends Controller
     {
         //
         $sublesson = SubLesson::findOrFail($id);
-        $sublesson->update([
-            'sublesson_id' => $request->sublesson_id,
-            'lesson_id' => $request->lesson_id,
-            'sublesson_topic' => $request->sublesson_topic,
-            'sublesson_image' => $request->sublesson_image,
-            'sublesson_description' => $request->sublesson_description
-        ]);
+        $sublessonimage = $request->file('sublesson_image');
+        if ($sublessonimage) {
+            Storage::delete($request->oldImage);
+            $sublesson->update([
+                'sublesson_id' => $request->sublesson_id,
+                'lesson_id' => $request->lesson_id,
+                'sublesson_topic' => $request->sublesson_topic,
+                'sublesson_image' => $sublessonimage->store('sublesson_image'),
+                'sublesson_description' => $request->sublesson_description
+            ]);
+        } else {
+            $sublesson->update([
+                'sublesson_id' => $request->sublesson_id,
+                'lesson_id' => $request->lesson_id,
+                'sublesson_topic' => $request->sublesson_topic,
+                'sublesson_description' => $request->sublesson_description
+            ]);
+        }
+
         return redirect(route('sublesson.index'));
     }
 
@@ -109,6 +123,7 @@ class SubLessonController extends Controller
     public function destroy($id)
     {
         $sublesson = SubLesson::findOrFail($id);
+        Storage::delete($sublesson->sublesson_image);
         $sublesson->delete();
         return redirect(route('sublesson.index'));
     }
