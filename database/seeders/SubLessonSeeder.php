@@ -18,7 +18,7 @@ class SubLessonSeeder extends Seeder
         //
         DB::table('kim10_sublesson')->insert([
             'lesson_id' => '1',
-            'sublesson_topic' => 'Hukum Lavoisier',
+            'sublesson_topic' => 'Pengantar',
             'sublesson_description' => 'Hukum kekekalan massa atau dikenal juga sebagai hukum Lomonosov-Lavoisier adalah suatu hukum 
             yang menyatakan massa dari suatu sistem tertutup akan konstan meskipun terjadi berbagai macam proses di dalam sistem 
             tersebut (dalam sistem tertutup Massa zat sebelum dan sesudah reaksi adalah sama (tetap/konstan). Pernyataan yang umum 
@@ -42,8 +42,26 @@ class SubLessonSeeder extends Seeder
         ]);
 
         DB::table('kim10_sublesson')->insert([
+            'lesson_id' => '1',
+            'sublesson_topic' => 'Observasi',
+            'sublesson_description' => '1. Sediakan larutan KI pada labu erlenmeyer besar dan Pb(NO3)2 pada tabung reaksi kecil yang diikat dengan benang. 2. Masukkan tabung reaksi berisi larutan Pb(NO3 ) 2 dengan hati-hati ke dalam labu seperti pada gambar (Hati-hati kedua larutan jangan tercampur). 3. Sumbat labu kemudian timbang. 4. Miringkan tabung reaksi sampai kedua larutan bereaksi. 5. Timbang kembali seluruh alat dan hasil reaksi tersebut.',
+            'sublesson_image' => 'Photo',
+            'created_at' => \Carbon\Carbon::now(),
+            'updated_at' => \Carbon\Carbon::now()
+        ]);
+
+        DB::table('kim10_sublesson')->insert([
+            'lesson_id' => '1',
+            'sublesson_topic' => 'Latihan',
+            'sublesson_description' => 'Berikut ini tabel reaksi antara tembaga dan belerang (sulfur) yang menghasilkan tembaga(II) sulfida berdasarkan Hukum Kekekalan Massa. Salin tabel, lengkapi, dan tulis persamaan reaksinya.',
+            'sublesson_image' => 'Photo',
+            'created_at' => \Carbon\Carbon::now(),
+            'updated_at' => \Carbon\Carbon::now()
+        ]);
+
+        DB::table('kim10_sublesson')->insert([
             'lesson_id' => '2',
-            'sublesson_topic' => 'Hukum Proust',
+            'sublesson_topic' => 'Pengantar',
             'sublesson_description' => 'Dalam kimia, hukum perbandingan tetap atau hukum Proust (diambil dari nama kimiawan Prancis 
             Joseph Proust) adalah hukum yang menyatakan bahwa suatu senyawa kimia terdiri dari unsur-unsur dengan perbandingan massa 
             yang selalu tepat sama.[1] Dengan kata lain, setiap sampel suatu senyawa memiliki komposisi unsur-unsur yang tetap. 
@@ -62,8 +80,26 @@ class SubLessonSeeder extends Seeder
         ]);
 
         DB::table('kim10_sublesson')->insert([
+            'lesson_id' => '2',
+            'sublesson_topic' => 'Observasi',
+            'sublesson_description' => 'Perhatikan data massa besi dan belerang pada senyawanya yaitu besi belerang atau besi sulfida berikut ini.',
+            'sublesson_image' => 'Photo',
+            'created_at' => \Carbon\Carbon::now(),
+            'updated_at' => \Carbon\Carbon::now()
+        ]);
+
+        DB::table('kim10_sublesson')->insert([
+            'lesson_id' => '2',
+            'sublesson_topic' => 'Latihan',
+            'sublesson_description' => 'Logam natrium jika direaksikan dengan gas oksigen akan dihasilkan natrium oksida. Data beberapa percobaannya adalah sebagai berikut. a. Tentukan perbandingan massa natrium dengan massa oksigen pembentuk senyawa pada setiap percobaan. b. Apakah data tersebut sesuai dengan hukum perbandingan tetap? Jelaskan! c. Tulis reaksi pada percobaan tersebut!',
+            'sublesson_image' => 'Photo',
+            'created_at' => \Carbon\Carbon::now(),
+            'updated_at' => \Carbon\Carbon::now()
+        ]);
+
+        DB::table('kim10_sublesson')->insert([
             'lesson_id' => '3',
-            'sublesson_topic' => 'Hukum Dalton',
+            'sublesson_topic' => 'Pengantar',
             'sublesson_description' => 'Dalam kimia, hukum perbandingan berganda adalah salah satu hukum dasar stoikiometri. 
             Hukum ini juga kadang-kadang disebut hukum Dalton (diambil dari nama kimiawan Inggris John Dalton), tetapi biasanya hukum 
             Dalton merujuk kepada hukum tekanan parsial. Hukum ini menyatakan bahwa apabila dua unsur bereaksi membentuk dua atau lebih 
@@ -94,8 +130,26 @@ class SubLessonSeeder extends Seeder
         ]);
 
         DB::table('kim10_sublesson')->insert([
+            'lesson_id' => '3',
+            'sublesson_topic' => 'Observasi',
+            'sublesson_description' => 'Dari data ternyata perbandingan massa oksigen yang terikat oleh karbon dengan massa yang sama yaitu 1 : 2. Perbandingan ini merupakan perbandingan yang sederhana.',
+            'sublesson_image' => 'Photo',
+            'created_at' => \Carbon\Carbon::now(),
+            'updated_at' => \Carbon\Carbon::now()
+        ]);
+
+        DB::table('kim10_sublesson')->insert([
+            'lesson_id' => '3',
+            'sublesson_topic' => 'Latihan',
+            'sublesson_description' => 'Perbandingan massa N dan O dalam senyawa NO dan NO2 adalah sebagai berikut. Buktikan apakah kedua rumus senyawa tersebut memenuhi Hukum Kelipatan Perbandingan?',
+            'sublesson_image' => 'Photo',
+            'created_at' => \Carbon\Carbon::now(),
+            'updated_at' => \Carbon\Carbon::now()
+        ]);
+
+        DB::table('kim10_sublesson')->insert([
             'lesson_id' => '4',
-            'sublesson_topic' => 'Hukum Gay Lussac',
+            'sublesson_topic' => 'Pengantar',
             'sublesson_description' => 'Hukum perbandingan volume atau hukum Gay Lussac adalah sebuah hukum kimia yang menyatakan 
             bahwa sejumlah gas yang direaksikan dengan volume konstan atau tetap akan berbanding lurus dengan nilai suhunya.
             Saat suhu gas dalam sebuah wadah yang kaku dinaikkan, maka tekanan dari gas tersebut akan ikut meningkat. 
@@ -122,8 +176,26 @@ class SubLessonSeeder extends Seeder
         ]);
 
         DB::table('kim10_sublesson')->insert([
+            'lesson_id' => '4',
+            'sublesson_topic' => 'Observasi',
+            'sublesson_description' => 'Dalton berhasil menyelidiki hubungan massa antara zat-zat yang membentuk suatu senyawa. Pada tahun 1808 Josep Louis Gay Lussac dari Perancis menyelidiki hubungan antara volum gas-gas dalam suatu reaksi kimia. Ia menemukan bahwa pada suhu dan tekanan yang sama, satu volum gas oksigen bereaksi dengan dua volum gas hidrogen menghasilkan dua volum uap air',
+            'sublesson_image' => 'Photo',
+            'created_at' => \Carbon\Carbon::now(),
+            'updated_at' => \Carbon\Carbon::now()
+        ]);
+
+        DB::table('kim10_sublesson')->insert([
+            'lesson_id' => '4',
+            'sublesson_topic' => 'Latihan',
+            'sublesson_description' => 'Tentukan: a. volum gas O2 yang diperlukan; b. volum gas CO2 yang dihasilkan; c. volum uap air yang dihasilkan.',
+            'sublesson_image' => 'Photo',
+            'created_at' => \Carbon\Carbon::now(),
+            'updated_at' => \Carbon\Carbon::now()
+        ]);
+
+        DB::table('kim10_sublesson')->insert([
             'lesson_id' => '5',
-            'sublesson_topic' => 'Hukum Avogadro',
+            'sublesson_topic' => 'Pengantar',
             'sublesson_description' => 'Hukum Avogadro (terkadang dirujuk sebagai hipotesis Avogadro atau prinsip Avogadro) adalah 
             suatu hukum gas eksperimen yang mengaitkan volume gas dengan jumlah zat gas tersebut.[1] Hukum ini merupakan kasus hukum 
             gas ideal yang spesifik. Hukum ini berbunyi: Hukum Avogadro menyatakan bahwa, "Gas-gas yang memiliki volume yang sama, 
@@ -143,6 +215,24 @@ class SubLessonSeeder extends Seeder
             Tentukan berapa perbandingan jumlah volume gas yang terlibat dalam reaksi tersebut!
             nN2 : nH2 = nH3
             2 : 3 = 2',
+            'sublesson_image' => 'Photo',
+            'created_at' => \Carbon\Carbon::now(),
+            'updated_at' => \Carbon\Carbon::now()
+        ]);
+
+        DB::table('kim10_sublesson')->insert([
+            'lesson_id' => '5',
+            'sublesson_topic' => 'Observasi',
+            'sublesson_description' => 'Data percobaan pengukuran volum pada suhu dan tekanan standar. Dari data tersebut ternyata dalam volum yang sama dan keadaan yang sama terdapat jumlah molekul yang sama pula. Hipotesis ini dijadikan suatu hukum, yang dikenal sebagai Hukum Avogadro.',
+            'sublesson_image' => 'Photo',
+            'created_at' => \Carbon\Carbon::now(),
+            'updated_at' => \Carbon\Carbon::now()
+        ]);
+
+        DB::table('kim10_sublesson')->insert([
+            'lesson_id' => '5',
+            'sublesson_topic' => 'Latihan',
+            'sublesson_description' => 'Pada suhu dan tekanan tertentu dalam 1 L gas O2 terdapat 3 x 10^22 molekul. Berapa jumlah molekul yang terdapat di dalam 2 liter gas CO2 pada suhu dan tekanan tersebut?',
             'sublesson_image' => 'Photo',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()

@@ -22,7 +22,7 @@
                 <div class="card bg-warning text-white mb-4">
                     <div class="card-body">Quiz</div>
                     <div class="card-footer d-flex align-items-center justify-content-between">
-                        <a class="small text-white stretched-link" href="{{ URL('/quiz') }}">View Details</a>
+                        <a class="small text-white stretched-link" href="{{ URL('/exercises') }}">View Details</a>
                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                     </div>
                 </div>
@@ -31,7 +31,7 @@
                 <div class="card bg-success text-white mb-4">
                     <div class="card-body">User Account</div>
                     <div class="card-footer d-flex align-items-center justify-content-between">
-                        <a class="small text-white stretched-link" href="{{ URL('/user') }}">View Details</a>
+                        <a class="small text-white stretched-link" href="{{ URL('/users') }}">View Details</a>
                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                     </div>
                 </div>

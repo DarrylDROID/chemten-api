@@ -3,12 +3,12 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Http\Resources\UserResource;
-use App\Models\User;
+use App\Http\Resources\QuestionResource;
+use App\Models\Question;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
-class UserController extends Controller
+class QuestionController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,8 +17,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        $user = User::all();
-        return ['user' => UserResource::collection($user)];
+        $question = Question::all();
+        return ['question' => QuestionResource::collection($question)];
     }
 
     /**
@@ -30,12 +30,15 @@ class UserController extends Controller
     public function store(Request $request)
     {
         //
-
-        User::create([
-            'nama' => $request->nama,
-            'email' => $request->email,
-            'password' => $request->password,
-            'role' => $request->role
+        Question::create([
+            'exercise_id' => $request->exercise_id,
+            'question_topic' => $request->question_topic,
+            'question_description' => $request->question_description,
+            'qchoice1' => $request->qchoice1,
+            'qchoice2' => $request->qchoice2,
+            'qchoice3' => $request->qchoice3,
+            'qchoice4' => $request->qchoice4,
+            'correctanswer' => $request->correctanswer
         ]);
 
         return ['message' => 'data has been saved'];
@@ -51,8 +54,8 @@ class UserController extends Controller
     {
         //
         $code = Str::upper($id);
-        $user = User::all()->where('id', $code);
-        return ['user' => UserResource::collection($user)];
+        $question = Question::all()->where('id', $code);
+        return ['question' => QuestionResource::collection($question)];
     }
 
     /**
@@ -65,12 +68,16 @@ class UserController extends Controller
     public function update(Request $request, $id)
     {
         $code = Str::upper($id);
-        $user = User::findOrFail($code);
-        $user->update([
-            'nama' => $request->nama,
-            'email' => $request->email,
-            'password' => $request->password,
-            'role' => $request->role
+        $question = Question::findOrFail($code);
+        $question->update([
+            'exercise_id' => $request->exercise_id,
+            'question_topic' => $request->question_topic,
+            'question_description' => $request->question_description,
+            'qchoice1' => $request->qchoice1,
+            'qchoice2' => $request->qchoice2,
+            'qchoice3' => $request->qchoice3,
+            'qchoice4' => $request->qchoice4,
+            'correctanswer' => $request->correctanswer
         ]);
 
         return ['message' => 'data has been updated'];
@@ -85,8 +92,8 @@ class UserController extends Controller
     public function destroy($id)
     {
         //
-        $user = User::findOrFail($id);
-        $user->delete();
+        $question = Question::findOrFail($id);
+        $question->delete();
         return ['message' => 'data has been deleted'];
     }
 }

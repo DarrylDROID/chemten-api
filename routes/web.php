@@ -4,6 +4,8 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\LessonController;
 use App\Http\Controllers\SubLessonController;
 use App\Http\Controllers\ExerciseController;
+use App\Http\Controllers\QuestionController;
+use App\Http\Controllers\StudentController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -22,11 +24,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::resource('user', UserController::class);
-Route::resource('sublesson', SubLessonController::class);
-Route::resource('lesson', LessonController::class);
-Route::resource('exercise', ExerciseController::class);
 
 Auth::routes();
 
@@ -49,6 +46,10 @@ Route::middleware(['auth'])->group(function () {
 
 Route::resource('lessons', LessonController::class);
 Route::resource('sublesson', SubLessonController::class);
+Route::resource('exercises', ExerciseController::class);
+Route::resource('question', QuestionController::class);
+Route::resource('users', UserController::class);
+Route::resource('students', UserController::class);
 
 //tes
 Route::get('/homepage', function () {

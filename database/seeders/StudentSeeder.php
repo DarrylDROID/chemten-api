@@ -6,7 +6,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 
-class AdminSeeder extends Seeder
+class StudentSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,11 +15,15 @@ class AdminSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('kim10_admin')->insert([
-            'name' => 'Admin',
-            'email' => 'admin@gmail.com',
+        DB::table('kim10_students')->insert([
+            'name' => 'User',
+            'username' => 'Student123',
+            'email' => 'user@gmail.com',
             'password' => Hash::make('12345678'),
-            'role' => 'admin',
+            'sekolah' => 'sekolah123',
+            'kota' => 'kota123',
+            'tanggal_lahir' => 'mm/dd/yyyy',
+            'role' => 'student',
             'created_at' => \Carbon\Carbon::now(),
             'email_verified_at' => \Carbon\Carbon::now()
         ]);

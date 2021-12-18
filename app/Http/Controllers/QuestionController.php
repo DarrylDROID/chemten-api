@@ -17,9 +17,9 @@ class QuestionController extends Controller
         $active_welcome = "";
         $active_questions = "active";
 
-        $question = Question::all();
+        $questions = Question::all();
 
-        return view('question', compact('active_welcome', 'active_questions', 'question'));
+        return view('question', compact('active_welcome', 'active_questions', 'questions'));
     }
 
     /**
@@ -30,7 +30,7 @@ class QuestionController extends Controller
     public function create()
     {
         //
-        return view('questionCreate');
+        return view('dashboard.form.createquestion');
     }
 
     /**
@@ -41,13 +41,12 @@ class QuestionController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, [
-            'question_topic' => 'required|min:5|max:50',
-        ]);
+        // $this->validate($request, [
+        //     'question_topic' => 'required|min:5|max:50',
+        // ]);
 
         //
         Question::create([
-            'question_id' => $request->question_id,
             'exercise_id' => $request->exercise_id,
             'question_topic' => $request->question_topic,
             'question_description' => $request->question_description,
@@ -55,7 +54,6 @@ class QuestionController extends Controller
             'qchoice2' => $request->qchoice2,
             'qchoice3' => $request->qchoice3,
             'qchoice4' => $request->qchoice4,
-            'qimage' => $request->qimage,
             'correctanswer' => $request->correctanswer
         ]);
         return redirect(route('question.index'));
@@ -83,7 +81,7 @@ class QuestionController extends Controller
     public function edit($id)
     {
         $question = Question::findOrFail($id);
-        return view('questionEdit', compact('question'));
+        return view('dashboard.form.editquestion', compact('question'));
     }
 
     /**
@@ -106,7 +104,6 @@ class QuestionController extends Controller
             'qchoice2' => $request->qchoice2,
             'qchoice3' => $request->qchoice3,
             'qchoice4' => $request->qchoice4,
-            'qimage' => $request->qimage,
             'correctanswer' => $request->correctanswer
         ]);
         return redirect(route('question.index'));

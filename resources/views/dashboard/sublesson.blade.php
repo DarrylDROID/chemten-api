@@ -2,10 +2,12 @@
 
 @section('main_content')
 
-<div class="mt-5 mx-5 d-flex justify-content-between">
+<div class="mt-5 mx-5 d-flex justify-content">
     <h2 class="">Sublesson</h2>
-
-    <a href="{{ URL('/lessons') }}" class="btn btn-warning">Go Back</a>
+</div>
+    <div class="mx-5 d-flex justify-content-end">
+    <a href="{{ route('sublesson.create') }}" class="btn btn-dark">Create</a>
+    <a href="{{ URL('/lessons') }}" class="btn btn-warning ms-3">Go Back</a>
 </div>
 
 
@@ -24,7 +26,7 @@
                 <form action="{{ route('sublesson.destroy', $sublesson['id']) }}" method="POST">
                     @csrf
                     @method('DELETE')
-                    <a href="{{ route('sublesson.create') }}" class="btn btn-dark">Create</a>
+             
                     <button type="submit" class="btn btn-danger">Delete</button>
                 </form>
             </td>

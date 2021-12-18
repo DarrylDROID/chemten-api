@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Exercise;
+use App\Models\Question;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ExerciseController extends Controller
 {
@@ -17,9 +19,9 @@ class ExerciseController extends Controller
         $active_welcome = "";
         $active_exercises = "active";
 
-        $exercise = Exercise::all();
+        $exercises = Exercise::all();
 
-        return view('exercise', compact('active_welcome', 'active_exercises', 'exercise'));
+        return view('dashboard.exercise', compact('active_welcome', 'active_exercises', 'exercises'));
     }
 
     /**
@@ -47,7 +49,6 @@ class ExerciseController extends Controller
 
         //
         Exercise::create([
-            'exercise_id' => $request->exercise_id,
             'exercise_topic' => $request->exercise_topic,
             'exercise_level' => $request->exercise_level,
             'exercise_image' => $request->exercise_image,
@@ -65,8 +66,8 @@ class ExerciseController extends Controller
     public function show($id)
     {
 
-        $exercise = Exercise::where('exercise_id', $id)->first();
-        return view('exerciseView', compact('exercise'));
+        $questions = Question::where('exercise_id', $id)->get();
+        return view('dashboard.question', compact('questions'));
     }
 
     /**
@@ -78,7 +79,7 @@ class ExerciseController extends Controller
     public function edit($id)
     {
         $exercise = Exercise::findOrFail($id);
-        return view('exerciseEdit', compact('exercise'));
+        return view('dashboard.form.editexercise', compact('exercise'));
     }
 
     /**
@@ -92,13 +93,23 @@ class ExerciseController extends Controller
     {
         //
         $exercise = Exercise::findOrFail($id);
-        $exercise->update([
-            'exercise_id' => $request->exercise_id,
-            'exercise_topic' => $request->exercise_topic,
-            'exercise_level' => $request->exercise_level,
-            'exercise_image' => $request->exercise_image,
-            'exercise_description' => $request->exercise_description
-        ]);
+        $exerciseimage = $request->file('exercise_image');
+        if ($exerciseimage) {
+            Storage::delete($request->oldImage);
+            $exercise->update([
+                'exercise_topic' => $request->exercise_topic,
+                'exercise_level' => $request->exercise_level,
+                'exercise_image' => $exerciseimage->store('exercise_image'),
+                'exercise_description' => $request->exercise_description
+            ]);
+        } else {
+            $exercise->update([
+                'exercise_topic' => $request->exercise_topic,
+                'exercise_level' => $request->exercise_level,
+                'exercise_description' => $request->exercise_description
+            ]);
+        }
+
         return redirect(route('exercise.index'));
     }
 

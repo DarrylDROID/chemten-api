@@ -8,7 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Passport\HasApiTokens;
 
-class User extends Authenticatable
+class Student extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
@@ -17,13 +17,17 @@ class User extends Authenticatable
      *
      * @var string[]
      */
-    protected $table = 'kim10_users';
+    protected $table = 'kim10_students';
     protected $primaryKey = 'id';
     protected $fillable = [
         'id',
         'name',
+        'username',
         'email',
         'password',
+        'sekolah',
+        'kota',
+        'tanggal_lahir',
         'role',
         'created_at',
         'is_login',

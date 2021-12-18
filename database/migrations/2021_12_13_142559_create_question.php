@@ -22,7 +22,6 @@ class CreateQuestion extends Migration
             $table->string('qchoice2');
             $table->string('qchoice3');
             $table->string('qchoice4');
-            $table->string('qimage');
             $table->string('correctanswer');
             $table->timestamps();
         });

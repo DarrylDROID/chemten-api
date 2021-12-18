@@ -4,8 +4,10 @@ use App\Http\Controllers\Api\Auth\LoginController;
 use App\Http\Controllers\Api\Auth\RegisterController;
 use App\Http\Controllers\Api\LessonController;
 use App\Http\Controllers\Api\ExerciseController;
+use App\Http\Controllers\Api\QuestionController;
 use App\Http\Controllers\Api\SubLessonController;
 use App\Http\Controllers\Api\UserController;
+use App\Http\Controllers\Api\StudentController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -29,6 +31,8 @@ Route::group(['middleware' => 'auth:api'], function () {
     Route::apiResource('sublesson', SubLessonController::class);
     Route::apiResource('exercise', ExerciseController::class);
     Route::apiResource('user', UserController::class);
+    Route::apiResource('question', QuestionController::class);
+    Route::apiResource('student', StudentController::class);
     Route::post('logout', [LoginController::class, 'logout']);
 });
 

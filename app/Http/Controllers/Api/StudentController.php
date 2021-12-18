@@ -3,12 +3,12 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Http\Resources\UserResource;
-use App\Models\User;
+use App\Http\Resources\StudentResource;
+use App\Models\Student;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
-class UserController extends Controller
+class StudentController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,8 +17,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        $user = User::all();
-        return ['user' => UserResource::collection($user)];
+        $student = Student::all();
+        return ['student' => StudentResource::collection($student)];
     }
 
     /**
@@ -31,10 +31,14 @@ class UserController extends Controller
     {
         //
 
-        User::create([
-            'nama' => $request->nama,
+        Student::create([
+            'name' => $request->name,
+            'username' => $request->username,
             'email' => $request->email,
             'password' => $request->password,
+            'sekolah' => $request->sekolah,
+            'kota' => $request->kota,
+            'tanggal_lahir' => $request->tanggal_lahir,
             'role' => $request->role
         ]);
 
@@ -51,8 +55,8 @@ class UserController extends Controller
     {
         //
         $code = Str::upper($id);
-        $user = User::all()->where('id', $code);
-        return ['user' => UserResource::collection($user)];
+        $student = Student::all()->where('id', $code);
+        return ['student' => StudentResource::collection($student)];
     }
 
     /**
@@ -65,11 +69,15 @@ class UserController extends Controller
     public function update(Request $request, $id)
     {
         $code = Str::upper($id);
-        $user = User::findOrFail($code);
-        $user->update([
-            'nama' => $request->nama,
+        $student = Student::findOrFail($code);
+        $student->update([
+            'name' => $request->name,
+            'username' => $request->username,
             'email' => $request->email,
             'password' => $request->password,
+            'sekolah' => $request->sekolah,
+            'kota' => $request->kota,
+            'tanggal_lahir' => $request->tanggal_lahir,
             'role' => $request->role
         ]);
 
@@ -85,8 +93,8 @@ class UserController extends Controller
     public function destroy($id)
     {
         //
-        $user = User::findOrFail($id);
-        $user->delete();
+        $student = Student::findOrFail($id);
+        $student->delete();
         return ['message' => 'data has been deleted'];
     }
 }

@@ -10,11 +10,9 @@ class Question extends Model
     use HasFactory;
 
     protected $table = 'kim10_question';
-    protected $primaryKey = 'question_id';
-    protected $keyType = 'string';
+    protected $primaryKey = 'id';
 
     protected $fillable = [
-        'question_id',
         'exercise_id',
         'question_topic',
         'question_description',
@@ -22,7 +20,6 @@ class Question extends Model
         'qchoice2',
         'qchoice3',
         'qchoice4',
-        'qimage',
         'correctanswer',
     ];
 }

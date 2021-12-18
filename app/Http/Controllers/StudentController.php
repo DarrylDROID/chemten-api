@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
+use App\Models\Student;
 use App\Models\Leaderboard;
 use Illuminate\Http\Request;
 
-class UserController extends Controller
+class StudentController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,11 +16,11 @@ class UserController extends Controller
     public function index()
     {
         $active_welcome = "";
-        $active_users = "active";
+        $active_students = "active";
 
-        $users = User::all();
+        $students = Student::all();
 
-        return view('dashboard.user', compact('active_welcome', 'active_users', 'users'));
+        return view('dashboard.user', compact('active_welcome', 'active_students', 'students'));
     }
 
     /**
@@ -31,7 +31,7 @@ class UserController extends Controller
     public function create()
     {
         //
-        return view('dashboard.form.createuser');
+        return view('dashboard.form.createstudent');
     }
 
     /**
@@ -47,10 +47,14 @@ class UserController extends Controller
         // ]);
 
         //
-        User::create([
+        Student::create([
             'name' => $request->name,
+            'username' => $request->username,
             'email' => $request->email,
             'password' => $request->password,
+            'sekolah' => $request->sekolah,
+            'kota' => $request->kota,
+            'tanggal_lahir' => $request->tanggal_lahir,
             'role' => $request->role
         ]);
         return redirect(route('user.index'));
@@ -64,7 +68,7 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        $leaderboards = Leaderboard::where('user_id', $id)->get();
+        $leaderboards = Leaderboard::where('student_id', $id)->get();
         return view('dashboard.leaderboard', compact('leaderboards'));
     }
 
@@ -76,8 +80,8 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        $user = User::findOrFail($id);
-        return view('dashboard.form.edituser', compact('user'));
+        $student = Student::findOrFail($id);
+        return view('dashboard.form.editstudent', compact('user'));
     }
 
     /**
@@ -90,11 +94,15 @@ class UserController extends Controller
     public function update(Request $request, $id)
     {
         //
-        $user = User::findOrFail($id);
-        $user->update([
+        $student = Student::findOrFail($id);
+        $student->update([
             'name' => $request->name,
+            'username' => $request->username,
             'email' => $request->email,
             'password' => $request->password,
+            'sekolah' => $request->sekolah,
+            'kota' => $request->kota,
+            'tanggal_lahir' => $request->tanggal_lahir,
             'role' => $request->role
         ]);
         return redirect(route('user.index'));
@@ -108,8 +116,8 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        $user = User::findOrFail($id);
-        $user->delete();
+        $student = Student::findOrFail($id);
+        $student->delete();
         return redirect(route('user.index'));
     }
 }

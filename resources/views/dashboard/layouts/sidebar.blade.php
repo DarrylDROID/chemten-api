@@ -3,7 +3,7 @@
         <div class="sb-sidenav-menu">
             <div class="nav">
                 <div class="sb-sidenav-menu-heading">Home</div>
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="dashboard">
                     <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                     Dashboard
                 </a>
@@ -12,16 +12,16 @@
                     <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                     Lessons
                 </a>
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="{{ route('exercises.index') }}">
                     <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                     Quiz
                 </a>
                 <div class="sb-sidenav-menu-heading">User</div>
-                <a class="nav-link" href="charts.html">
+                <a class="nav-link" href="{{ route('users.index') }}">
                     <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                     User Account
                 </a>
-                <a class="nav-link" href="tables.html">
+                <a class="nav-link" href="leaderboard.html">
                     <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                     Leaderboard
                 </a>
