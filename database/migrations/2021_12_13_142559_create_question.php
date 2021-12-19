@@ -17,7 +17,7 @@ class CreateQuestion extends Migration
             $table->id();
             $table->unsignedBigInteger('exercise_id');
             $table->string('question_topic');
-            $table->string('question_description');
+            $table->text('question_description');
             $table->string('qchoice1');
             $table->string('qchoice2');
             $table->string('qchoice3');

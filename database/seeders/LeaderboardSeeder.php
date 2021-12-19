@@ -17,8 +17,8 @@ class LeaderboardSeeder extends Seeder
     {
         //
         DB::table('kim10_leaderboard')->insert([
-            'user_id' => 'User',
-            'rank_score' => "Score",
+            'user_id' => '1',
+            'rank_score' => "100",
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);

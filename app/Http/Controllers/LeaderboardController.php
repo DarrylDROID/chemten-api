@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Student;
 use App\Models\Leaderboard;
 use Illuminate\Http\Request;
 
-class StudentController extends Controller
+class LeaderboardController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,11 +15,11 @@ class StudentController extends Controller
     public function index()
     {
         $active_welcome = "";
-        $active_students = "active";
+        $active_leaderboards = "active";
 
-        $students = Student::all();
+        $leaderboards = Leaderboard::all();
 
-        return view('dashboard.user', compact('active_welcome', 'active_students', 'students'));
+        return view('dashboard.leaderboard', compact('active_welcome', 'active_leaderboards', 'leaderboards'));
     }
 
     /**
@@ -31,7 +30,7 @@ class StudentController extends Controller
     public function create()
     {
         //
-        return view('dashboard.form.createstudent');
+        return view('dashboard.form.createleaderboard');
     }
 
     /**
@@ -47,17 +46,11 @@ class StudentController extends Controller
         // ]);
 
         //
-        Student::create([
-            'name' => $request->name,
-            'username' => $request->username,
-            'email' => $request->email,
-            'password' => $request->password,
-            'sekolah' => $request->sekolah,
-            'kota' => $request->kota,
-            'tanggal_lahir' => $request->tanggal_lahir,
-            'role' => $request->role
+        Leaderboard::create([
+            'user_id' => $request->user_id,
+            'rank_score' => $request->rank_score
         ]);
-        return redirect(route('user.index'));
+        return redirect(route('leaderboard.index'));
     }
 
     /**
@@ -68,8 +61,8 @@ class StudentController extends Controller
      */
     public function show($id)
     {
-        $leaderboards = Leaderboard::where('student_id', $id)->get();
-        return view('dashboard.leaderboard', compact('leaderboards'));
+        $leaderboard = Leaderboard::where('id', $id)->get();
+        return view('dashboard.leaderboard', compact('leaderboard'));
     }
 
     /**
@@ -80,8 +73,8 @@ class StudentController extends Controller
      */
     public function edit($id)
     {
-        $student = Student::findOrFail($id);
-        return view('dashboard.form.editstudent', compact('user'));
+        $leaderboard = Leaderboard::findOrFail($id);
+        return view('dashboard.form.editleaderboard', compact('leaderboard'));
     }
 
     /**
@@ -94,18 +87,12 @@ class StudentController extends Controller
     public function update(Request $request, $id)
     {
         //
-        $student = Student::findOrFail($id);
-        $student->update([
-            'name' => $request->name,
-            'username' => $request->username,
-            'email' => $request->email,
-            'password' => $request->password,
-            'sekolah' => $request->sekolah,
-            'kota' => $request->kota,
-            'tanggal_lahir' => $request->tanggal_lahir,
-            'role' => $request->role
+        $leaderboard = Leaderboard::findOrFail($id);
+        $leaderboard->update([
+            'user_id' => $request->user_id,
+            'rank_score' => $request->rank_score
         ]);
-        return redirect(route('user.index'));
+        return redirect(route('leaderboard.index'));
     }
 
     /**
@@ -116,8 +103,8 @@ class StudentController extends Controller
      */
     public function destroy($id)
     {
-        $student = Student::findOrFail($id);
-        $student->delete();
-        return redirect(route('user.index'));
+        $leaderboard = Leaderboard::findOrFail($id);
+        $leaderboard->delete();
+        return redirect(route('leaderboard.index'));
     }
 }

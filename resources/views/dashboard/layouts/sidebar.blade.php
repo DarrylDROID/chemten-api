@@ -21,7 +21,7 @@
                     <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                     User Account
                 </a>
-                <a class="nav-link" href="leaderboard.html">
+                <a class="nav-link" href="{{ route('leaderboards.index') }}">
                     <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                     Leaderboard
                 </a>

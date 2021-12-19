@@ -49,9 +49,12 @@ class UserController extends Controller
         //
         User::create([
             'name' => $request->name,
+            'username' => $request->username,
             'email' => $request->email,
             'password' => $request->password,
-            'role' => $request->role
+            'sekolah' => $request->sekolah,
+            'kota' => $request->kota,
+            'tanggal_lahir' => $request->tanggal_lahir,
         ]);
         return redirect(route('user.index'));
     }
@@ -93,9 +96,12 @@ class UserController extends Controller
         $user = User::findOrFail($id);
         $user->update([
             'name' => $request->name,
+            'username' => $request->username,
             'email' => $request->email,
             'password' => $request->password,
-            'role' => $request->role
+            'sekolah' => $request->sekolah,
+            'kota' => $request->kota,
+            'tanggal_lahir' => $request->tanggal_lahir,
         ]);
         return redirect(route('user.index'));
     }

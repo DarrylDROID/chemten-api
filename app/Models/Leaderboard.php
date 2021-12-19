@@ -10,11 +10,9 @@ class Leaderboard extends Model
     use HasFactory;
 
     protected $table = 'kim10_leaderboard';
-    protected $primaryKey = 'leaderboard_id';
-    protected $keyType = 'string';
+    protected $primaryKey = 'id';
 
     protected $fillable = [
-        'leaderboard_id',
         'user_id',
         'rank_score'
     ];

@@ -5,8 +5,8 @@ use App\Http\Controllers\LessonController;
 use App\Http\Controllers\SubLessonController;
 use App\Http\Controllers\ExerciseController;
 use App\Http\Controllers\QuestionController;
-use App\Http\Controllers\StudentController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\LeaderboardController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -49,7 +49,7 @@ Route::resource('sublesson', SubLessonController::class);
 Route::resource('exercises', ExerciseController::class);
 Route::resource('question', QuestionController::class);
 Route::resource('users', UserController::class);
-Route::resource('students', UserController::class);
+Route::resource('leaderboards', LeaderboardController::class);
 
 //tes
 Route::get('/homepage', function () {

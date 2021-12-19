@@ -32,10 +32,13 @@ class UserController extends Controller
         //
 
         User::create([
-            'nama' => $request->nama,
+            'name' => $request->name,
+            'username' => $request->username,
             'email' => $request->email,
             'password' => $request->password,
-            'role' => $request->role
+            'sekolah' => $request->sekolah,
+            'kota' => $request->kota,
+            'tanggal_lahir' => $request->tanggal_lahir,
         ]);
 
         return ['message' => 'data has been saved'];
@@ -67,10 +70,13 @@ class UserController extends Controller
         $code = Str::upper($id);
         $user = User::findOrFail($code);
         $user->update([
-            'nama' => $request->nama,
+            'name' => $request->name,
+            'username' => $request->username,
             'email' => $request->email,
             'password' => $request->password,
-            'role' => $request->role
+            'sekolah' => $request->sekolah,
+            'kota' => $request->kota,
+            'tanggal_lahir' => $request->tanggal_lahir,
         ]);
 
         return ['message' => 'data has been updated'];

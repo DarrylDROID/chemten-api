@@ -16,11 +16,14 @@ class CreateUsersTable extends Migration
         Schema::create('kim10_users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('username');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
-            $table->string('role')->default('admin');
+            $table->string('sekolah');
+            $table->string('kota');
+            $table->string('tanggal_lahir');
             $table->timestamps();
         });
     }

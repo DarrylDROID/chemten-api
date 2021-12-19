@@ -36,7 +36,7 @@ class SubLessonSeeder extends Seeder
 
             Air    -> Hidrogen + Oksigen (+ Air)
             (36 g)               (36 g)',
-            'sublesson_image' => 'Photo',
+            'sublesson_image' => 'sublesson_image/0K53UC0LRNC10Q5uWFX9c67C3yl5W5tQJDT1T5FO.jpg',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -45,7 +45,7 @@ class SubLessonSeeder extends Seeder
             'lesson_id' => '1',
             'sublesson_topic' => 'Observasi',
             'sublesson_description' => '1. Sediakan larutan KI pada labu erlenmeyer besar dan Pb(NO3)2 pada tabung reaksi kecil yang diikat dengan benang. 2. Masukkan tabung reaksi berisi larutan Pb(NO3 ) 2 dengan hati-hati ke dalam labu seperti pada gambar (Hati-hati kedua larutan jangan tercampur). 3. Sumbat labu kemudian timbang. 4. Miringkan tabung reaksi sampai kedua larutan bereaksi. 5. Timbang kembali seluruh alat dan hasil reaksi tersebut.',
-            'sublesson_image' => 'Photo',
+            'sublesson_image' => 'sublesson_image/JX2u1hXuDvLBwU7imCtC7alFvgjW1oT1ZOuu6bcR.png',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -54,7 +54,7 @@ class SubLessonSeeder extends Seeder
             'lesson_id' => '1',
             'sublesson_topic' => 'Latihan',
             'sublesson_description' => 'Berikut ini tabel reaksi antara tembaga dan belerang (sulfur) yang menghasilkan tembaga(II) sulfida berdasarkan Hukum Kekekalan Massa. Salin tabel, lengkapi, dan tulis persamaan reaksinya.',
-            'sublesson_image' => 'Photo',
+            'sublesson_image' => 'sublesson_image/3kD7HmeWZAo7sskIISYzfgEewjEIP6zB5lRYtbw9.png',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -74,7 +74,7 @@ class SubLessonSeeder extends Seeder
                 8     +     2    :  10  
             
             Maka perbandingannya adalah 8 + 2 : 10',
-            'sublesson_image' => 'Photo',
+            'sublesson_image' => 'sublesson_image/WhwRZonhG5W7qeEGQz96521WCoqC9URCnNBnKG6G.jpg',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -83,7 +83,7 @@ class SubLessonSeeder extends Seeder
             'lesson_id' => '2',
             'sublesson_topic' => 'Observasi',
             'sublesson_description' => 'Perhatikan data massa besi dan belerang pada senyawanya yaitu besi belerang atau besi sulfida berikut ini.',
-            'sublesson_image' => 'Photo',
+            'sublesson_image' => 'sublesson_image/clj8g8yrg1wG5VvSnnpO6ZzwfRc5f5hcAux73O37.png',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -92,7 +92,7 @@ class SubLessonSeeder extends Seeder
             'lesson_id' => '2',
             'sublesson_topic' => 'Latihan',
             'sublesson_description' => 'Logam natrium jika direaksikan dengan gas oksigen akan dihasilkan natrium oksida. Data beberapa percobaannya adalah sebagai berikut. a. Tentukan perbandingan massa natrium dengan massa oksigen pembentuk senyawa pada setiap percobaan. b. Apakah data tersebut sesuai dengan hukum perbandingan tetap? Jelaskan! c. Tulis reaksi pada percobaan tersebut!',
-            'sublesson_image' => 'Photo',
+            'sublesson_image' => 'sublesson_image/kATs0wo4qntOvKuO2yg4bihTWdlp0nzwa0sFjsIj.png',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -124,7 +124,7 @@ class SubLessonSeeder extends Seeder
             Perbandingan A = 14 : 56
                            = 1 : 4 
             Jadi, perbandingan unsur A dalam senyawa pertama terhadap unsur A dalam senyawa kedua adalah 1 : 4.',
-            'sublesson_image' => 'Photo',
+            'sublesson_image' => 'sublesson_image/5ewOyN2Dr9EeKk0pSRegzNgwD54OZMzLETPgOjvl.jpg',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -133,7 +133,7 @@ class SubLessonSeeder extends Seeder
             'lesson_id' => '3',
             'sublesson_topic' => 'Observasi',
             'sublesson_description' => 'Dari data ternyata perbandingan massa oksigen yang terikat oleh karbon dengan massa yang sama yaitu 1 : 2. Perbandingan ini merupakan perbandingan yang sederhana.',
-            'sublesson_image' => 'Photo',
+            'sublesson_image' => 'sublesson_image/ghhUb2aC1QDTrFih2xdHW0JSyJKZ9g5gN1AMWCE7.png',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -142,7 +142,7 @@ class SubLessonSeeder extends Seeder
             'lesson_id' => '3',
             'sublesson_topic' => 'Latihan',
             'sublesson_description' => 'Perbandingan massa N dan O dalam senyawa NO dan NO2 adalah sebagai berikut. Buktikan apakah kedua rumus senyawa tersebut memenuhi Hukum Kelipatan Perbandingan?',
-            'sublesson_image' => 'Photo',
+            'sublesson_image' => 'sublesson_image/p4lakdQkYFelnu9Dr1606TF70ajBnklN6IhN2Oz3.png',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -170,7 +170,7 @@ class SubLessonSeeder extends Seeder
             Volume H2 = Koefisien H2/Koefisien HBr x Volume HBr
                       = 1/2 x 10 L
                       = 5 L',
-            'sublesson_image' => 'Photo',
+            'sublesson_image' => 'sublesson_image/Ag0n6bFwR1bnTX5yaYNDZ8RdegQVaNqRz9vvv41J.jpg',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -179,7 +179,7 @@ class SubLessonSeeder extends Seeder
             'lesson_id' => '4',
             'sublesson_topic' => 'Observasi',
             'sublesson_description' => 'Dalton berhasil menyelidiki hubungan massa antara zat-zat yang membentuk suatu senyawa. Pada tahun 1808 Josep Louis Gay Lussac dari Perancis menyelidiki hubungan antara volum gas-gas dalam suatu reaksi kimia. Ia menemukan bahwa pada suhu dan tekanan yang sama, satu volum gas oksigen bereaksi dengan dua volum gas hidrogen menghasilkan dua volum uap air',
-            'sublesson_image' => 'Photo',
+            'sublesson_image' => 'sublesson_image/J9OTW4Xewd7skBrEV51geuA8zEoEF5TzDfSfBOM4.png',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -188,7 +188,7 @@ class SubLessonSeeder extends Seeder
             'lesson_id' => '4',
             'sublesson_topic' => 'Latihan',
             'sublesson_description' => 'Tentukan: a. volum gas O2 yang diperlukan; b. volum gas CO2 yang dihasilkan; c. volum uap air yang dihasilkan.',
-            'sublesson_image' => 'Photo',
+            'sublesson_image' => 'sublesson_image/ZRvP9k7yWkuYRUVcLX0l50JPQ33fqxHOWu8BZ0Bt.png',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -215,7 +215,7 @@ class SubLessonSeeder extends Seeder
             Tentukan berapa perbandingan jumlah volume gas yang terlibat dalam reaksi tersebut!
             nN2 : nH2 = nH3
             2 : 3 = 2',
-            'sublesson_image' => 'Photo',
+            'sublesson_image' => 'sublesson_image/LmA0LeHOLVdg7544MjigmDRKy2Z2dN9vNHLV0386.jpg',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -224,7 +224,7 @@ class SubLessonSeeder extends Seeder
             'lesson_id' => '5',
             'sublesson_topic' => 'Observasi',
             'sublesson_description' => 'Data percobaan pengukuran volum pada suhu dan tekanan standar. Dari data tersebut ternyata dalam volum yang sama dan keadaan yang sama terdapat jumlah molekul yang sama pula. Hipotesis ini dijadikan suatu hukum, yang dikenal sebagai Hukum Avogadro.',
-            'sublesson_image' => 'Photo',
+            'sublesson_image' => 'sublesson_image/8sxLWRjnzVMObmvG5bCARcflgm4Vf9aHn257eoDv.png',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -233,7 +233,7 @@ class SubLessonSeeder extends Seeder
             'lesson_id' => '5',
             'sublesson_topic' => 'Latihan',
             'sublesson_description' => 'Pada suhu dan tekanan tertentu dalam 1 L gas O2 terdapat 3 x 10^22 molekul. Berapa jumlah molekul yang terdapat di dalam 2 liter gas CO2 pada suhu dan tekanan tersebut?',
-            'sublesson_image' => 'Photo',
+            'sublesson_image' => 'sublesson_image/P8DmC0JfTxQxUDVseybSU3m9l97RaM4PTrD1qBhC.jpg',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);

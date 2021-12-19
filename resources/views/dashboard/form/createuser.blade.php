@@ -14,6 +14,10 @@
                     <input type="text" class="form-control" name="name" required>
                 </div>                
                 <div class="form-group">
+                    <label for="">Username</label>
+                    <input type="text" class="form-control" name="username" required>
+                </div>
+                <div class="form-group">
                     <label for="">Email</label>
                     <input type="text" class="form-control" name="email" required>
                 </div>
@@ -22,8 +26,16 @@
                     <input type="text" class="form-control" name="password" required>
                 </div>
                 <div class="form-group">
-                    <label for="">Role</label>
-                    <input type="text" class="form-control" name="role" required>
+                    <label for="">Sekolah</label>
+                    <input type="text" class="form-control" name="sekolah" required>
+                </div>
+                <div class="form-group">
+                    <label for="">Kota</label>
+                    <input type="text" class="form-control" name="kota" required>
+                </div>
+                <div class="form-group">
+                    <label for="">Tanggal Lahir</label>
+                    <input type="date" class="form-control" name="tanggal_lahir" required>
                 </div>
 
                 <div class="form-group mt-3">

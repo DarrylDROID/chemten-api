@@ -13,18 +13,30 @@
                 <div class="form-group">
                     <label for="">Name</label>
                     <input type="text" class="form-control" name="name" value="{{ $user['name'] }}" required>
-                </div>                
+                </div>       
+                <div class="form-group">
+                    <label for="">Username</label>
+                    <input type="text" class="form-control" name="username" value="{{ $user['username'] }}" required>
+                </div>          
                 <div class="form-group">
                     <label for="">Email</label>
                     <input type="text" class="form-control" name="email" value="{{ $user['email'] }}" required>
                 </div>
                 <div class="form-group">
                     <label for="">Password</label>
-                    <input type="text" class="form-control" name="password" value="{{  $user['password'] }}" required>
+                    <input type="text" class="form-control" name="password" value="{{ $user['password'] }}" required>
                 </div>
                 <div class="form-group">
-                    <label for="">Role</label>
-                    <input type="text" class="form-control" name="role" value="{{  $user['role'] }}" required>
+                    <label for="">Sekolah</label>
+                    <input type="text" class="form-control" name="sekolah" value="{{ $user['sekolah'] }}" required>
+                </div>
+                <div class="form-group">
+                    <label for="">Kota</label>
+                    <input type="text" class="form-control" name="kota" value="{{ $user['kota'] }}" required>
+                </div>
+                <div class="form-group">
+                    <label for="">Tanggal Lahir</label>
+                    <input type="date" class="form-control" name="tanggal_lahir" value="{{ $user['tanggal_lahir'] }}" required>
                 </div>
 
                 <div class="form-group mt-3">

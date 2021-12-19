@@ -3,12 +3,12 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Http\Resources\StudentResource;
-use App\Models\Student;
+use App\Http\Resources\LeaderboardResource;
+use App\Models\Leaderboard;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
-class StudentController extends Controller
+class SubLessonController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,8 +17,8 @@ class StudentController extends Controller
      */
     public function index()
     {
-        $student = Student::all();
-        return ['student' => StudentResource::collection($student)];
+        $leaderboard = Leaderboard::all();
+        return ['leaderboard' => LeaderboardResource::collection($leaderboard)];
     }
 
     /**
@@ -30,16 +30,10 @@ class StudentController extends Controller
     public function store(Request $request)
     {
         //
-
-        Student::create([
-            'name' => $request->name,
-            'username' => $request->username,
-            'email' => $request->email,
-            'password' => $request->password,
-            'sekolah' => $request->sekolah,
-            'kota' => $request->kota,
-            'tanggal_lahir' => $request->tanggal_lahir,
-            'role' => $request->role
+        Leaderboard::create([
+            'leaderboard_id' => $request->leaderboard_id,
+            'user_id' => $request->user_id,
+            'rank_score' => $request->rank_score
         ]);
 
         return ['message' => 'data has been saved'];
@@ -55,8 +49,8 @@ class StudentController extends Controller
     {
         //
         $code = Str::upper($id);
-        $student = Student::all()->where('id', $code);
-        return ['student' => StudentResource::collection($student)];
+        $leaderboard = Leaderboard::all()->where('leaderboard_id', $code);
+        return ['leaderboard' => LeaderboardResource::collection($leaderboard)];
     }
 
     /**
@@ -69,16 +63,11 @@ class StudentController extends Controller
     public function update(Request $request, $id)
     {
         $code = Str::upper($id);
-        $student = Student::findOrFail($code);
-        $student->update([
-            'name' => $request->name,
-            'username' => $request->username,
-            'email' => $request->email,
-            'password' => $request->password,
-            'sekolah' => $request->sekolah,
-            'kota' => $request->kota,
-            'tanggal_lahir' => $request->tanggal_lahir,
-            'role' => $request->role
+        $leaderboard = Leaderboard::findOrFail($code);
+        $leaderboard->update([
+            'leaderboard_id' => $request->leaderboard_id,
+            'user_id' => $request->user_id,
+            'rank_score' => $request->rank_score
         ]);
 
         return ['message' => 'data has been updated'];
@@ -93,8 +82,8 @@ class StudentController extends Controller
     public function destroy($id)
     {
         //
-        $student = Student::findOrFail($id);
-        $student->delete();
+        $leaderboard = Leaderboard::findOrFail($id);
+        $leaderboard->delete();
         return ['message' => 'data has been deleted'];
     }
 }
