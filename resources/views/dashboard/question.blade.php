@@ -16,10 +16,10 @@
             <th>Exercise ID</th>
             <th>Topic</th>
             <th>Description</th>
-            <th class="text-center">A</th>
-            <th class="text-center">B</th>
-            <th class="text-center">C</th>
-            <th class="text-center">D</th>
+            <th>Qchoice1</th>
+            <th>Qchoice2</th>
+            <th>Qchoice3</th>
+            <th>Qchoice4</th>
             <th>Correct Answer</th>
             <th>Action</th>
         </tr>

@@ -25,7 +25,7 @@ class QuestionSeeder extends Seeder
             'qchoice2' => 'Proust',
             'qchoice3' => 'Dalton',
             'qchoice4' => 'Lavoisier',
-            'correctanswer' => 'D',
+            'correctanswer' => 'qchoice4',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -39,7 +39,7 @@ class QuestionSeeder extends Seeder
             'qchoice2' => '8,285 gram',
             'qchoice3' => '4,970 gram',
             'qchoice4' => '3,315 gram',
-            'correctanswer' => 'B',
+            'correctanswer' => 'qchoice2',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -53,7 +53,7 @@ class QuestionSeeder extends Seeder
             'qchoice2' => '530 gram',
             'qchoice3' => '1104,8 gram',
             'qchoice4' => '574,2 gram',
-            'correctanswer' => 'A',
+            'correctanswer' => 'qchoice1',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -69,7 +69,7 @@ class QuestionSeeder extends Seeder
             'qchoice2' => '2,4 gram',
             'qchoice3' => '1,2 gram',
             'qchoice4' => '0,6 gram',
-            'correctanswer' => 'A',
+            'correctanswer' => 'qchoice1',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -83,7 +83,7 @@ class QuestionSeeder extends Seeder
             'qchoice2' => '6,13 gram',
             'qchoice3' => '35,9 gram',
             'qchoice4' => '21,9 gram',
-            'correctanswer' => 'C',
+            'correctanswer' => 'qchoice3',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -93,11 +93,11 @@ class QuestionSeeder extends Seeder
             'exercise_id' => '1',
             'question_topic' => "Hukum Lavoisier",
             'question_description' => 'Terdapat dua senyawa yang pertama adalah H dengan massa 0,6 gram direaksikan dengan senyawa kedua Br dengan massa 79,9 gram. Hitung Massa HBr sesudah direaksikan … gram',
-            'qchoice1' => ' 80,5 gram',
+            'qchoice1' => '80,5 gram',
             'qchoice2' => '85,9 gram',
             'qchoice3' => '79,3 gram',
             'qchoice4' => '73,9 gram',
-            'correctanswer' => 'A',
+            'correctanswer' => 'qchoice1',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -112,7 +112,7 @@ class QuestionSeeder extends Seeder
             'qchoice2' => '17,29 gram',
             'qchoice3' => '0,1729 kilogram',
             'qchoice4' => '1,729 kilogram',
-            'correctanswer' => 'C',
+            'correctanswer' => 'qchoice3',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -127,7 +127,7 @@ class QuestionSeeder extends Seeder
             'qchoice2' => '29,2 gram',
             'qchoice3' => '29,2 kilogram',
             'qchoice4' => '2,92 gram',
-            'correctanswer' => 'B',
+            'correctanswer' => 'qchoice2',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -142,7 +142,7 @@ class QuestionSeeder extends Seeder
             'qchoice2' => '6,5 gram',
             'qchoice3' => '6,5 kilogram',
             'qchoice4' => '0,65 gram',
-            'correctanswer' => 'B',
+            'correctanswer' => 'qchoice2',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -157,7 +157,7 @@ class QuestionSeeder extends Seeder
             'qchoice2' => '59 x 10^-2 gram',
             'qchoice3' => '59 x 10^-4 kilogram',
             'qchoice4' => '59 x 10^-1 gram',
-            'correctanswer' => 'D',
+            'correctanswer' => 'qchoice4',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -172,7 +172,7 @@ class QuestionSeeder extends Seeder
             'qchoice2' => 'Proust',
             'qchoice3' => 'Dalton',
             'qchoice4' => 'Lavoisier',
-            'correctanswer' => 'B',
+            'correctanswer' => 'qchoice2',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -186,7 +186,7 @@ class QuestionSeeder extends Seeder
             'qchoice2' => '46 gram',
             'qchoice3' => '31 gram',
             'qchoice4' => '49 gram',
-            'correctanswer' => 'A',
+            'correctanswer' => 'qchoice1',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -200,7 +200,7 @@ class QuestionSeeder extends Seeder
             'qchoice2' => '7 : 18',
             'qchoice3' => '8 : 10',
             'qchoice4' => '8 : 15',
-            'correctanswer' => 'A',
+            'correctanswer' => 'qchoice1',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -214,7 +214,7 @@ class QuestionSeeder extends Seeder
             'qchoice2' => '40 gram Cu',
             'qchoice3' => '20 gram Cu',
             'qchoice4' => '50 gram Cu',
-            'correctanswer' => 'D',
+            'correctanswer' => 'qchoice4',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -228,7 +228,7 @@ class QuestionSeeder extends Seeder
             'qchoice2' => '350 gram CO2',
             'qchoice3' => '275 gram CO2',
             'qchoice4' => '250 gram CO2',
-            'correctanswer' => 'C',
+            'correctanswer' => 'qchoice3',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -242,7 +242,7 @@ class QuestionSeeder extends Seeder
             'qchoice2' => '24 gram',
             'qchoice3' => '8 gram',
             'qchoice4' => '4 gram',
-            'correctanswer' => 'A',
+            'correctanswer' => 'qchoice1',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -258,7 +258,7 @@ class QuestionSeeder extends Seeder
             'qchoice2' => '3 : 6 gram',
             'qchoice3' => '5 : 2 gram',
             'qchoice4' => '4 : 8 gram',
-            'correctanswer' => 'A',
+            'correctanswer' => 'qchoice1',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -272,7 +272,7 @@ class QuestionSeeder extends Seeder
             'qchoice2' => '17 gram NH3',
             'qchoice3' => '8 gram NH3',
             'qchoice4' => '13 gram NH3',
-            'correctanswer' => 'B',
+            'correctanswer' => 'qchoice2',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -286,7 +286,7 @@ class QuestionSeeder extends Seeder
             'qchoice2' => '34 gram amonia dan 3 gram hidrogen',
             'qchoice3' => '34 gram amonia dan 6 gram nitrogen',
             'qchoice4' => '34 gram amonia dan 3 gram nitrogen',
-            'correctanswer' => 'B',
+            'correctanswer' => 'qchoice2',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -300,7 +300,7 @@ class QuestionSeeder extends Seeder
             'qchoice2' => '55 gram CO2 dan 5 gram unsur O',
             'qchoice3' => '55 gram CO2 dan 3 gram unsur C',
             'qchoice4' => '5 gram CO2 dan 55 gram unsur O',
-            'correctanswer' => 'A',
+            'correctanswer' => 'qchoice1',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -315,7 +315,7 @@ class QuestionSeeder extends Seeder
             'qchoice2' => 'Proust',
             'qchoice3' => 'Dalton',
             'qchoice4' => 'Lavoisier',
-            'correctanswer' => 'C',
+            'correctanswer' => 'qchoice3',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -329,7 +329,7 @@ class QuestionSeeder extends Seeder
             'qchoice2' => '1 : 2',
             'qchoice3' => '1 : 1',
             'qchoice4' => '4 : 1',
-            'correctanswer' => 'A',
+            'correctanswer' => 'qchoice1',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -343,7 +343,7 @@ class QuestionSeeder extends Seeder
             'qchoice2' => '1 : 3',
             'qchoice3' => '1 : 2',
             'qchoice4' => '3 : 1',
-            'correctanswer' => 'C',
+            'correctanswer' => 'qchoice3',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -357,7 +357,7 @@ class QuestionSeeder extends Seeder
             'qchoice2' => '0,745',
             'qchoice3' => '0,855',
             'qchoice4' => '0,985',
-            'correctanswer' => 'A',
+            'correctanswer' => 'qchoice1',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -371,7 +371,7 @@ class QuestionSeeder extends Seeder
             'qchoice2' => '2 : 5',
             'qchoice3' => '1 : 3',
             'qchoice4' => '2 : 3',
-            'correctanswer' => 'D',
+            'correctanswer' => 'qchoice4',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -385,7 +385,7 @@ class QuestionSeeder extends Seeder
             'qchoice2' => '3 : 8',
             'qchoice3' => '2 : 1',
             'qchoice4' => '2 : 5',
-            'correctanswer' => 'C',
+            'correctanswer' => 'qchoice3',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -399,7 +399,7 @@ class QuestionSeeder extends Seeder
             'qchoice2' => '1 : 2',
             'qchoice3' => '3 : 4',
             'qchoice4' => '3 : 2',
-            'correctanswer' => 'A',
+            'correctanswer' => 'qchoice1',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -413,7 +413,7 @@ class QuestionSeeder extends Seeder
             'qchoice2' => '1 : 2',
             'qchoice3' => '3 : 1',
             'qchoice4' => '1 : 3',
-            'correctanswer' => 'C',
+            'correctanswer' => 'qchoice3',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -427,7 +427,7 @@ class QuestionSeeder extends Seeder
             'qchoice2' => '1 : 3',
             'qchoice3' => '3 : 1',
             'qchoice4' => '1 : 2',
-            'correctanswer' => 'D',
+            'correctanswer' => 'qchoice4',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -441,7 +441,7 @@ class QuestionSeeder extends Seeder
             'qchoice2' => '32 gram',
             'qchoice3' => '16 gram',
             'qchoice4' => '28 gram',
-            'correctanswer' => 'B',
+            'correctanswer' => 'qchoice2',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -456,7 +456,7 @@ class QuestionSeeder extends Seeder
             'qchoice2' => 'Gay Lussac',
             'qchoice3' => 'Dalton',
             'qchoice4' => 'Lavoisier',
-            'correctanswer' => 'B',
+            'correctanswer' => 'qchoice2',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -472,7 +472,7 @@ class QuestionSeeder extends Seeder
             'qchoice2' => '1,5 L',
             'qchoice3' => '5 L',
             'qchoice4' => '4,8 L',
-            'correctanswer' => 'C',
+            'correctanswer' => 'qchoice3',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -488,7 +488,7 @@ class QuestionSeeder extends Seeder
             'qchoice2' => '15 L',
             'qchoice3' => '12,5 L',
             'qchoice4' => '14,5 L',
-            'correctanswer' => 'C',
+            'correctanswer' => 'qchoice3',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -502,7 +502,7 @@ class QuestionSeeder extends Seeder
             'qchoice2' => 'Tetap',
             'qchoice3' => '2 Kali',
             'qchoice4' => '4 Kali',
-            'correctanswer' => 'D',
+            'correctanswer' => 'qchoice4',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -516,7 +516,7 @@ class QuestionSeeder extends Seeder
             'qchoice2' => '300 °C',
             'qchoice3' => '327 °C',
             'qchoice4' => '255 °R',
-            'correctanswer' => 'C',
+            'correctanswer' => 'qchoice3',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -532,7 +532,7 @@ class QuestionSeeder extends Seeder
             'qchoice2' => '6 L',
             'qchoice3' => '4 L',
             'qchoice4' => '1 L',
-            'correctanswer' => 'C',
+            'correctanswer' => 'qchoice3',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -547,7 +547,7 @@ class QuestionSeeder extends Seeder
             'qchoice2' => '2 L',
             'qchoice3' => '4 L',
             'qchoice4' => '18 L',
-            'correctanswer' => 'B',
+            'correctanswer' => 'qchoice2',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -563,7 +563,7 @@ class QuestionSeeder extends Seeder
             'qchoice2' => '20 %',
             'qchoice3' => '60 %',
             'qchoice4' => '75 %',
-            'correctanswer' => 'A',
+            'correctanswer' => 'qchoice1',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -578,7 +578,7 @@ class QuestionSeeder extends Seeder
             'qchoice2' => '24 L',
             'qchoice3' => '12 L',
             'qchoice4' => '6 L',
-            'correctanswer' => 'A',
+            'correctanswer' => 'qchoice1',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -594,7 +594,7 @@ class QuestionSeeder extends Seeder
             'qchoice2' => '6 T',
             'qchoice3' => '4 T',
             'qchoice4' => '7 T',
-            'correctanswer' => 'B',
+            'correctanswer' => 'qchoice2',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -609,7 +609,7 @@ class QuestionSeeder extends Seeder
             'qchoice2' => 'Gay Lussac',
             'qchoice3' => 'Dalton',
             'qchoice4' => 'Lavoisier',
-            'correctanswer' => 'A',
+            'correctanswer' => 'qchoice1',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -627,7 +627,7 @@ class QuestionSeeder extends Seeder
             'qchoice2' => '3 : 1 = 2',
             'qchoice3' => '2 : 3 = 2',
             'qchoice4' => '3 : 2 = 1',
-            'correctanswer' => 'C',
+            'correctanswer' => 'qchoice3',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -641,7 +641,7 @@ class QuestionSeeder extends Seeder
             'qchoice2' => '1,6 x 10^22 molekul',
             'qchoice3' => '1,2 x 10^22 molekul',
             'qchoice4' => '1,8 x 10^22 molekul',
-            'correctanswer' => 'B',
+            'correctanswer' => 'qchoice2',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -655,7 +655,7 @@ class QuestionSeeder extends Seeder
             'qchoice2' => 'C10H20',
             'qchoice3' => 'C15H18',
             'qchoice4' => 'C2H4',
-            'correctanswer' => 'B',
+            'correctanswer' => 'qchoice2',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -669,7 +669,7 @@ class QuestionSeeder extends Seeder
             'qchoice2' => '10 gram',
             'qchoice3' => '0,75 gram',
             'qchoice4' => '22,5 gram',
-            'correctanswer' => 'C',
+            'correctanswer' => 'qchoice3',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -687,7 +687,7 @@ class QuestionSeeder extends Seeder
             'qchoice2' => '2 L',
             'qchoice3' => '3 L',
             'qchoice4' => '1 L',
-            'correctanswer' => 'A',
+            'correctanswer' => 'qchoice1',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -701,7 +701,7 @@ class QuestionSeeder extends Seeder
             'qchoice2' => '12 L',
             'qchoice3' => '32 L',
             'qchoice4' => '24 L',
-            'correctanswer' => 'A',
+            'correctanswer' => 'qchoice1',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -715,7 +715,7 @@ class QuestionSeeder extends Seeder
             'qchoice2' => '90 L',
             'qchoice3' => '81,5 L',
             'qchoice4' => '102 L',
-            'correctanswer' => 'D',
+            'correctanswer' => 'qchoice4',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -729,7 +729,7 @@ class QuestionSeeder extends Seeder
             'qchoice2' => '15,4 liter',
             'qchoice3' => '10.5 liter',
             'qchoice4' => '13,3 liter',
-            'correctanswer' => 'A',
+            'correctanswer' => 'qchoice1',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -743,7 +743,7 @@ class QuestionSeeder extends Seeder
             'qchoice2' => '1,6 mol',
             'qchoice3' => '1,5 mol',
             'qchoice4' => '3,2 mol',
-            'correctanswer' => 'C',
+            'correctanswer' => 'qchoice3',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
