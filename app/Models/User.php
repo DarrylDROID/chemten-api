@@ -17,7 +17,7 @@ class User extends Authenticatable
      *
      * @var string[]
      */
-    protected $table = 'kim10_users';
+    protected $table = 'students';
     protected $primaryKey = 'id';
     protected $fillable = [
         'id',
@@ -51,4 +51,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function questions() 
+    {
+        return $this->belongsToMany(Question::class, 'kim10_quizanswer', 'question_id', 'id');
+    }
 }

@@ -16,7 +16,7 @@ class RelationTableLeaderboardUser extends Migration
         Schema::table('kim10_leaderboard', function (Blueprint $table) {
             //
             $table->foreign('user_id')
-                ->references('id')->on('kim10_users')
+                ->references('id')->on('students')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
         });

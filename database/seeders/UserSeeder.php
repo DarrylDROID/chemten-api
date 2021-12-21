@@ -15,16 +15,16 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('kim10_users')->insert([
+        DB::table('students')->insert([
             'name' => 'User',
             'username' => 'Student123',
             'email' => 'user@gmail.com',
             'password' => Hash::make('12345678'),
-            'sekolah' => 'sekolah123',
-            'kota' => 'kota123',
-            'tanggal_lahir' => 'mm/dd/yyyy',
+            'school' => 'sekolah123',
+            'city' => 'kota123',
+            'birthyear' => 2002,
             'created_at' => \Carbon\Carbon::now(),
-            'email_verified_at' => \Carbon\Carbon::now()
+            'updated_at' => \Carbon\Carbon::now(),
         ]);
     }
 }

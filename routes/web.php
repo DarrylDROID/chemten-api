@@ -7,6 +7,7 @@ use App\Http\Controllers\ExerciseController;
 use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\LeaderboardController;
+use App\Http\Controllers\QuizController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -51,6 +52,10 @@ Route::resource('question', QuestionController::class);
 Route::resource('users', UserController::class);
 Route::resource('leaderboards', LeaderboardController::class);
 
+Route::get('/startquiz/{id}', [QuizController::class, 'index']);
+Route::get('/quiz/{exercise}/{number}', [QuizController::class, 'question']);
+Route::get('/finish/{exercise}/{user}', [QuizController::class, 'finish']);
+
 //tes
 Route::get('/homepage', function () {
     return view('homepage');
@@ -70,15 +75,6 @@ Route::get('/lesson', function () {
 Route::get('/sublesson', function () {
     return view('level.lesson.sublesson');
 });
-Route::get('/startquiz', function () {
-    return view('level.quiz.startquiz');
-});
-Route::get('/question', function () {
-    return view('level.quiz.question');
-});
 Route::get('/dashboard', function () {
     return view('dashboard.index');
-});
-Route::get('/create', function () {
-    return view('dashboard.form.createsublesson');
 });

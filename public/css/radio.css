@@ -1,0 +1,7 @@
+.radioquestion {
+    border: 2px solid #F61A60;
+}
+
+input[type=radio]:checked + .radioquestion {
+    border-color: #010020;
+}

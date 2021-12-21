@@ -13,7 +13,7 @@ class AddColumnsUsers extends Migration
      */
     public function up()
     {
-        Schema::table('kim10_users', function (Blueprint $table) {
+        Schema::table('students', function (Blueprint $table) {
             $table->enum('is_login', ['0', '1'])->default('0')->after('password');
             $table->enum('is_active', ['0', '1'])->default('1')->after('is_login');
         });

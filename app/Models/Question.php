@@ -22,4 +22,9 @@ class Question extends Model
         'qchoice4',
         'correctanswer',
     ];
+
+    public function students() 
+    {
+        return $this->belongsToMany(User::class, 'kim10_quizanswer', 'student_id', 'id');
+    }
 }

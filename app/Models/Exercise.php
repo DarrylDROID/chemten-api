@@ -14,7 +14,6 @@ class Exercise extends Model
     protected $keyType = 'string';
 
     protected $fillable = [
-        'id',
         'exercise_topic',
         'exercise_level',
         'exercise_image',
