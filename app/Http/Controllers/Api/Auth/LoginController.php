@@ -23,19 +23,18 @@ class LoginController extends Controller
         $user = [
             'email' => $request->email,
             'password' => $request->password,
-            'role' => 'admin',
             'is_login' => '0',
             'is_active' => '1',
         ];
 
-        $check = DB::table('users')->where('email', $request->email)->first();
+        $check = DB::table('students')->where('email', $request->email)->first();
 
         if ($check->is_active == '1') {
             if ($check->is_login == '0') {
                 if (Auth::attempt($user)) {
                     $this->isLogin(Auth::id());
 
-                    $response = Http::asForm()->post('http://chemten.test/oauth/token', [
+                    $response = Http::asForm()->post('http://localhost/chemten-api/public/oauth/token', [
                         'grant_type' => 'password',
                         'client_id' => $this->client->id,
                         'client_secret' => $this->client->secret,
@@ -77,7 +76,7 @@ class LoginController extends Controller
             'refresh_token' => 'refresh token is required',
         ]);
 
-        $response = Http::asForm()->post('http://chemten.test/oauth/token', [
+        $response = Http::asForm()->post('http://localhost/chemten-api/public/oauth/token', [
             'grant_type' => 'refresh_token',
             'refresh_token' => $request->refresh_token,
             'client_id' => $this->client->id,
