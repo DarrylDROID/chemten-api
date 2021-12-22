@@ -10,12 +10,12 @@
     <div class="mx-5">
     <table class="mt-2 table table-striped">
         <tr>
-            <th>Nama</th>
+            <th>Name</th>
             <th>Username</th>
             <th>Email</th>
-            <th>Sekolah</th>
-            <th>Kota</th>
-            <th>Tanggal Lahir</th>
+            <th>School</th>
+            <th>City</th>
+            <th>Birthyear</th>
             <th>Action</th>
         </tr>
     @foreach ($users as $user)
@@ -23,9 +23,9 @@
             <td>{{ $user['name'] }}</td>
             <td>{{ $user['username'] }}</td>
             <td>{{ $user['email'] }}</td>
-            <td>{{ $user['sekolah'] }}</td>
-            <td>{{ $user['kota'] }}</td>
-            <td>{{ $user['tanggal_lahir'] }}</td>
+            <td>{{ $user['school'] }}</td>
+            <td>{{ $user['city'] }}</td>
+            <td>{{ $user['birthyear'] }}</td>
             <td>
                 <form action="{{ route('users.destroy', $user['id']) }}" method="POST">
                     @csrf
