@@ -9,7 +9,7 @@
 </head>
 <body>
     @include('layouts.nav')
-    <div class="container bg-bluebg">
+    <div class="bg-bluebg">
         @yield('main_content')
     </div>
 </body>

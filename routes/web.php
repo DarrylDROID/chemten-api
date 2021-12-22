@@ -7,6 +7,7 @@ use App\Http\Controllers\ExerciseController;
 use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\LeaderboardController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\QuizController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -22,14 +23,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Auth::routes();
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+    Route::get('/', function () {
+        return view('homepage');
+    });
+
+    Route::resource('profile', ProfileController::class);
+
+    Route::get('/startquiz/{id}', [QuizController::class, 'index']);
+    Route::get('/quiz/{exercise}/{number}', [QuizController::class, 'question'])->name('question');
+    Route::post('/answer/{exercise}/{number}', [QuizController::class, 'answer']);
+    Route::get('/finish/{exercise}/{user}/{number}', [QuizController::class, 'finish']);
 
     Route::middleware(['admin'])->group(function () {
         Route::get('admin', [AdminController::class, 'index']);
@@ -41,7 +49,7 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('/logout', function () {
         Auth::logout();
-        redirect('/');
+        redirect('/homepage');
     });
 });
 
@@ -52,23 +60,8 @@ Route::resource('question', QuestionController::class);
 Route::resource('users', UserController::class);
 Route::resource('leaderboards', LeaderboardController::class);
 
-Route::get('/startquiz/{id}', [QuizController::class, 'index']);
-Route::get('/quiz/{exercise}/{number}', [QuizController::class, 'question']);
-Route::get('/finish/{exercise}/{user}', [QuizController::class, 'finish']);
 
 //tes
-Route::get('/homepage', function () {
-    return view('homepage');
-});
-Route::get('/profile', function () {
-    return view('profile');
-});
-Route::get('/userlogin', function () {
-    return view('login');
-});
-Route::get('/userregister', function () {
-    return view('register');
-});
 Route::get('/lesson', function () {
     return view('level.lesson.lesson');
 });
