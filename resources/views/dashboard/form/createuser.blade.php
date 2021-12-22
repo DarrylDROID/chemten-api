@@ -26,16 +26,16 @@
                     <input type="text" class="form-control" name="password" required>
                 </div>
                 <div class="form-group">
-                    <label for="">Sekolah</label>
-                    <input type="text" class="form-control" name="sekolah" required>
+                    <label for="">School</label>
+                    <input type="text" class="form-control" name="school" required>
                 </div>
                 <div class="form-group">
-                    <label for="">Kota</label>
-                    <input type="text" class="form-control" name="kota" required>
+                    <label for="">City</label>
+                    <input type="text" class="form-control" name="city" required>
                 </div>
                 <div class="form-group">
-                    <label for="">Tanggal Lahir</label>
-                    <input type="date" class="form-control" name="tanggal_lahir" required>
+                    <label for="">Birthyear</label>
+                    <input type="text" class="form-control" name="birthyear" required>
                 </div>
 
                 <div class="form-group mt-3">

@@ -27,16 +27,16 @@
                     <input type="text" class="form-control" name="password" value="{{ $user['password'] }}" required>
                 </div>
                 <div class="form-group">
-                    <label for="">Sekolah</label>
-                    <input type="text" class="form-control" name="sekolah" value="{{ $user['sekolah'] }}" required>
+                    <label for="">School</label>
+                    <input type="text" class="form-control" name="school" value="{{ $user['school'] }}" required>
                 </div>
                 <div class="form-group">
-                    <label for="">Kota</label>
-                    <input type="text" class="form-control" name="kota" value="{{ $user['kota'] }}" required>
+                    <label for="">City</label>
+                    <input type="text" class="form-control" name="city" value="{{ $user['city'] }}" required>
                 </div>
                 <div class="form-group">
-                    <label for="">Tanggal Lahir</label>
-                    <input type="date" class="form-control" name="tanggal_lahir" value="{{ $user['tanggal_lahir'] }}" required>
+                    <label for="">Birthyear</label>
+                    <input type="text" class="form-control" name="birthyear" value="{{ $user['birthyear'] }}" required>
                 </div>
 
                 <div class="form-group mt-3">

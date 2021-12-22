@@ -52,9 +52,9 @@ class UserController extends Controller
             'username' => $request->username,
             'email' => $request->email,
             'password' => $request->password,
-            'sekolah' => $request->sekolah,
-            'kota' => $request->kota,
-            'tanggal_lahir' => $request->tanggal_lahir,
+            'school' => $request->school,
+            'city' => $request->city,
+            'birthyear' => $request->birthyear
         ]);
         return redirect(route('user.index'));
     }
@@ -99,9 +99,9 @@ class UserController extends Controller
             'username' => $request->username,
             'email' => $request->email,
             'password' => $request->password,
-            'sekolah' => $request->sekolah,
-            'kota' => $request->kota,
-            'tanggal_lahir' => $request->tanggal_lahir,
+            'school' => $request->school,
+            'city' => $request->city,
+            'birthyear' => $request->birthyear
         ]);
         return redirect(route('user.index'));
     }

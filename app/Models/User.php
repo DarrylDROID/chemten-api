@@ -24,9 +24,9 @@ class User extends Authenticatable
         'username',
         'email',
         'password',
-        'sekolah',
-        'kota',
-        'tanggal_lahir',
+        'school',
+        'city',
+        'birthyear',
         'created_at',
         'is_login',
         'is_active'
@@ -51,7 +51,7 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function questions() 
+    public function questions()
     {
         return $this->belongsToMany(Question::class, 'kim10_quizanswer', 'question_id', 'id');
     }
