@@ -27,12 +27,13 @@ class QuizController extends Controller
 
     public function answer($exercise, $questionid)
     {
-        $question = Question::where('exercise_id', $exercise)->where('id', $questionid)->first();
+        $question = Question::where('exercise_id', $exercise)->where('id', $questionid-1)->first();
+        $temp = Request()->answer;
 
         if ($questionid != 1) {
             $answer = $question->correctanswer;                 
-        
-            if ($answer == "") {
+
+            if ($answer == $temp) {
                 $hasil = "benar";
             } else {
                 $hasil = "salah";
@@ -51,15 +52,7 @@ class QuizController extends Controller
     public function finish($exercise, $user, $questionid)
     {    
         $score = 0;
-        $question = Question::where('exercise_id', $exercise)->where('id', $questionid-1)->first();
-
-        $temps = Quiz::where('student_id', $user)->get();
-
-            foreach($temps as $temp) {
-                if ($temp->hasil == "benar") {
-                    $score++;
-                }
-            }
+        $question = Question::where('exercise_id', $exercise)->where('id', $questionid-1)->first();        
 
         if ($questionid != 1) {
             $answer = $question->correctanswer;                 
@@ -76,6 +69,14 @@ class QuizController extends Controller
                 'hasil' => $hasil
             ]);
         } 
+
+        $temps = Quiz::where('student_id', $user)->whereRelation('questions', 'id', '=', 1)->get();
+
+            foreach($temps as $temp) {
+                if ($temp->hasil == "benar") {
+                    $score++;
+                }
+            }
 
         return view('level.quiz.finish', compact('score'));
     }

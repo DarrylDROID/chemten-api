@@ -56,7 +56,7 @@ class UserController extends Controller
             'city' => $request->city,
             'birthyear' => $request->birthyear
         ]);
-        return redirect(route('user.index'));
+        return redirect(route('users.index'));
     }
 
     /**
@@ -103,7 +103,7 @@ class UserController extends Controller
             'city' => $request->city,
             'birthyear' => $request->birthyear
         ]);
-        return redirect(route('user.index'));
+        return redirect(route('users.index'));
     }
 
     /**
@@ -116,6 +116,6 @@ class UserController extends Controller
     {
         $user = User::findOrFail($id);
         $user->delete();
-        return redirect(route('user.index'));
+        return redirect(route('users.index'));
     }
 }

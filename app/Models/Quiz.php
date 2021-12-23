@@ -16,4 +16,14 @@ class Quiz extends Model
         'question_id',
         'hasil',
     ];
+
+    public function students() 
+    {
+        return $this->belongsTo(User::class, 'student_id', 'id');
+    }
+
+    public function questions() 
+    {
+        return $this->belongsTo(Question::class, 'question_id', 'id');
+    }
 }
