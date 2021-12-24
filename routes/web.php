@@ -36,6 +36,7 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('/startquiz/{id}', [QuizController::class, 'index']);
     Route::get('/quiz/{exercise}/{number}', [QuizController::class, 'question'])->name('question');
+    Route::get('/retryquiz/{exercise}/{number}', [QuizController::class, 'retryquestion']);
     Route::post('/answer/{exercise}/{number}', [QuizController::class, 'answer']);
     Route::get('/finish/{exercise}/{user}/{number}', [QuizController::class, 'finish']);
 

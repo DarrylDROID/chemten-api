@@ -7,6 +7,7 @@ use App\Models\Question;
 use App\Models\Quiz;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Symfony\Component\Console\Input\Input;
 
 class QuizController extends Controller
@@ -14,13 +15,30 @@ class QuizController extends Controller
     public function index($id)
     {      
         $exercise = Exercise::where('id', $id)->first();
+        $temps = Quiz::where('student_id', Auth::user()->id)->whereRelation('questions', 'exercise_id', '=', $id)->get();
 
-        return view('level.quiz.startquiz', compact('exercise'));
+        $count = 0;
+        foreach ($temps as $temp) {
+            $count++;
+        }
+
+        return view('level.quiz.startquiz', compact('exercise', 'temps', 'count'));
     }
 
     public function question($exercise, $questionid)
     {    
         $question = Question::where('exercise_id', $exercise)->where('id', $questionid)->first();       
+
+        return view('level.quiz.question', compact('question'));
+    }
+
+    public function retryquestion($exercise, $questionid)
+    {    
+        $question = Question::where('exercise_id', $exercise)->where('id', $questionid)->first();
+        
+        $quiz = Quiz::where('student_id', Auth::user()->id)->whereRelation('questions', 'exercise_id', '=', $exercise)->get();
+        $quiz->delete();
+        // DB::table('kim10_quizanswer')->where('student_id', Auth::user()->id)->whereRelation('questions', 'exercise_id', '=', $exercise)->delete();
 
         return view('level.quiz.question', compact('question'));
     }
@@ -52,33 +70,33 @@ class QuizController extends Controller
     public function finish($exercise, $user, $questionid)
     {    
         $score = 0;
-        $question = Question::where('exercise_id', $exercise)->where('id', $questionid-1)->first();        
+        $question = Question::where('exercise_id', $exercise)->where('id', $questionid-1)->first();     
 
-        if ($questionid != 1) {
-            $answer = $question->correctanswer;                 
-        
-            if ($answer == "") {
-                $hasil = "benar";
-            } else {
-                $hasil = "salah";
-            }
+        $temp = Request()->answer;
+        $answer = $question->correctanswer;                 
+
+        if ($answer == $temp) {
+            $hasil = "benar";
+        } else {
+            $hasil = "salah";
+        }
             
-            Quiz::create([
-                'student_id' => Auth::user()->id,
-                'question_id' => $questionid-1,
-                'hasil' => $hasil
-            ]);
-        } 
+        Quiz::create([
+            'student_id' => Auth::user()->id,
+            'question_id' => $questionid-1,
+            'hasil' => $hasil
+        ]);        
 
-        $temps = Quiz::where('student_id', $user)->whereRelation('questions', 'id', '=', 1)->get();
-
+        $temps = Quiz::where('student_id', $user)->whereRelation('questions', 'exercise_id', '=', $exercise)->get();
+        
             foreach($temps as $temp) {
                 if ($temp->hasil == "benar") {
                     $score++;
                 }
             }
 
+            $score = $score * 10;
+
         return view('level.quiz.finish', compact('score'));
     }
-
 }
