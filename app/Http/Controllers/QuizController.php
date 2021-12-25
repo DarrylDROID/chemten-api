@@ -22,7 +22,7 @@ class QuizController extends Controller
             $count++;
         }
 
-        return view('level.quiz.startquiz', compact('exercise', 'temps', 'count'));
+        return view('level.quiz.startquiz', compact('exercise', 'count'));
     }
 
     public function question($exercise, $questionid)
@@ -36,9 +36,8 @@ class QuizController extends Controller
     {    
         $question = Question::where('exercise_id', $exercise)->where('id', $questionid)->first();
         
-        $quiz = Quiz::where('student_id', Auth::user()->id)->whereRelation('questions', 'exercise_id', '=', $exercise)->get();
+        $quiz = Quiz::where('student_id', Auth::user()->id)->whereRelation('questions', 'exercise_id', '=', $exercise);
         $quiz->delete();
-        // DB::table('kim10_quizanswer')->where('student_id', Auth::user()->id)->whereRelation('questions', 'exercise_id', '=', $exercise)->delete();
 
         return view('level.quiz.question', compact('question'));
     }
@@ -97,6 +96,6 @@ class QuizController extends Controller
 
             $score = $score * 10;
 
-        return view('level.quiz.finish', compact('score'));
+        return view('level.quiz.finish', compact('score', 'exercise'));
     }
 }
