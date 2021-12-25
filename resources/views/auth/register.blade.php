@@ -17,11 +17,11 @@
                         type="text" placeholder="nama" required>
                     <input name="username" class="border-2 border-gray-300 rounded-md mt-2 w-full p-2"
                         type="text" placeholder="username" required>
-                    <input name="sekolah" class="border-2 border-gray-300 rounded-md mt-2 w-full p-2"
+                    <input name="school" class="border-2 border-gray-300 rounded-md mt-2 w-full p-2"
                         type="text" placeholder="sekolah" required>
-                    <input name="kota" class="border-2 border-gray-300 rounded-md mt-2 w-full p-2"
+                    <input name="city" class="border-2 border-gray-300 rounded-md mt-2 w-full p-2"
                         type="text" placeholder="kota" required>
-                    <input name="tahun_lahir" class="border-2 border-gray-300 rounded-md mt-2 w-full p-2"
+                    <input name="birthyear" class="border-2 border-gray-300 rounded-md mt-2 w-full p-2"
                         type="number" placeholder="tahun lahir" required>
 
                     <button type="submit" class="bg-pink-500 rounded-md mt-4 w-full p-2 text-white">
