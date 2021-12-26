@@ -13,7 +13,7 @@ class RelationTableLeaderboardUser extends Migration
      */
     public function up()
     {
-        Schema::table('kim10_leaderboard', function (Blueprint $table) {
+        Schema::table('kim10_users', function (Blueprint $table) {
             //
             $table->foreign('user_id')
                 ->references('id')->on('students')
@@ -29,7 +29,7 @@ class RelationTableLeaderboardUser extends Migration
      */
     public function down()
     {
-        Schema::table('kim10_leaderboard', function (Blueprint $table) {
+        Schema::table('kim10_users', function (Blueprint $table) {
             //
         });
     }

@@ -10,7 +10,9 @@
                 <div class="bg-pink-500 text-center rounded-2xl -mt-24">
                     <div class="flex justify-center items-center py-5">
                         <div class="bg-white rounded-full w-48 h-48"></div>
-                    </div>                
+                    </div>   
+                    <p>Role {{ Auth::user()->kimuser->role }}</p>    
+                             
                     <p>Nama {{ $user['name'] }}</p>
                     <p>Email {{ $user['email'] }}</p>
                     <p>Username {{ $user['username'] }}</p>

@@ -17,8 +17,8 @@ class AdminMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-        if (Auth::user()->role != 'admin') {
-            return redirect()->to('logout');
+        if (Auth::user()->kimuser->role != 'admin') {
+            return redirect()->to('/');
         }
         return $next($request);
     }

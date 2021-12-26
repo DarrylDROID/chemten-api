@@ -17,8 +17,8 @@ class UserMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-        if (Auth::user()->role != 'user') {
-            return redirect()->to('logout');
+        if (Auth::user()->kimuser->role != 'student') {
+            return redirect()->to('dashboard');
         }
         return $next($request);
     }

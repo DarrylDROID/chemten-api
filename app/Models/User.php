@@ -28,8 +28,6 @@ class User extends Authenticatable
         'city',
         'birthyear',
         'created_at',
-        'is_login',
-        'is_active'
     ];
 
     /**
@@ -54,5 +52,10 @@ class User extends Authenticatable
     public function questions()
     {
         return $this->belongsToMany(Question::class, 'kim10_quizanswer', 'question_id', 'id');
+    }
+
+    public function kimuser()
+    {
+        return $this->hasOne(KimUsers::class, 'user_id', 'id');
     }
 }

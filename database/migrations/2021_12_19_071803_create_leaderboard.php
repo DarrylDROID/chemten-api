@@ -13,9 +13,10 @@ class CreateLeaderboard extends Migration
      */
     public function up()
     {
-        Schema::create('kim10_leaderboard', function (Blueprint $table) {
+        Schema::create('kim10_users', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
+            $table->string('role');
             $table->string('rank_score');
             $table->timestamps();
         });
@@ -28,6 +29,6 @@ class CreateLeaderboard extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('kim10_leaderboard');
+        Schema::dropIfExists('kim10_users');
     }
 }

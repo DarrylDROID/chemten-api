@@ -16,6 +16,7 @@ class ProfileController extends Controller
     public function index()
     {
         $user = User::where('id', Auth::user()->id)->first();
+        // dd(Auth::user()->kimuser->role);
         return view('profile', compact('user'));
     }
 

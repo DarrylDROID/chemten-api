@@ -26,26 +26,30 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::middleware(['auth'])->group(function () {
-    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-    Route::get('/', function () {
-        return view('homepage');
-    });
-
-    Route::resource('profile', ProfileController::class);
-
-    Route::get('/startquiz/{id}', [QuizController::class, 'index']);
-    Route::get('/quiz/{exercise}/{number}', [QuizController::class, 'question'])->name('question');
-    Route::get('/retryquiz/{exercise}/{number}', [QuizController::class, 'retryquestion']);
-    Route::post('/answer/{exercise}/{number}', [QuizController::class, 'answer']);
-    Route::get('/finish/{exercise}/{user}/{number}', [QuizController::class, 'finish']);
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');    
 
     Route::middleware(['admin'])->group(function () {
         Route::get('admin', [AdminController::class, 'index']);
+
+        Route::get('/dashboard', function () {
+            return view('dashboard.index');
+        });
     });
 
-    Route::middleware(['user'])->group(function () {
+    Route::middleware(['student'])->group(function () {
         Route::get('user', [UserController::class, 'index']);
+
+        Route::get('/', function () {
+            return view('homepage');
+        });
+    
+        Route::resource('profile', ProfileController::class);
+    
+        Route::get('/startquiz/{id}', [QuizController::class, 'index']);
+        Route::get('/quiz/{exercise}/{number}', [QuizController::class, 'question'])->name('question');
+        Route::get('/retryquiz/{exercise}/{number}', [QuizController::class, 'retryquestion']);
+        Route::post('/answer/{exercise}/{number}', [QuizController::class, 'answer']);
+        Route::get('/finish/{exercise}/{user}/{number}', [QuizController::class, 'finish']);
     });
 
     Route::get('/logout', function () {
@@ -69,6 +73,4 @@ Route::get('/lesson', function () {
 Route::get('/sublesson', function () {
     return view('level.lesson.sublesson');
 });
-Route::get('/dashboard', function () {
-    return view('dashboard.index');
-});
+
