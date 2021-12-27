@@ -15,7 +15,7 @@ class SubLessonResource extends JsonResource
     public function toArray($request)
     {
         return [
-            'sublesson_id' => $this->sublesson_id,
+            'id' => $this->id,
             'lesson_id' => $this->lesson_id,
             'sublesson_topic' => $this->sublesson_topic,
             'sublesson_image' => $this->sublesson_image,

@@ -7,6 +7,7 @@ use App\Http\Controllers\ExerciseController;
 use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\LeaderboardController;
+use App\Http\Controllers\LessonUserController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\QuizController;
 use Illuminate\Support\Facades\Auth;
@@ -39,9 +40,7 @@ Route::middleware(['auth'])->group(function () {
     Route::middleware(['student'])->group(function () {
         Route::get('user', [UserController::class, 'index']);
 
-        Route::get('/', function () {
-            return view('homepage');
-        });
+        Route::get('/',[LessonUserController::class, 'index']);
     
         Route::resource('profile', ProfileController::class);
     
@@ -50,6 +49,8 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/retryquiz/{exercise}/{number}', [QuizController::class, 'retryquestion']);
         Route::post('/answer/{exercise}/{number}', [QuizController::class, 'answer']);
         Route::get('/finish/{exercise}/{user}/{number}', [QuizController::class, 'finish']);
+        Route::get('/lesson/{id}', [LessonUserController::class, 'lesson']);
+        Route::get('/lesson/sublesson/{id}', [LessonUserController::class, 'sublesson']);
     });
 
     Route::get('/logout', function () {
@@ -68,7 +69,7 @@ Route::resource('leaderboards', LeaderboardController::class);
 
 //tes
 Route::get('/lesson', function () {
-    return view('level.lesson.lesson');
+    return view('level.lesson.lessons');
 });
 Route::get('/sublesson', function () {
     return view('level.lesson.sublesson');

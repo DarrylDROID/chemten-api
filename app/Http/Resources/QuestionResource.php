@@ -15,7 +15,7 @@ class QuestionResource extends JsonResource
     public function toArray($request)
     {
         return [
-            'question_id' => $this->question_id,
+            'id' => $this->id,
             'exercise_id' => $this->exercise_id,
             'question_description' => $this->question_description,
             'qchoice1' => $this->qchoice1,

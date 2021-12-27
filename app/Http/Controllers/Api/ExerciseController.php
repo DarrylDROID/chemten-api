@@ -4,7 +4,9 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Http\Resources\ExerciseResource;
+use App\Http\Resources\QuestionResource;
 use App\Models\Exercise;
+use App\Models\Question;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
@@ -51,7 +53,8 @@ class ExerciseController extends Controller
         //
         $code = Str::upper($id);
         $exercise = Exercise::all()->where('id', $code);
-        return ['exercise' => ExerciseResource::collection($exercise)];
+        $question = Question::all()->where('exercise_id', $code);
+        return ['exercise' => ExerciseResource::collection($exercise), 'question' => QuestionResource::collection(($question))];
     }
 
     /**

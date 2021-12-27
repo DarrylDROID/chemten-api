@@ -4,7 +4,9 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Http\Resources\LessonResource;
+use App\Http\Resources\SubLessonResource;
 use App\Models\Lesson;
+use App\Models\SubLesson;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
@@ -50,7 +52,8 @@ class LessonController extends Controller
         //
         $code = Str::upper($id);
         $lesson = Lesson::all()->where('id', $code);
-        return ['lesson' => LessonResource::collection($lesson)];
+        $sublesson = SubLesson::all()->where('lesson_id', $code);
+        return ['lesson' => LessonResource::collection($lesson), 'sublesson' => SubLessonResource::collection($sublesson)];
     }
 
     /**
