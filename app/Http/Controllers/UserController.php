@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Models\Leaderboard;
+use App\Models\kim_logs;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
@@ -68,8 +69,28 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        $leaderboards = Leaderboard::where('user_id', $id)->get();
-        return view('dashboard.leaderboard', compact('leaderboards'));
+        // $leaderboards = Leaderboard::where('user_id', $id)->get();
+        // return view('dashboard.leaderboard', compact('leaderboards'));
+        $user = User::findOrFail($id);
+        $leaderboards = Leaderboard::all();
+
+        kim_logs::create([
+            "table" => "students",
+            "userId" => 1,
+            "log_path" => "UserController@show",
+            "log_desc" => "Access function show untuk menampilkan data user dari id" + $id,
+            "log_ip" => "192.168.1.1",
+        ]);
+
+        kim_logs::create([
+            "table" => "kim10_leaderboard",
+            "userId" => 1,
+            "log_path" => "UserController@show",
+            "log_desc" => "Get all leaderboard related to id = " + $id,
+            "log_ip" => "192.168.1.1",
+        ]);
+
+        return view('dashboard.leaderboard', compact('leaderboards', 'user'));
     }
 
     /**
@@ -117,6 +138,14 @@ class UserController extends Controller
     {
         $user = User::findOrFail($id);
         $user->delete();
+        kim_logs::create([
+            "table" => "students",
+            "userId" => 1,
+            "log_path" => "UserController@destroy",
+            "log_desc" => "Hapus data dengan id = " + $id,
+            "log_ip" => "192.168.1.1",
+        ]);
+
         return redirect(route('users.index'));
     }
 }
