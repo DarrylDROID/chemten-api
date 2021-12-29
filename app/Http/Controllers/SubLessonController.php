@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\kim_logs;
 use App\Models\SubLesson;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
 class SubLessonController extends Controller
@@ -54,6 +56,15 @@ class SubLessonController extends Controller
             'sublesson_image' => $request->file('sublesson_image')->store('sublesson_image'),
             'sublesson_description' => $request->sublesson_description
         ]);
+
+        kim_logs::create([
+            "table" => "kim10_sublesson",
+            "userId" => Auth::user()->id,
+            "log_path" => "SubLessonController@create",
+            "log_desc" => "Access function create untuk membuat data",
+            "log_ip" => request()->ip(),
+        ]);
+
         return redirect()->route('lessons.show', ['lesson' => $lesson_id]);
     }
 
@@ -111,6 +122,14 @@ class SubLessonController extends Controller
             ]);
         }
 
+        kim_logs::create([
+            "table" => "kim10_sublesson",
+            "userId" => Auth::user()->id,
+            "log_path" => "SubLessonController@update",
+            "log_desc" => "Access function update untuk mengubah data",
+            "log_ip" => request()->ip(),
+        ]);
+
         return redirect(route('sublesson.index'));
     }
 
@@ -125,6 +144,13 @@ class SubLessonController extends Controller
         $sublesson = SubLesson::findOrFail($id);
         Storage::delete($sublesson->sublesson_image);
         $sublesson->delete();
+        kim_logs::create([
+            "table" => "kim10_sublesson",
+            "userId" => Auth::user()->id,
+            "log_path" => "SubLessonController@destroy",
+            "log_desc" => "Access function delete untuk menghapus data",
+            "log_ip" => request()->ip(),
+        ]);
         return redirect(route('sublesson.index'));
     }
 }

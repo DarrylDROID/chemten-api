@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Exercise;
 use App\Models\Question;
+use App\Models\kim_logs;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
 class ExerciseController extends Controller
@@ -109,6 +111,14 @@ class ExerciseController extends Controller
                 'exercise_description' => $request->exercise_description
             ]);
         }
+
+        kim_logs::create([
+            "table" => "kim10_exercise",
+            "userId" => Auth::user()->id,
+            "log_path" => "ExerciseController@update",
+            "log_desc" => "Access function update untuk mengubah data",
+            "log_ip" => request()->ip(),
+        ]);
 
         return redirect(route('exercise.index'));
     }

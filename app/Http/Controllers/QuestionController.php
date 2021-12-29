@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\kim_logs;
 use App\Models\Question;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class QuestionController extends Controller
 {
@@ -56,6 +58,15 @@ class QuestionController extends Controller
             'qchoice4' => $request->qchoice4,
             'correctanswer' => $request->correctanswer
         ]);
+
+        kim_logs::create([
+            "table" => "kim10_question",
+            "userId" => Auth::user()->id,
+            "log_path" => "QuestionController@create",
+            "log_desc" => "Access function create untuk membuat data",
+            "log_ip" => request()->ip(),
+        ]);
+
         return redirect(route('question.index'));
     }
 
@@ -106,6 +117,15 @@ class QuestionController extends Controller
             'qchoice4' => $request->qchoice4,
             'correctanswer' => $request->correctanswer
         ]);
+
+        kim_logs::create([
+            "table" => "kim10_question",
+            "userId" => Auth::user()->id,
+            "log_path" => "QuestionController@update",
+            "log_desc" => "Access function update untuk mengubah data",
+            "log_ip" => request()->ip(),
+        ]);
+
         return redirect(route('question.index'));
     }
 
@@ -119,6 +139,14 @@ class QuestionController extends Controller
     {
         $question = Question::findOrFail($id);
         $question->delete();
+        kim_logs::create([
+            "table" => "kim10_question",
+            "userId" => Auth::user()->id,
+            "log_path" => "QuestionController@destroy",
+            "log_desc" => "Access function delete untuk menghapus data",
+            "log_ip" => request()->ip(),
+        ]);
+
         return redirect(route('question.index'));
     }
 }

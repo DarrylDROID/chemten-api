@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\kim_logs;
 use App\Models\Lesson;
 use App\Models\SubLesson;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class LessonController extends Controller
 {
@@ -95,6 +97,15 @@ class LessonController extends Controller
             'lesson_level' => $request->lesson_level,
             'lesson_description' => $request->lesson_description
         ]);
+
+        kim_logs::create([
+            "table" => "kim10_lesson",
+            "userId" => Auth::user()->id,
+            "log_path" => "LessonController@update",
+            "log_desc" => "Access function update untuk mengubah data",
+            "log_ip" => request()->ip(),
+        ]);
+
         return redirect(route('lesson.index'));
     }
 
@@ -108,6 +119,13 @@ class LessonController extends Controller
     {
         $lesson = Lesson::findOrFail($id);
         $lesson->delete();
+        kim_logs::create([
+            "table" => "kim10_lesson",
+            "userId" => Auth::user()->id,
+            "log_path" => "LessonController@destroy",
+            "log_desc" => "Access function delete untuk menghapus data",
+            "log_ip" => request()->ip(),
+        ]);
         return redirect(route('lesson.index'));
     }
 }
