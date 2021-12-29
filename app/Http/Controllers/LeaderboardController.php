@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Leaderboard;
+use App\Models\KimUsers;
 use Illuminate\Http\Request;
 
 class LeaderboardController extends Controller
@@ -17,7 +17,7 @@ class LeaderboardController extends Controller
         $active_welcome = "";
         $active_leaderboards = "active";
 
-        $leaderboards = Leaderboard::all();
+        $leaderboards = KimUsers::all();
 
         return view('dashboard.leaderboard', compact('active_welcome', 'active_leaderboards', 'leaderboards'));
     }
@@ -46,7 +46,7 @@ class LeaderboardController extends Controller
         // ]);
 
         //
-        Leaderboard::create([
+        KimUsers::create([
             'user_id' => $request->user_id,
             'rank_score' => $request->rank_score
         ]);
@@ -61,7 +61,7 @@ class LeaderboardController extends Controller
      */
     public function show($id)
     {
-        $leaderboard = Leaderboard::where('id', $id)->get();
+        $leaderboard = KimUsers::where('id', $id)->get();
         return view('dashboard.leaderboard', compact('leaderboard'));
     }
 
@@ -73,7 +73,7 @@ class LeaderboardController extends Controller
      */
     public function edit($id)
     {
-        $leaderboard = Leaderboard::findOrFail($id);
+        $leaderboard = KimUsers::findOrFail($id);
         return view('dashboard.form.editleaderboard', compact('leaderboard'));
     }
 
@@ -87,7 +87,7 @@ class LeaderboardController extends Controller
     public function update(Request $request, $id)
     {
         //
-        $leaderboard = Leaderboard::findOrFail($id);
+        $leaderboard = KimUsers::findOrFail($id);
         $leaderboard->update([
             'user_id' => $request->user_id,
             'rank_score' => $request->rank_score
@@ -103,7 +103,7 @@ class LeaderboardController extends Controller
      */
     public function destroy($id)
     {
-        $leaderboard = Leaderboard::findOrFail($id);
+        $leaderboard = KimUsers::findOrFail($id);
         $leaderboard->delete();
         return redirect(route('leaderboard.index'));
     }

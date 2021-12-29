@@ -19,7 +19,7 @@
             <p>{{$lesson->lesson_level}}</p>
         </div>
         @endforeach
-        <div class="rounded-lg bg-pink-500 pb-5 flex justify-center items-center" onclick="window.location.href='starquiz/{{$lesson->id}}'">
+        <div class="rounded-lg bg-pink-500 pb-5 flex justify-center items-center" onclick="window.location.href='/startquiz/{{$lesson->id}}'">
             <p class="text-xl font-bold">Let's try some <br>Exercise</p>
         </div>
         

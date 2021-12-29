@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
-use App\Models\Leaderboard;
 use App\Models\kim_logs;
+use App\Models\KimUsers;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
@@ -58,6 +59,15 @@ class UserController extends Controller
             'city' => $request->city,
             'birthyear' => $request->birthyear
         ]);
+
+        kim_logs::create([
+            "table" => "students",
+            "userId" => Auth::user()->id,
+            "log_path" => "UserController@create",
+            "log_desc" => "Access function create untuk membuat data",
+            "log_ip" => request()->ip(),
+        ]);
+
         return redirect(route('users.index'));
     }
 
@@ -69,28 +79,8 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        // $leaderboards = Leaderboard::where('user_id', $id)->get();
-        // return view('dashboard.leaderboard', compact('leaderboards'));
-        $user = User::findOrFail($id);
-        $leaderboards = Leaderboard::all();
-
-        kim_logs::create([
-            "table" => "students",
-            "userId" => 1,
-            "log_path" => "UserController@show",
-            "log_desc" => "Access function show untuk menampilkan data user dari id" + $id,
-            "log_ip" => "192.168.1.1",
-        ]);
-
-        kim_logs::create([
-            "table" => "kim10_leaderboard",
-            "userId" => 1,
-            "log_path" => "UserController@show",
-            "log_desc" => "Get all leaderboard related to id = " + $id,
-            "log_ip" => "192.168.1.1",
-        ]);
-
-        return view('dashboard.leaderboard', compact('leaderboards', 'user'));
+        $leaderboards = KimUsers::where('user_id', $id)->get();
+        return view('dashboard.leaderboard', compact('leaderboards'));
     }
 
     /**
@@ -125,6 +115,15 @@ class UserController extends Controller
             'city' => $request->city,
             'birthyear' => $request->birthyear
         ]);
+
+        kim_logs::create([
+            "table" => "students",
+            "userId" => Auth::user()->id,
+            "log_path" => "UserController@update",
+            "log_desc" => "Access function update untuk mengubah data",
+            "log_ip" => request()->ip(),
+        ]);
+
         return redirect(route('users.index'));
     }
 
@@ -140,10 +139,10 @@ class UserController extends Controller
         $user->delete();
         kim_logs::create([
             "table" => "students",
-            "userId" => 1,
+            "userId" => Auth::user()->id,
             "log_path" => "UserController@destroy",
-            "log_desc" => "Hapus data dengan id = " + $id,
-            "log_ip" => "192.168.1.1",
+            "log_desc" => "Access function delete untuk menghapus data",
+            "log_ip" => request()->ip(),
         ]);
 
         return redirect(route('users.index'));

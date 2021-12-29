@@ -22,19 +22,19 @@
                     <input type="text" class="form-control" name="question_description" required>
                 </div>
                 <div class="form-group">
-                    <label for="">A</label>
+                    <label for="">Qchoice1</label>
                     <input type="text" class="form-control" name="qchoice1" required>
                 </div>
                 <div class="form-group">
-                    <label for="">B</label>
+                    <label for="">Qchoice2</label>
                     <input type="text" class="form-control" name="qchoice2" required>
                 </div>
                 <div class="form-group">
-                    <label for="">C</label>
+                    <label for="">Qchoice3</label>
                     <input type="text" class="form-control" name="qchoice3" required>
                 </div>
                 <div class="form-group">
-                    <label for="">D</label>
+                    <label for="">Qchoice4</label>
                     <input type="text" class="form-control" name="qchoice4" required>
                 </div>
                 <div class="form-group">
