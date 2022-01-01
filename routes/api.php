@@ -4,6 +4,7 @@ use App\Http\Controllers\Api\Auth\LoginController;
 use App\Http\Controllers\Api\Auth\RegisterController;
 use App\Http\Controllers\Api\LessonController;
 use App\Http\Controllers\Api\ExerciseController;
+use App\Http\Controllers\Api\ImageController;
 use App\Http\Controllers\Api\QuestionController;
 use App\Http\Controllers\Api\SubLessonController;
 use App\Http\Controllers\Api\UserController;
@@ -26,6 +27,7 @@ use Illuminate\Support\Facades\Route;
 Route::post('register', [RegisterController::class, 'register']);
 Route::post('login', [LoginController::class, 'login']);
 Route::post('refresh', [LoginController::class, 'refresh']);
+Route::get('image/{image}', [ImageController::class, 'getImage']);
 
 Route::group(['middleware' => 'auth:api'], function () {
     Route::apiResource('lesson', LessonController::class);

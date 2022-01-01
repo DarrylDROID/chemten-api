@@ -13,7 +13,9 @@
         @foreach ($sublesson as $sublessontopic)
         <div class="rounded-lg bg-pink-500 pb-5" onclick="window.location.href='sublesson/{{$sublessontopic->id}}'">
             <div class="flex justify-center items-center py-5">
-                <div class="bg-white rounded-full w-36 h-36"></div>
+                <div class="bg-white rounded-full w-36 h-36 overflow-hidden flex justify-center items-center">
+                    <img class="" src="{{ asset('storage/'.$sublessontopic->sublesson_image) }}">
+                </div>
             </div> 
             <p class="text-xl font-bold">{{$sublessontopic->sublesson_topic}}</p>
             <p>{{$lesson->lesson_level}}</p>
