@@ -22,7 +22,9 @@ class QuizController extends Controller
             $count++;
         }
 
-        return view('level.quiz.startquiz', compact('exercise', 'count'));
+        $first = Question::where('exercise_id', $id)->first();
+
+        return view('level.quiz.startquiz', compact('exercise', 'count', 'first'));
     }
 
     public function question($exercise, $questionid)

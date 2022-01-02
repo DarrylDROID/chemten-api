@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\AdminController;
 use App\Http\Controllers\LessonController;
 use App\Http\Controllers\SubLessonController;
 use App\Http\Controllers\ExerciseController;
@@ -26,24 +25,23 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::middleware(['auth'])->group(function () {
-    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');    
+Route::middleware(['auth'])->group(function () { 
 
     Route::middleware(['admin'])->group(function () {
-        Route::get('admin', [AdminController::class, 'index']);
-
         Route::get('/dashboard', function () {
             return view('dashboard.index');
         });
+
+        Route::resource('lessons', LessonController::class);
+        Route::resource('sublesson', SubLessonController::class);
+        Route::resource('exercises', ExerciseController::class);
+        Route::resource('question', QuestionController::class);
+        Route::resource('users', UserController::class);
     });
 
-    Route::middleware(['student'])->group(function () {
-        Route::get('user', [UserController::class, 'index']);
-
-        Route::get('/',[LessonUserController::class, 'index']);
-    
-        Route::resource('profile', ProfileController::class);
-    
+    Route::middleware(['student'])->group(function () {     
+        Route::get('/',[LessonUserController::class, 'index']);    
+        Route::resource('profile', ProfileController::class);    
         Route::get('/startquiz/{id}', [QuizController::class, 'index']);
         Route::get('/quiz/{exercise}/{number}', [QuizController::class, 'question'])->name('question');
         Route::get('/retryquiz/{exercise}/{number}', [QuizController::class, 'retryquestion']);
@@ -53,25 +51,10 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/lesson/sublesson/{id}', [LessonUserController::class, 'sublesson']);
     });
 
+    Route::resource('leaderboards', LeaderboardController::class);
+
     Route::get('/logout', function () {
         Auth::logout();
         redirect('/homepage');
     });
 });
-
-Route::resource('lessons', LessonController::class);
-Route::resource('sublesson', SubLessonController::class);
-Route::resource('exercises', ExerciseController::class);
-Route::resource('question', QuestionController::class);
-Route::resource('users', UserController::class);
-Route::resource('leaderboards', LeaderboardController::class);
-
-
-//tes
-Route::get('/lesson', function () {
-    return view('level.lesson.lessons');
-});
-Route::get('/sublesson', function () {
-    return view('level.lesson.sublesson');
-});
-
