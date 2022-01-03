@@ -142,7 +142,7 @@ class SubLessonController extends Controller
     public function destroy($id)
     {
         $temp = SubLesson::where('id', $id)->first();
-        $sublessonid = $temp->lessond_id;
+        $lessonid = $temp->lesson_id;
 
         $sublesson = SubLesson::findOrFail($id);
         Storage::delete($sublesson->sublesson_image);
@@ -154,6 +154,6 @@ class SubLessonController extends Controller
             "log_desc" => "Access function delete untuk menghapus data",
             "log_ip" => request()->ip(),
         ]);
-        return redirect(route('sublesson.show', ['sublesson' => $sublessonid]));
+        return redirect(route('lessons.show', ['lesson' => $lessonid]));
     }
 }
