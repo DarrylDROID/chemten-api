@@ -16,6 +16,7 @@ class CreateKimLogs extends Migration
         Schema::create('kim10_logs', function (Blueprint $table) {
             $table->id();
             $table->string('table');
+            $table->unsignedBigInteger('userId');
             $table->string('log_path');
             $table->text('log_desc');
             $table->string('log_ip');

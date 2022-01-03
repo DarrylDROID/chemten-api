@@ -27,7 +27,7 @@
         <tr>
                 <td>{{ $question['exercise_id'] }}</td>
                 <td>{{ $question['question_topic'] }}</td>
-                <td>{{ $question['question_description'] }}</td>
+                <td>{!! $question['question_description'] !!}</td>
                 <td>{{ $question['qchoice1'] }}</td>
                 <td>{{ $question['qchoice2'] }}</td>
                 <td>{{ $question['qchoice3'] }}</td>

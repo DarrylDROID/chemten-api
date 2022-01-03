@@ -19,24 +19,8 @@ class SubLessonSeeder extends Seeder
         DB::table('kim10_sublesson')->insert([
             'lesson_id' => '1',
             'sublesson_topic' => 'Pengantar',
-            'sublesson_description' => 'Hukum kekekalan massa atau dikenal juga sebagai hukum Lomonosov-Lavoisier adalah suatu hukum 
-            yang menyatakan massa dari suatu sistem tertutup akan konstan meskipun terjadi berbagai macam proses di dalam sistem 
-            tersebut (dalam sistem tertutup Massa zat sebelum dan sesudah reaksi adalah sama (tetap/konstan). Pernyataan yang umum 
-            digunakan untuk menyatakan hukum kekekalan massa adalah massa dapat berubah bentuk tetapi tidak dapat diciptakan atau 
-            dimusnahkan. Untuk suatu proses kimiawi di dalam suatu sistem tertutup, massa dari reaktan harus sama dengan massa produk. 
-            Hukum kekekalan massa digunakan secara luas dalam bidang-bidang seperti kimia, teknik kimia, mekanika, dan dinamika fluida. 
-            Berdasarkan ilmu relativitas spesial, kekekalan massa adalah pernyataan dari kekekalan energi. Massa partikel yang tetap 
-            dalam suatu sistem ekuivalen dengan energi momentum pusatnya. Pada beberapa peristiwa radiasi, dikatakan bahwa terlihat 
-            adanya perubahan massa menjadi energi. Hal ini terjadi ketika suatu benda berubah menjadi energi kinetik/energi potensial 
-            dan sebaliknya. Karena massa dan energi berhubungan, dalam suatu sistem yang mendapat/mengeluarkan energi, massa dalam 
-            jumlah yang sangat sedikit akan tercipta/hilang dari sistem. Namun, dalam hampir seluruh peristiwa yang melibatkan perubahan 
-            energi, hukum kekekalan massa dapat digunakan karena massa yang berubah sangatlah sedikit.
-            Contoh soal hukum kekekalan massa
-            Hukum kekekalan massa berlaku pada reaksi kimia, di mana massa pereaksi harus sama dengan massa produk. Hukum kekekalan massa dapat terlihat pada reaksi pembentukan hidrogen dan oksigen dari air. Bila hidrogen dan oksigen dibentuk dari 36 g air, maka bila reaksi berlangsung hingga seluruh air habis, akan diperoleh massa campuran produk hidrogen dan oksigen sebesar 36 g. Bila reaksi masih menyisakan air, maka massa campuran hidrogen, oksigen dan air yang tidak bereaksi tetap sebesar 36 g.
-
-            Air    -> Hidrogen + Oksigen (+ Air)
-            (36 g)               (36 g)',
-            'sublesson_image' => 'lavoisier.jpg',
+            'sublesson_description' => '<blockquote><ul><li><strong>Hukum kekekalan massa </strong>atau dikenal juga sebagai hukum Lomonosov-Lavoisier adalah suatu hukum yang menyatakan massa dari suatu sistem tertutup akan konstan meskipun terjadi berbagai macam proses di dalam sistem tersebut (dalam sistem tertutup Massa zat sebelum dan sesudah reaksi adalah sama (tetap/konstan).&nbsp;</li><li>Pernyataan yang umum digunakan untuk menyatakan hukum kekekalan massa adalah massa dapat berubah bentuk tetapi tidak dapat diciptakan atau dimusnahkan.&nbsp;</li><li>Untuk suatu proses kimiawi di dalam suatu sistem tertutup, massa dari reaktan harus sama dengan massa produk.&nbsp;</li><li>Hukum kekekalan massa digunakan secara luas dalam bidang-bidang seperti kimia, teknik kimia, mekanika, dan dinamika fluida.</li><li>Berdasarkan ilmu relativitas spesial, kekekalan massa adalah pernyataan dari kekekalan energi.&nbsp;</li><li>Massa partikel yang tetap dalam suatu sistem ekuivalen dengan energi momentum pusatnya.&nbsp;</li><li>Pada beberapa peristiwa radiasi, dikatakan bahwa terlihat adanya perubahan massa menjadi energi.&nbsp;</li><li>Hal ini terjadi ketika suatu benda berubah menjadi energi kinetik/energi potensial dan sebaliknya.&nbsp;</li><li>Karena massa dan energi berhubungan, dalam suatu sistem yang mendapat/mengeluarkan energi, massa dalam jumlah yang sangat sedikit akan tercipta/hilang dari sistem.&nbsp;</li><li>Namun, dalam hampir seluruh peristiwa yang melibatkan perubahan energi, hukum kekekalan massa dapat digunakan karena massa yang berubah sangatlah sedikit.&nbsp;</li><li>Contoh soal hukum kekekalan massa&nbsp;</li></ul>Hukum kekekalan massa berlaku pada reaksi kimia, di mana massa pereaksi harus sama dengan massa produk. Hukum kekekalan massa dapat terlihat pada reaksi pembentukan hidrogen dan oksigen dari air. Bila hidrogen dan oksigen dibentuk dari 36 g air, maka bila reaksi berlangsung hingga seluruh air habis, akan diperoleh massa campuran produk hidrogen dan oksigen sebesar 36 g. Bila reaksi masih menyisakan air, maka massa campuran hidrogen, oksigen dan air yang tidak bereaksi tetap sebesar 36 g.<br>&nbsp;<br><em>Air -&gt; Hidrogen + Oksigen (+ Air)&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(36 g)&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(36 g)</em></blockquote>',
+            'sublesson_image' => 'lavoisier.png',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
@@ -44,7 +28,7 @@ class SubLessonSeeder extends Seeder
         DB::table('kim10_sublesson')->insert([
             'lesson_id' => '1',
             'sublesson_topic' => 'Observasi',
-            'sublesson_description' => '1. Sediakan larutan KI pada labu erlenmeyer besar dan Pb(NO3)2 pada tabung reaksi kecil yang diikat dengan benang. 2. Masukkan tabung reaksi berisi larutan Pb(NO3 ) 2 dengan hati-hati ke dalam labu seperti pada gambar (Hati-hati kedua larutan jangan tercampur). 3. Sumbat labu kemudian timbang. 4. Miringkan tabung reaksi sampai kedua larutan bereaksi. 5. Timbang kembali seluruh alat dan hasil reaksi tersebut.',
+            'sublesson_description' => '<ol><li>Sediakan larutan KI pada labu erlenmeyer besar dan Pb(NO3)2 pada tabung reaksi kecil yang diikat dengan benang.&nbsp;</li><li>Masukkan tabung reaksi berisi larutan Pb(NO3)2 dengan hati-hati ke dalam labu seperti pada gambar (Hati-hati kedua larutan jangan tercampur).&nbsp;</li><li>Sumbat labu kemudian timbang.&nbsp;</li><li>Miringkan tabung reaksi sampai kedua larutan bereaksi.&nbsp;</li><li>Timbang kembali seluruh alat dan hasil reaksi tersebut.</li></ol>',
             'sublesson_image' => 'observasi_lavoisier.png',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
@@ -53,7 +37,7 @@ class SubLessonSeeder extends Seeder
         DB::table('kim10_sublesson')->insert([
             'lesson_id' => '1',
             'sublesson_topic' => 'Latihan',
-            'sublesson_description' => 'Berikut ini tabel reaksi antara tembaga dan belerang (sulfur) yang menghasilkan tembaga(II) sulfida berdasarkan Hukum Kekekalan Massa. Salin tabel, lengkapi, dan tulis persamaan reaksinya.',
+            'sublesson_description' => '<div>Berikut ini tabel reaksi antara tembaga dan belerang (sulfur) yang menghasilkan tembaga(II) sulfida berdasarkan Hukum Kekekalan Massa.&nbsp;<br>Salin tabel, lengkapi, dan tulis persamaan reaksinya.</div>',
             'sublesson_image' => 'latihan_lavoisier.png',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
@@ -62,18 +46,7 @@ class SubLessonSeeder extends Seeder
         DB::table('kim10_sublesson')->insert([
             'lesson_id' => '2',
             'sublesson_topic' => 'Pengantar',
-            'sublesson_description' => 'Dalam kimia, hukum perbandingan tetap atau hukum Proust (diambil dari nama kimiawan Prancis 
-            Joseph Proust) adalah hukum yang menyatakan bahwa suatu senyawa kimia terdiri dari unsur-unsur dengan perbandingan massa 
-            yang selalu tepat sama.[1] Dengan kata lain, setiap sampel suatu senyawa memiliki komposisi unsur-unsur yang tetap. 
-            Misalnya, air terdiri dari 8/9 massa oksigen dan 1/9 massa hidrogen. Bersama dengan hukum perbandingan berganda 
-            (hukum Dalton), hukum perbandingan tetap adalah hukum dasar stoikiometri.
-            Contoh soal hukum perbandingan tetap
-            Kawat tembaga dibakar sehingga terbentuk tembaga oksida (CuO). Perhatikan reaksi berikut.
-
-            32g Cu(s) + 8g O2(g) → 40g CuO(s)
-                8     +     2    :  10  
-            
-            Maka perbandingannya adalah 8 + 2 : 10',
+            'sublesson_description' => '<ul><li>Dalam kimia,<strong> hukum perbandingan tetap </strong>atau<strong> hukum Proust</strong> (diambil dari nama kimiawan Prancis Joseph Proust) adalah hukum yang menyatakan bahwa suatu senyawa kimia terdiri dari unsur-unsur dengan perbandingan massa yang selalu tepat sama.</li><li>Dengan kata lain, setiap sampel suatu senyawa memiliki komposisi unsur-unsur yang tetap.&nbsp;</li><li>Misalnya, air terdiri dari 8/9 massa oksigen dan 1/9 massa hidrogen.&nbsp;</li><li>Bersama dengan hukum perbandingan berganda (hukum Dalton), hukum perbandingan tetap adalah hukum dasar stoikiometri.&nbsp;</li><li>Contoh soal hukum perbandingan tetap&nbsp;</li></ul><div>Kawat tembaga dibakar sehingga terbentuk tembaga oksida (CuO).&nbsp;<br>Perhatikan reaksi berikut.&nbsp;<br><br>32g Cu(s) + 8g O2(g) → 40g CuO(s)&nbsp;<br>&nbsp; &nbsp; &nbsp;8&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;+&nbsp; &nbsp; &nbsp; 2&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; :&nbsp; &nbsp; &nbsp; 10&nbsp;<br><br>Maka perbandingannya adalah 8 + 2 : 10</div>',
             'sublesson_image' => 'proust.jpg',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
@@ -82,7 +55,7 @@ class SubLessonSeeder extends Seeder
         DB::table('kim10_sublesson')->insert([
             'lesson_id' => '2',
             'sublesson_topic' => 'Observasi',
-            'sublesson_description' => 'Perhatikan data massa besi dan belerang pada senyawanya yaitu besi belerang atau besi sulfida berikut ini.',
+            'sublesson_description' => '<div>Perhatikan data massa besi dan belerang pada senyawanya yaitu besi belerang atau besi sulfida berikut ini.</div>',
             'sublesson_image' => 'observasi_proust.png',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
@@ -91,7 +64,7 @@ class SubLessonSeeder extends Seeder
         DB::table('kim10_sublesson')->insert([
             'lesson_id' => '2',
             'sublesson_topic' => 'Latihan',
-            'sublesson_description' => 'Logam natrium jika direaksikan dengan gas oksigen akan dihasilkan natrium oksida. Data beberapa percobaannya adalah sebagai berikut. a. Tentukan perbandingan massa natrium dengan massa oksigen pembentuk senyawa pada setiap percobaan. b. Apakah data tersebut sesuai dengan hukum perbandingan tetap? Jelaskan! c. Tulis reaksi pada percobaan tersebut!',
+            'sublesson_description' => '<div>Logam natrium jika direaksikan dengan gas oksigen akan dihasilkan natrium oksida. Data beberapa percobaannya adalah sebagai berikut.&nbsp;<br>a. Tentukan perbandingan massa natrium dengan massa oksigen pembentuk senyawa pada setiap percobaan.&nbsp;<br>b. Apakah data tersebut sesuai dengan hukum perbandingan tetap? Jelaskan!&nbsp;<br>c. Tulis reaksi pada percobaan tersebut!</div>',
             'sublesson_image' => 'latihan_proust.png',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
@@ -100,30 +73,7 @@ class SubLessonSeeder extends Seeder
         DB::table('kim10_sublesson')->insert([
             'lesson_id' => '3',
             'sublesson_topic' => 'Pengantar',
-            'sublesson_description' => 'Dalam kimia, hukum perbandingan berganda adalah salah satu hukum dasar stoikiometri. 
-            Hukum ini juga kadang-kadang disebut hukum Dalton (diambil dari nama kimiawan Inggris John Dalton), tetapi biasanya hukum 
-            Dalton merujuk kepada hukum tekanan parsial. Hukum ini menyatakan bahwa apabila dua unsur bereaksi membentuk dua atau lebih 
-            senyawa, maka perbandingan berat salah satu unsur yang bereaksi dengan berat tertentu dari unsur yang lain pada kedua senyawa 
-            selalu merupakan perbandingan bilangan bulat sederhana.[1] Misalnya karbon bereaksi dengan oksigen membentuk karbondioksida 
-            (CO2) dan karbonmonoksida (CO). Jika jumlah karbon yang bereaksi pada masing-masing adalah 1 gram, maka diamati bahwa pada 
-            karbonmonoksida yang terbentuk akan terdapat 1,33 gram oksigen dan 2,67 gram oksigen pada karbondioksida. Perbandingan massa 
-            oksigen mendekati 2:1,yang perbandingan bilangan bulat sederhana, mematuhi hukum perbandingan berganda. Pengamatan serupa 
-            juga terjadi pada reaksi-reaksi lain, seperti hidrogen dan oksigen membentuk air (H2O) dan hidrogen peroksida (H2O2). 
-            Jika hidrogen yang bereaksi masing-masing 1 gram, H2O yang terbentuk akan mengandung 4 gram oksigen, dan 8 gram pada H2O2.
-            Contoh soal hukum perbandingan ganda
-            A dan B bereaksi membentuk dua senyawa. Untuk senyawa pertama 1,4 gram A bereaksi dengan 3,2 gram B. 
-            Untuk senyawa kedua 0,7 gram A bereaksi dengan 0,4 gram B. Berapakah perbandingan unsur A dalam senyawa pertama terhadap unsur A dalam senyawa kedua?
-                          A           B
-            Senyawa I  1.4 gram   3,2 gram
-            Semyawa II 0,7 gram   0,4 gram
-            Perbandingan A pada senyawa I dan II adalah :
-
-            A : B = 1,4/0,7 : 3,2/0,4
-                  = 14/7 : 32/4 -> x 1/x 8
-                  = 14/56 : 32/32
-            Perbandingan A = 14 : 56
-                           = 1 : 4 
-            Jadi, perbandingan unsur A dalam senyawa pertama terhadap unsur A dalam senyawa kedua adalah 1 : 4.',
+            'sublesson_description' => '<ul><li>Dalam kimia, <strong>hukum perbandingan berganda</strong> adalah salah satu hukum dasar stoikiometri.&nbsp;</li><li>Hukum ini juga kadang-kadang disebut <strong>hukum Dalton</strong> (diambil dari nama kimiawan Inggris John Dalton), tetapi biasanya hukum Dalton merujuk kepada hukum tekanan parsial.&nbsp;</li><li>Hukum ini menyatakan bahwa apabila dua unsur bereaksi membentuk dua atau lebih senyawa, maka perbandingan berat salah satu unsur yang bereaksi dengan berat tertentu dari unsur yang lain pada kedua senyawa selalu merupakan perbandingan bilangan bulat sederhana.</li><li>Misalnya karbon bereaksi dengan oksigen membentuk karbondioksida (CO2) dan karbonmonoksida (CO).&nbsp;</li><li>Jika jumlah karbon yang bereaksi pada masing-masing adalah 1 gram, maka diamati bahwa pada karbonmonoksida yang terbentuk akan terdapat 1,33 gram oksigen dan 2,67 gram oksigen pada karbondioksida.&nbsp;</li><li>Perbandingan massa oksigen mendekati 2:1, yang perbandingan bilangan bulat sederhana, mematuhi hukum perbandingan berganda.&nbsp;</li><li>Pengamatan serupa juga terjadi pada reaksi-reaksi lain, seperti hidrogen dan oksigen membentuk air (H2O) dan hidrogen peroksida (H2O2).&nbsp;</li><li>Jika hidrogen yang bereaksi masing-masing 1 gram, H2O yang terbentuk akan mengandung 4 gram oksigen, dan 8 gram pada H2O2.&nbsp;</li><li>Contoh soal hukum perbandingan ganda&nbsp;</li></ul><div>A dan B bereaksi membentuk dua senyawa. Untuk senyawa pertama 1,4 gram A bereaksi dengan 3,2 gram B. Untuk senyawa kedua 0,7 gram A bereaksi dengan 0,4 gram B. Berapakah perbandingan unsur A dalam senyawa pertama terhadap unsur A dalam senyawa kedua?<br>&nbsp;<br><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;A&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; B <br>Senyawa I&nbsp; &nbsp; &nbsp;1.4 gram&nbsp; &nbsp; &nbsp; &nbsp; 3,2 gram <br>Senyawa II&nbsp; &nbsp; &nbsp;0,7 gram&nbsp; &nbsp; &nbsp; &nbsp;0,4 gram<br><em> </em><br>Perbandingan A pada senyawa I dan II adalah :&nbsp;<br><br>A : B = 1,4/0,7 : 3,2/0,4&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; = 14/7 : 32/4 -&gt; x 1/x 8&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; = 14/56 : 32/32&nbsp;<br><br>Perbandingan A = 14 : 56 = 1 : 4&nbsp;<br><br>Jadi, perbandingan unsur A dalam senyawa pertama terhadap unsur A dalam senyawa kedua adalah 1 : 4.</div>',
             'sublesson_image' => 'john_dalton.jpg',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
@@ -132,7 +82,7 @@ class SubLessonSeeder extends Seeder
         DB::table('kim10_sublesson')->insert([
             'lesson_id' => '3',
             'sublesson_topic' => 'Observasi',
-            'sublesson_description' => 'Dari data ternyata perbandingan massa oksigen yang terikat oleh karbon dengan massa yang sama yaitu 1 : 2. Perbandingan ini merupakan perbandingan yang sederhana.',
+            'sublesson_description' => '<div>Dari data ternyata perbandingan massa oksigen yang terikat oleh karbon dengan massa yang sama yaitu 1 : 2.&nbsp;<br>Perbandingan ini merupakan perbandingan yang sederhana.</div>',
             'sublesson_image' => 'observasi_dalton.png',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
@@ -141,7 +91,7 @@ class SubLessonSeeder extends Seeder
         DB::table('kim10_sublesson')->insert([
             'lesson_id' => '3',
             'sublesson_topic' => 'Latihan',
-            'sublesson_description' => 'Perbandingan massa N dan O dalam senyawa NO dan NO2 adalah sebagai berikut. Buktikan apakah kedua rumus senyawa tersebut memenuhi Hukum Kelipatan Perbandingan?',
+            'sublesson_description' => '<div>Perbandingan massa N dan O dalam senyawa NO dan NO2 adalah sebagai berikut.&nbsp;<br>Buktikan apakah kedua rumus senyawa tersebut memenuhi Hukum Kelipatan Perbandingan?</div>',
             'sublesson_image' => 'latihan_dalton.png',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
@@ -150,26 +100,7 @@ class SubLessonSeeder extends Seeder
         DB::table('kim10_sublesson')->insert([
             'lesson_id' => '4',
             'sublesson_topic' => 'Pengantar',
-            'sublesson_description' => 'Hukum perbandingan volume atau hukum Gay Lussac adalah sebuah hukum kimia yang menyatakan 
-            bahwa sejumlah gas yang direaksikan dengan volume konstan atau tetap akan berbanding lurus dengan nilai suhunya.
-            Saat suhu gas dalam sebuah wadah yang kaku dinaikkan, maka tekanan dari gas tersebut akan ikut meningkat. 
-            Meningkatnya energi kinetik dalam wadah tersebut mengakibatkan molekul-molekul gas bertabrakan dengan dinding wadah 
-            yang memiliki gaya lebih kuat. Kondisi tersebut menyebabkan tekanan yang lebih besar lagi. Seorang ahli kimia asal 
-            Perancis bernama lengkap Joseph Gay-Lussac menyebutkan bahwa ada hubungan antara tekanan sebuah gas dengan suhu tertentu. 
-            Hukum Gay Lussac memiliki kemiripan dengan hukum Charles, yang membedakan antara dua hukum tersebut adalah wadahnya saja. 
-            Dalam percobaannya, Gay Lussac menggunakan wadah yang bersifat kaku dan keras Sementara itu, Charles menggunaan wadah yang 
-            fleksibel.
-            Contoh soal hukum perbandingan volume
-
-            Sepuluh liter gas hidrogen bromida terurai sebagai berikut,
-            2 HBr(g) → H2(g) + Br2(g)
-            Pada suhu dan tekanan yang sama, tentukan volume gas hidrogen yang dihasilkan!
-            
-            Volume gas hidrogen
-            Volume H2/volume HBr = Koefisien H2/Koefisien HBr
-            Volume H2 = Koefisien H2/Koefisien HBr x Volume HBr
-                      = 1/2 x 10 L
-                      = 5 L',
+            'sublesson_description' => '<ul><li><strong>Hukum perbandingan volume</strong> atau <strong>hukum Gay Lussac</strong> adalah sebuah hukum kimia yang menyatakan bahwa sejumlah gas yang direaksikan dengan volume konstan atau tetap akan berbanding lurus dengan nilai suhunya.&nbsp;</li><li>Saat suhu gas dalam sebuah wadah yang kaku dinaikkan, maka tekanan dari gas tersebut akan ikut meningkat.&nbsp;</li><li>Meningkatnya energi kinetik dalam wadah tersebut mengakibatkan molekul-molekul gas bertabrakan dengan dinding wadah yang memiliki gaya lebih kuat. Kondisi tersebut menyebabkan tekanan yang lebih besar lagi.&nbsp;</li><li>Seorang ahli kimia asal Perancis bernama lengkap Joseph Gay-Lussac menyebutkan bahwa ada hubungan antara tekanan sebuah gas dengan suhu tertentu.&nbsp;</li><li>Hukum Gay Lussac memiliki kemiripan dengan hukum Charles, yang membedakan antara dua hukum tersebut adalah wadahnya saja.&nbsp;</li><li>Dalam percobaannya, Gay Lussac menggunakan wadah yang bersifat kaku dan keras Sementara itu, Charles menggunaan wadah yang fleksibel.&nbsp;</li><li>Contoh soal hukum perbandingan volume&nbsp;</li></ul><div>Sepuluh liter gas hidrogen bromida terurai sebagai berikut,&nbsp;<br><br>2 HBr(g) → H2(g) + Br2(g)&nbsp;<br><br>Pada suhu dan tekanan yang sama, tentukan volume gas hidrogen yang dihasilkan!<br><br>Volume gas hidrogen&nbsp;<br><br>Volume H2/volume HBr = Koefisien H2/Koefisien HBr&nbsp;<br>Volume H2 = Koefisien H2/Koefisien HBr x Volume HBr&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= 1/2 x 10 L&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= 5 L</div>',
             'sublesson_image' => 'gay_lussac.jpg',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
@@ -178,7 +109,7 @@ class SubLessonSeeder extends Seeder
         DB::table('kim10_sublesson')->insert([
             'lesson_id' => '4',
             'sublesson_topic' => 'Observasi',
-            'sublesson_description' => 'Dalton berhasil menyelidiki hubungan massa antara zat-zat yang membentuk suatu senyawa. Pada tahun 1808 Josep Louis Gay Lussac dari Perancis menyelidiki hubungan antara volum gas-gas dalam suatu reaksi kimia. Ia menemukan bahwa pada suhu dan tekanan yang sama, satu volum gas oksigen bereaksi dengan dua volum gas hidrogen menghasilkan dua volum uap air',
+            'sublesson_description' => '<div>Dalton berhasil menyelidiki hubungan massa antara zat-zat yang membentuk suatu senyawa.&nbsp;Pada tahun 1808 Joseph Louis Gay Lussac dari Perancis menyelidiki hubungan antara volum gas-gas dalam suatu reaksi kimia.&nbsp;Ia menemukan bahwa pada suhu dan tekanan yang sama, satu volum gas oksigen bereaksi dengan dua volum gas hidrogen menghasilkan dua volum uap air</div>',
             'sublesson_image' => 'observasi_gaylussac.png',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
@@ -187,7 +118,7 @@ class SubLessonSeeder extends Seeder
         DB::table('kim10_sublesson')->insert([
             'lesson_id' => '4',
             'sublesson_topic' => 'Latihan',
-            'sublesson_description' => 'Tentukan: a. volum gas O2 yang diperlukan; b. volum gas CO2 yang dihasilkan; c. volum uap air yang dihasilkan.',
+            'sublesson_description' => '<div>Tentukan:&nbsp;<br>a. volum gas O2 yang diperlukan;&nbsp;<br>b. volum gas CO2 yang dihasilkan;&nbsp;<br>c. volum uap air yang dihasilkan.</div>',
             'sublesson_image' => 'latihan_gaylussac.png',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
@@ -196,25 +127,7 @@ class SubLessonSeeder extends Seeder
         DB::table('kim10_sublesson')->insert([
             'lesson_id' => '5',
             'sublesson_topic' => 'Pengantar',
-            'sublesson_description' => 'Hukum Avogadro (terkadang dirujuk sebagai hipotesis Avogadro atau prinsip Avogadro) adalah 
-            suatu hukum gas eksperimen yang mengaitkan volume gas dengan jumlah zat gas tersebut.[1] Hukum ini merupakan kasus hukum 
-            gas ideal yang spesifik. Hukum ini berbunyi: Hukum Avogadro menyatakan bahwa, "Gas-gas yang memiliki volume yang sama, 
-            pada suhu dan tekanan yang sama, memiliki jumlah molekul yang sama pula."
-            Untuk massa dari suatu gas ideal tertentu, volume sebanding dengan jumlah (mol) gas tersebut jika diukur pada suhu dan 
-            tekanan konstan. Hukum ini dinamai dari Amedeo Avogadro yang, pada tahun 1811, menyatakan hipotesis bahwa dua sampel gas 
-            ideal, dengan volume yang sama dan pada suhu dan tekanan sama, memiliki jumlah molekul yang sama. Sebagai contoh volume 
-            sebanding dari hidrogen dan nitrogen molekuler mengandung jumlah molekul yang sama ketika berada pada suhu dan tekanan 
-            yang sama, serta diamati berperilaku seperti gas ideal. Pada prakteknya, gas-gas nyata memperlihatkan penyimpangan kecil dari 
-            perilaku ideal dan hukum tersebut hanya merupakan pendekatan saja, tetapi tetap berguna bagi para peneliti.
-            Contoh soal hukum avogadro
-            
-            Pada tekanan dan suhu yang sama, diketahui sebuah persamaan reaksi seperti berikut
-
-            N2(g) + 3H2(g) = 2NH3(g)
-            
-            Tentukan berapa perbandingan jumlah volume gas yang terlibat dalam reaksi tersebut!
-            nN2 : nH2 = nH3
-            2 : 3 = 2',
+            'sublesson_description' => '<ul><li><strong>Hukum Avogadro </strong>(terkadang dirujuk sebagai hipotesis Avogadro atau prinsip Avogadro) adalah suatu hukum gas eksperimen yang mengaitkan volume gas dengan jumlah zat gas tersebut.</li><li>Hukum ini merupakan kasus hukum gas ideal yang spesifik.&nbsp;</li><li>Hukum ini berbunyi: Hukum Avogadro menyatakan bahwa, "Gas-gas yang memiliki volume yang sama, pada suhu dan tekanan yang sama, memiliki jumlah molekul yang sama pula."&nbsp;</li><li>Untuk massa dari suatu gas ideal tertentu, volume sebanding dengan jumlah (mol) gas tersebut jika diukur pada suhu dan tekanan konstan.&nbsp;</li><li>Hukum ini dinamai dari Amedeo Avogadro yang, pada tahun 1811, menyatakan hipotesis bahwa dua sampel gas ideal, dengan volume yang sama dan pada suhu dan tekanan sama, memiliki jumlah molekul yang sama.&nbsp;</li><li>Sebagai contoh volume sebanding dari hidrogen dan nitrogen molekuler mengandung jumlah molekul yang sama ketika berada pada suhu dan tekanan yang sama, serta diamati berperilaku seperti gas ideal.&nbsp;</li><li>Pada prakteknya, gas-gas nyata memperlihatkan penyimpangan kecil dari perilaku ideal dan hukum tersebut hanya merupakan pendekatan saja, tetapi tetap berguna bagi para peneliti.&nbsp;</li><li>Contoh soal hukum avogadro&nbsp;</li></ul><div>Pada tekanan dan suhu yang sama, diketahui sebuah persamaan reaksi seperti berikut&nbsp;<br><br>N2(g) + 3H2(g) = 2NH3(g)&nbsp;<br><br>Tentukan berapa perbandingan jumlah volume gas yang terlibat dalam reaksi tersebut!&nbsp;<br>nN2 : nH2 = nH3&nbsp;<br>&nbsp; 2&nbsp; &nbsp; : &nbsp; 3&nbsp; &nbsp;= &nbsp; 2</div>',
             'sublesson_image' => 'avogadro.jpg',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
@@ -223,7 +136,7 @@ class SubLessonSeeder extends Seeder
         DB::table('kim10_sublesson')->insert([
             'lesson_id' => '5',
             'sublesson_topic' => 'Observasi',
-            'sublesson_description' => 'Data percobaan pengukuran volum pada suhu dan tekanan standar. Dari data tersebut ternyata dalam volum yang sama dan keadaan yang sama terdapat jumlah molekul yang sama pula. Hipotesis ini dijadikan suatu hukum, yang dikenal sebagai Hukum Avogadro.',
+            'sublesson_description' => '<div>Data percobaan pengukuran volum pada suhu dan tekanan standar. Dari data tersebut ternyata dalam volum yang sama dan keadaan yang sama terdapat jumlah molekul yang sama pula.&nbsp;Hipotesis ini dijadikan suatu hukum, yang dikenal sebagai Hukum Avogadro.</div>',
             'sublesson_image' => 'observasi_avogadro.png',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
@@ -232,7 +145,7 @@ class SubLessonSeeder extends Seeder
         DB::table('kim10_sublesson')->insert([
             'lesson_id' => '5',
             'sublesson_topic' => 'Latihan',
-            'sublesson_description' => 'Pada suhu dan tekanan tertentu dalam 1 L gas O2 terdapat 3 x 10^22 molekul. Berapa jumlah molekul yang terdapat di dalam 2 liter gas CO2 pada suhu dan tekanan tersebut?',
+            'sublesson_description' => '<div>Pada suhu dan tekanan tertentu dalam 1 L gas O2 terdapat 3 x 10^22 molekul.&nbsp;<br>Berapa jumlah molekul yang terdapat di dalam 2 liter gas CO2 pada suhu dan tekanan tersebut?</div>',
             'sublesson_image' => 'latihan_avogadro.jpg',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()

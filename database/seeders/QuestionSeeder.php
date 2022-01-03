@@ -106,8 +106,7 @@ class QuestionSeeder extends Seeder
         DB::table('kim10_question')->insert([
             'exercise_id' => '1',
             'question_topic' => "Hukum Lavoisier",
-            'question_description' => '   Mg	  +       Br         ->   MgBr
-            93 gram + 79,9 gram 	-> … kilogram',
+            'question_description' => '<div>&nbsp; &nbsp; Mg&nbsp; &nbsp; &nbsp;+&nbsp; &nbsp; &nbsp; &nbsp;Br&nbsp; &nbsp; &nbsp; &nbsp; -&gt;&nbsp; &nbsp; &nbsp;MgBr&nbsp;<br>93 gram + 79,9 gram -&gt; … kilogram</div>',
             'qchoice1' => '172,9 gram',
             'qchoice2' => '17,29 gram',
             'qchoice3' => '0,1729 kilogram',
@@ -121,8 +120,7 @@ class QuestionSeeder extends Seeder
         DB::table('kim10_question')->insert([
             'exercise_id' => '1',
             'question_topic' => "Hukum Lavoisier",
-            'question_description' => '    N	  +       O        ->   NO2
-            28 gram + 1,2 gram 	-> … gram',
+            'question_description' => '<div>&nbsp; &nbsp; &nbsp; N&nbsp; &nbsp; &nbsp;+&nbsp; &nbsp; &nbsp; &nbsp; O&nbsp; &nbsp; &nbsp; -&gt;&nbsp; &nbsp; NO2&nbsp;<br>28 gram + 1,2 gram -&gt; … gram</div>',
             'qchoice1' => '0,292 kilogram',
             'qchoice2' => '29,2 gram',
             'qchoice3' => '29,2 kilogram',
@@ -136,8 +134,7 @@ class QuestionSeeder extends Seeder
         DB::table('kim10_question')->insert([
             'exercise_id' => '1',
             'question_topic' => "Hukum Lavoisier",
-            'question_description' => '    S	  +       O        ->   SO2
-            53 x 10^-4 kilogram + 12 x 10^-4 kilogram -> … gram',
+            'question_description' => '<div>&nbsp; S&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; +&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; O&nbsp; &nbsp; &nbsp; &nbsp; -&gt;&nbsp; &nbsp; &nbsp;SO2&nbsp;<br>53 x 10^-4 kilogram + 12 x 10^-4 kilogram -&gt; … gram</div>',
             'qchoice1' => '0,0065 kilogram',
             'qchoice2' => '6,5 gram',
             'qchoice3' => '6,5 kilogram',
@@ -151,8 +148,7 @@ class QuestionSeeder extends Seeder
         DB::table('kim10_question')->insert([
             'exercise_id' => '1',
             'question_topic' => "Hukum Lavoisier",
-            'question_description' => '   C	  +       Cl       ->   CCl4
-            2 x 10^-3 kilogram + … gram	-> 7,9 gram',
+            'question_description' => '<div>C&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Cl&nbsp; &nbsp; &nbsp; &nbsp; -&gt;&nbsp; &nbsp; &nbsp; CCl4&nbsp;<br>2 x 10^-3 kilogram + … gram -&gt; 7,9 gram</div>',
             'qchoice1' => '59 x 10^-3 kilogram',
             'qchoice2' => '59 x 10^-2 gram',
             'qchoice3' => '59 x 10^-4 kilogram',
@@ -251,9 +247,7 @@ class QuestionSeeder extends Seeder
         DB::table('kim10_question')->insert([
             'exercise_id' => '2',
             'question_topic' => 'Hukum Proust',
-            'question_description' => 'Kawat tembaga dibakar sehingga terbentuk tembaga oksida (CuO). Perhatikan reaksi berikut.
-            32g Cu(s) + 8g O2(g) → 40g CuO(s)
-            Berapa perbandingan massa unsur Cu : O dalam senyawa CuO ?',
+            'question_description' => '<div>Kawat tembaga dibakar sehingga terbentuk tembaga oksida (CuO). Perhatikan reaksi berikut.&nbsp;<br><br>32g Cu(s) + 8g O2(g) → 40g CuO(s)&nbsp;<br><br>Berapa perbandingan massa unsur Cu : O dalam senyawa CuO ?</div>',
             'qchoice1' => '4 : 1 gram',
             'qchoice2' => '3 : 6 gram',
             'qchoice3' => '5 : 2 gram',
@@ -465,9 +459,7 @@ class QuestionSeeder extends Seeder
         DB::table('kim10_question')->insert([
             'exercise_id' => '4',
             'question_topic' => 'Hukum Gay Lussac',
-            'question_description' => 'Sepuluh liter gas hidrogen bromida terurai sebagai berikut,
-            2 HBr(g) → H2(g) + Br2(g)
-            Pada suhu dan tekanan yang sama, tentukan volume gas hidrogen yang dihasilkan!',
+            'question_description' => '<div>Sepuluh liter gas hidrogen bromida terurai sebagai berikut,&nbsp;<br><br>2 HBr(g) → H2(g) + Br2(g)<br><br>Pada suhu dan tekanan yang sama, tentukan volume gas hidrogen yang dihasilkan!</div>',
             'qchoice1' => '10 L',
             'qchoice2' => '1,5 L',
             'qchoice3' => '5 L',
@@ -481,9 +473,7 @@ class QuestionSeeder extends Seeder
         DB::table('kim10_question')->insert([
             'exercise_id' => '4',
             'question_topic' => 'Hukum Gay Lussac',
-            'question_description' => 'Lima liter gas N2O5 terurai sesuai reaksi berikut.
-            2 N2O5(g) → 2 N2(g) + 5 O2(g)
-            Pada suhu dan tekanan yang sama, tentukan volume gas nitrogen dan volume gas oksigen yang terbentuk !',
+            'question_description' => '<div>Lima liter gas N2O5 terurai sesuai reaksi berikut.&nbsp;<br><br>2 N2O5(g) → 2 N2(g) + 5 O2(g)&nbsp;<br><br>Pada suhu dan tekanan yang sama, tentukan volume gas nitrogen dan volume gas oksigen yang terbentuk !</div>',
             'qchoice1' => '10 L',
             'qchoice2' => '15 L',
             'qchoice3' => '12,5 L',
@@ -525,9 +515,7 @@ class QuestionSeeder extends Seeder
         DB::table('kim10_question')->insert([
             'exercise_id' => '4',
             'question_topic' => 'Hukum Gay Lussac',
-            'question_description' => 'Sebanyak 4 L CH4 dibakar habis dengan gas oksigen sesuai persamaan reaksi:
-            CH4(g) + 2 O2(g)→ CO2(g) + 2 H2O(l)
-       Pada suhu dan tekanan yang sama. Volume gas CO2 yang dihasilkan adalah ....',
+            'question_description' => '<div>Sebanyak 4 L CH4 dibakar habis dengan gas oksigen sesuai persamaan reaksi:&nbsp;<br><br>CH4(g) + 2 O2(g)→ CO2(g) + 2 H2O(l)&nbsp;<br><br>Pada suhu dan tekanan yang sama. Volume gas CO2 yang dihasilkan adalah ....</div>',
             'qchoice1' => '2 L',
             'qchoice2' => '6 L',
             'qchoice3' => '4 L',
@@ -541,8 +529,7 @@ class QuestionSeeder extends Seeder
         DB::table('kim10_question')->insert([
             'exercise_id' => '4',
             'question_topic' => 'Hukum Gay Lussac',
-            'question_description' => 'Berapakah volume nitrogen yang bereaksi dengan 6 liter hidrogen (pada suhu dan tekanan yang sama) untuk membentuk amonia berdasarkan reaksi berikut :
-            N2 + 3H2 → 2NH3  adalah',
+            'question_description' => '<div>Berapakah volume nitrogen yang bereaksi dengan 6 liter hidrogen (pada suhu dan tekanan yang sama) untuk membentuk amonia berdasarkan reaksi berikut :&nbsp;<br><br>N2 + 3H2 → 2NH3 adalah</div>',
             'qchoice1' => '12 L',
             'qchoice2' => '2 L',
             'qchoice3' => '4 L',
@@ -556,9 +543,7 @@ class QuestionSeeder extends Seeder
         DB::table('kim10_question')->insert([
             'exercise_id' => '4',
             'question_topic' => 'Hukum Gay Lussac',
-            'question_description' => 'Karbon disulfida bereaksi dengan oksigen berdasarkan reaksi berikut:
-            CS2(g) + 3O2(g) → CO2(g) + 2SO2(g)
-            2 L karbon disulfida dibakar dengan 10 L oksigen, kemudian semua gas dialirkan ke dalam larutan NaOH berlebih. Berapakah persentase gas yang tersisa setelah dialirkan ke dalam NaOH?',
+            'question_description' => '<div>Karbon disulfida bereaksi dengan oksigen berdasarkan reaksi berikut:<br><br>CS2(g) + 3O2(g) → CO2(g) + 2SO2(g)&nbsp;<br><br>2 L karbon disulfida dibakar dengan 10 L oksigen, kemudian semua gas dialirkan ke dalam larutan NaOH berlebih. Berapakah persentase gas yang tersisa setelah dialirkan ke dalam NaOH?</div>',
             'qchoice1' => '40 %',
             'qchoice2' => '20 %',
             'qchoice3' => '60 %',
@@ -572,8 +557,7 @@ class QuestionSeeder extends Seeder
         DB::table('kim10_question')->insert([
             'exercise_id' => '4',
             'question_topic' => 'Hukum Gay Lussac',
-            'question_description' => '12 liter gas nitrogen direaksikan dengan sejumlah gas hidrogen menghasilkan amonia. Berapa volume gas hidrogen yang diperlukan serta amonia yang dihasilkan bila kondisi reaksi (suhu dan tekanan) dijaga konstan?
-            N2(g) + 3H2(g) → 2NH3(g)',
+            'question_description' => '<div>12 liter gas nitrogen direaksikan dengan sejumlah gas hidrogen menghasilkan amonia. Berapa volume gas hidrogen yang diperlukan serta amonia yang dihasilkan bila kondisi reaksi (suhu dan tekanan) dijaga konstan?&nbsp;<br><br>N2(g) + 3H2(g) → 2NH3(g)</div>',
             'qchoice1' => '18 L',
             'qchoice2' => '24 L',
             'qchoice3' => '12 L',
@@ -587,9 +571,7 @@ class QuestionSeeder extends Seeder
         DB::table('kim10_question')->insert([
             'exercise_id' => '4',
             'question_topic' => 'Hukum Gay Lussac',
-            'question_description' => 'Diketahui sebuah gas memiliki tekanan awal sejumlah P, sementara suhu awalnya adalah T. Kemudian, gas tersebut mengalami perubahan tekanan menjadi 6P.
-            Berapakah suhu gas tersebut sekarang ?
-            N2(g) + 3H2(g) → 2NH3(g)',
+            'question_description' => '<div>Diketahui sebuah gas memiliki tekanan awal sejumlah P, sementara suhu awalnya adalah T. Kemudian, gas tersebut mengalami perubahan tekanan menjadi 6P. Berapakah suhu gas tersebut sekarang ?&nbsp;<br><br>N2(g) + 3H2(g) → 2NH3(g)</div>',
             'qchoice1' => '3 T',
             'qchoice2' => '6 T',
             'qchoice3' => '4 T',
@@ -618,11 +600,7 @@ class QuestionSeeder extends Seeder
         DB::table('kim10_question')->insert([
             'exercise_id' => '5',
             'question_topic' => 'Hukum Avogadro',
-            'question_description' => 'Pada tekanan dan suhu yang sama, diketahui sebuah persamaan reaksi seperti berikut
-
-            N2(g) + 3H2(g) = 2NH3(g)
-            
-            Tentukan berapa perbandingan jumlah volume gas yang terlibat dalam reaksi tersebut!',
+            'question_description' => '<div>Pada tekanan dan suhu yang sama, diketahui sebuah persamaan reaksi seperti berikut&nbsp;<br><br>N2(g) + 3H2(g) = 2NH3(g)&nbsp;<br><br>Tentukan berapa perbandingan jumlah volume gas yang terlibat dalam reaksi tersebut!</div>',
             'qchoice1' => '2 : 1 = 3',
             'qchoice2' => '3 : 1 = 2',
             'qchoice3' => '2 : 3 = 2',
@@ -678,11 +656,7 @@ class QuestionSeeder extends Seeder
         DB::table('kim10_question')->insert([
             'exercise_id' => '5',
             'question_topic' => 'Hukum Avogadro',
-            'question_description' => 'Dinitrogen pentoksida (N2O5) mengalami reaksi dekomposisi berdasarkan reaksi berikut. 
-
-            N2O5(g) -> NO2(g) + O2(g) (belum setara)
-            
-            Pada reaksi tersebut hanya 75% N2O5 yang terurai dan diperoleh 1,5 L gas O2. Tentukan volume awal N2O5! (dalam L) ?',
+            'question_description' => '<div>Dinitrogen pentoksida (N2O5) mengalami reaksi dekomposisi berdasarkan reaksi berikut.&nbsp;<br><br>N2O5(g) -&gt; NO2(g) + O2(g) (belum setara)&nbsp;<br><br>Pada reaksi tersebut hanya 75% N2O5 yang terurai dan diperoleh 1,5 L gas O2. Tentukan volume awal N2O5! (dalam L) ?</div>',
             'qchoice1' => '4 L',
             'qchoice2' => '2 L',
             'qchoice3' => '3 L',
