@@ -16,12 +16,9 @@ class QuestionController extends Controller
      */
     public function index()
     {
-        $active_welcome = "";
-        $active_questions = "active";
-
         $questions = Question::all();
 
-        return view('question', compact('active_welcome', 'active_questions', 'questions'));
+        return view('question', compact('questions'));
     }
 
     /**
@@ -67,7 +64,7 @@ class QuestionController extends Controller
             "log_ip" => request()->ip(),
         ]);
 
-        return redirect(route('question.index'));
+        return redirect(route('exercises.show', ['exercise' => $request->exercise_id]));
     }
 
     /**
@@ -107,7 +104,6 @@ class QuestionController extends Controller
         //
         $question = Question::findOrFail($id);
         $question->update([
-            'question_id' => $request->question_id,
             'exercise_id' => $request->exercise_id,
             'question_topic' => $request->question_topic,
             'question_description' => $request->question_description,
@@ -126,7 +122,7 @@ class QuestionController extends Controller
             "log_ip" => request()->ip(),
         ]);
 
-        return redirect(route('question.index'));
+        return redirect(route('exercises.show', ['exercise' => $request->exercise_id]));
     }
 
     /**
@@ -137,6 +133,9 @@ class QuestionController extends Controller
      */
     public function destroy($id)
     {
+        $temp = Question::where('id', $id)->first();
+        $exerciseid = $temp->exercise_id;
+        
         $question = Question::findOrFail($id);
         $question->delete();
         kim_logs::create([
@@ -147,6 +146,6 @@ class QuestionController extends Controller
             "log_ip" => request()->ip(),
         ]);
 
-        return redirect(route('question.index'));
+        return redirect(route('exercises.show', ['exercise' => $exerciseid]));
     }
 }
