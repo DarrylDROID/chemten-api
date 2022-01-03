@@ -79,8 +79,8 @@ class QuestionController extends Controller
     public function show($id)
     {
 
-        $question = Question::where('question_id', $id)->first();
-        return view('questionView', compact('question'));
+        $question = Question::where('id', $id)->first();
+        return view('dashboard.question', compact('question'));
     }
 
     /**
