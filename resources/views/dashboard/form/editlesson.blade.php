@@ -20,7 +20,8 @@
                 </div>
                 <div class="form-group">
                     <label for="">Lesson Description</label>
-                    <input type="text" class="form-control" name="lesson_description" value="{{  $lesson['lesson_description'] }}" required>
+                    <input id="lesson_description" type="hidden" class="form-control" name="lesson_description" value="{{ $lesson['lesson_description'] }}" required>
+                    <trix-editor input="lesson_description"></trix-editor>
                 </div>
 
                 <div class="form-group mt-3">

@@ -17,6 +17,7 @@ class CreateTableQuizAnswer extends Migration
             $table->id();
             $table->unsignedBigInteger('student_id');
             $table->unsignedBigInteger('question_id');
+            $table->string('user_answer');
             $table->string('hasil');
             $table->timestamps();
         });

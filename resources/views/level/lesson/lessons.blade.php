@@ -6,7 +6,7 @@
 </div>
 <div class="p-5 bg-white" style="min-height: 50vh">
     <h1 class="font-bold text-2xl">{{$lesson->lesson_topic}}</h1>
-    <h2>{{$lesson->lesson_description}}</h2>
+    <p>{!! $lesson->lesson_description !!}</p>
     <br>
     <div class="grid grid-cols-5 gap-5 text-white text-center">
 

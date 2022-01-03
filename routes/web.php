@@ -42,13 +42,13 @@ Route::middleware(['auth'])->group(function () {
     Route::middleware(['student'])->group(function () {     
         Route::get('/',[LessonUserController::class, 'index']);    
         Route::resource('profile', ProfileController::class);    
+        Route::get('/lesson/{id}', [LessonUserController::class, 'lesson']);
+        Route::get('/lesson/sublesson/{id}', [LessonUserController::class, 'sublesson']);
         Route::get('/startquiz/{id}', [QuizController::class, 'index']);
         Route::get('/quiz/{exercise}/{number}', [QuizController::class, 'question'])->name('question');
         Route::get('/retryquiz/{exercise}/{number}', [QuizController::class, 'retryquestion']);
         Route::post('/answer/{exercise}/{number}', [QuizController::class, 'answer']);
-        Route::get('/finish/{exercise}/{user}/{number}', [QuizController::class, 'finish']);
-        Route::get('/lesson/{id}', [LessonUserController::class, 'lesson']);
-        Route::get('/lesson/sublesson/{id}', [LessonUserController::class, 'sublesson']);
+        Route::get('/finish/{exercise}/{user}/{number}', [QuizController::class, 'finish']);            
     });
 
     Route::resource('leaderboards', LeaderboardController::class);
@@ -58,3 +58,4 @@ Route::middleware(['auth'])->group(function () {
         redirect('/homepage');
     });
 });
+

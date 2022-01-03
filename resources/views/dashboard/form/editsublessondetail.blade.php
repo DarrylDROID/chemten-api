@@ -20,7 +20,8 @@
                 </div>                
                 <div class="form-group">
                     <label for="">SubLesson Description</label>
-                    <input type="text" class="form-control" name="sublesson_description" value="{{ $sublesson['sublesson_description'] }}"required>
+                    <input id="sublesson_description" type="hidden" class="form-control" name="sublesson_description" value="{{ $sublesson['sublesson_description'] }}"required>
+                    <trix-editor input="sublesson_description"></trix-editor>
                 </div>
                 <div class="form-group">
                     <label for="">SubLesson Image</label>

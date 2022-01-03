@@ -15,6 +15,7 @@ class Quiz extends Model
         'student_id',
         'question_id',
         'hasil',
+        'user_answer'
     ];
 
     public function students() 

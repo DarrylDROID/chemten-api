@@ -130,7 +130,7 @@ class SubLessonController extends Controller
             "log_ip" => request()->ip(),
         ]);
 
-        return redirect(route('sublesson.index'));
+        return redirect(route('sublesson.show', ['sublesson' => $id]));
     }
 
     /**
