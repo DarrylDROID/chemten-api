@@ -54,6 +54,7 @@ class LessonController extends Controller
             'lesson_level' => $request->lesson_level,
             'lesson_description' => $request->lesson_description
         ]);
+
         return redirect(route('lesson.index'));
     }
 

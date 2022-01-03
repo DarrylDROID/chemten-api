@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\kim_logs;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -82,6 +83,14 @@ class ProfileController extends Controller
             'school' => $request->sekolah,
             'city' => $request->kota,
             'birthyear' => $request->tahun_lahir,
+        ]);
+
+        kim_logs::create([
+            "table" => "students",
+            "userId" => Auth::user()->id,
+            "log_path" => "ProfileController@update",
+            "log_desc" => "Access function update untuk mengubah data",
+            "log_ip" => request()->ip(),
         ]);
 
         return redirect(route('profile.index'));
