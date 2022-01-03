@@ -3,5 +3,6 @@
     <div class="">
         <a href="/">Home</a>
         <a href="{{ route('profile.index') }}" class="ml-2">Profile</a>
+        <a href="/leaderboard" class="ml-2">Leaderboard</a>
     </div>
 </nav>

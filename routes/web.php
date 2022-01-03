@@ -6,6 +6,7 @@ use App\Http\Controllers\ExerciseController;
 use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\LeaderboardController;
+use App\Http\Controllers\LeaderboardUserController;
 use App\Http\Controllers\LessonUserController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\QuizController;
@@ -48,7 +49,8 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/quiz/{exercise}/{number}', [QuizController::class, 'question'])->name('question');
         Route::get('/retryquiz/{exercise}/{number}', [QuizController::class, 'retryquestion']);
         Route::post('/answer/{exercise}/{number}', [QuizController::class, 'answer']);
-        Route::get('/finish/{exercise}/{user}/{number}', [QuizController::class, 'finish']);            
+        Route::get('/finish/{exercise}/{user}/{number}', [QuizController::class, 'finish']);     
+        Route::get('/leaderboard', [LeaderboardUserController::class, 'leaderboard']);       
     });
 
     Route::resource('leaderboards', LeaderboardController::class);

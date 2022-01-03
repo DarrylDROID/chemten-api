@@ -10,11 +10,17 @@
     <table class="mt-2 table table-striped">
         <tr>
             <th>User ID</th>
-            <th>Rank Score</th>
+            <th>Username</th>            
+            <th>Name</th>    
+            <th>School</th>        
+            <th>Score</th>
         </tr>
     @foreach ($leaderboards as $leaderboard)
         <tr>
-            <td>{{ $leaderboard['user_id'] }}</td>
+            <td>{{ $leaderboard->id }}</td>
+            <td>{{ $leaderboard->user->username }}</td>
+            <td>{{ $leaderboard->user->name }}</td>
+            <td>{{ $leaderboard->user->school }}</td>
             <td>{{ $leaderboard['rank_score'] }}</td>
         </tr>
         @endforeach        

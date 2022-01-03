@@ -14,12 +14,9 @@ class LeaderboardController extends Controller
      */
     public function index()
     {
-        $active_welcome = "";
-        $active_leaderboards = "active";
-
         $leaderboards = KimUsers::all();
 
-        return view('dashboard.leaderboard', compact('active_welcome', 'active_leaderboards', 'leaderboards'));
+        return view('dashboard.leaderboard', compact('leaderboards'));
     }
 
     /**
