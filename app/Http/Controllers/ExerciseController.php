@@ -120,7 +120,7 @@ class ExerciseController extends Controller
             "log_ip" => request()->ip(),
         ]);
 
-        return redirect(route('exercise.index'));
+        return redirect(route('exercises.index'));
     }
 
     /**

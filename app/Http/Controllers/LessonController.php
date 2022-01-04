@@ -107,7 +107,7 @@ class LessonController extends Controller
             "log_ip" => request()->ip(),
         ]);
 
-        return redirect(route('lesson.index'));
+        return redirect(route('lessons.index'));
     }
 
     /**
