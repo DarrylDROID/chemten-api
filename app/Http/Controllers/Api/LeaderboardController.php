@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Http\Resources\LeaderboardResource;
-use App\Models\Leaderboard;
+use App\Models\KimUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
@@ -17,7 +17,7 @@ class SubLessonController extends Controller
      */
     public function index()
     {
-        $leaderboard = Leaderboard::all();
+        $leaderboard = KimUsers::all();
         return ['leaderboard' => LeaderboardResource::collection($leaderboard)];
     }
 
@@ -30,7 +30,7 @@ class SubLessonController extends Controller
     public function store(Request $request)
     {
         //
-        Leaderboard::create([
+        KimUsers::create([
             'leaderboard_id' => $request->leaderboard_id,
             'user_id' => $request->user_id,
             'rank_score' => $request->rank_score
@@ -49,7 +49,7 @@ class SubLessonController extends Controller
     {
         //
         $code = Str::upper($id);
-        $leaderboard = Leaderboard::all()->where('leaderboard_id', $code);
+        $leaderboard = KimUsers::all()->where('leaderboard_id', $code);
         return ['leaderboard' => LeaderboardResource::collection($leaderboard)];
     }
 
@@ -63,7 +63,7 @@ class SubLessonController extends Controller
     public function update(Request $request, $id)
     {
         $code = Str::upper($id);
-        $leaderboard = Leaderboard::findOrFail($code);
+        $leaderboard = KimUsers::findOrFail($code);
         $leaderboard->update([
             'leaderboard_id' => $request->leaderboard_id,
             'user_id' => $request->user_id,
@@ -82,7 +82,7 @@ class SubLessonController extends Controller
     public function destroy($id)
     {
         //
-        $leaderboard = Leaderboard::findOrFail($id);
+        $leaderboard = KimUsers::findOrFail($id);
         $leaderboard->delete();
         return ['message' => 'data has been deleted'];
     }

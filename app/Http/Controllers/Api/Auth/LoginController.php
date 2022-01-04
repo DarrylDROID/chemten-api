@@ -22,51 +22,31 @@ class LoginController extends Controller
     {
         $user = [
             'email' => $request->email,
-            'password' => $request->password,
-            'is_login' => '0',
-            'is_active' => '1',
+            'password' => $request->password
         ];
 
         $check = DB::table('students')->where('email', $request->email)->first();
 
-        if ($check->is_active == '1') {
-            if ($check->is_login == '0') {
-                if (Auth::attempt($user)) {
-                    $this->isLogin(Auth::id());
 
-                    $response = Http::asForm()->post('http://localhost/chemten-api/public/oauth/token', [
-                        'grant_type' => 'password',
-                        'client_id' => $this->client->id,
-                        'client_secret' => $this->client->secret,
-                        'username' => $request->email,
-                        'password' => $request->password,
-                        'scope' => '*',
-                    ]);
+        if (Auth::attempt($user)) {
 
-                    return $response->json();
-                } else {
-                    return response([
-                        'message' => 'Login Failed'
-                    ]);
-                }
-            } else {
-                return response([
-                    'message' => 'Account is used'
-                ]);
-            }
+            $response = Http::asForm()->post('http://localhost/chemten-clone/chemten-api/public/oauth/token', [
+                'grant_type' => 'password',
+                'client_id' => $this->client->id,
+                'client_secret' => $this->client->secret,
+                'username' => $request->email,
+                'password' => $request->password,
+                'scope' => '*',
+            ]);
+
+            return $response->json();
         } else {
             return response([
-                'message' => 'Account is suspended'
+                'message' => 'Login Failed'
             ]);
         }
     }
-    private function isLogin(int $id)
-    {
-        $user = User::findorFail($id);
-        return $user->update([
-            'is_login' => '1',
-        ]);
-    }
+
 
     public function refresh(Request $request)
     {
@@ -76,7 +56,7 @@ class LoginController extends Controller
             'refresh_token' => 'refresh token is required',
         ]);
 
-        $response = Http::asForm()->post('http://localhost/chemten-api/public/oauth/token', [
+        $response = Http::asForm()->post('http://localhost/chemten-clone/chemten-api/public/oauth/token', [
             'grant_type' => 'refresh_token',
             'refresh_token' => $request->refresh_token,
             'client_id' => $this->client->id,
@@ -93,10 +73,6 @@ class LoginController extends Controller
         $user = Auth::user();
         $accessToken = Auth::user()->token();
         DB::table('oauth_refresh_tokens')->where('access_token_id', $accessToken->id)->update(['revoked' => true]);
-
-        $user->update([
-            'is_login' => '0',
-        ]);
 
         $accessToken->revoke();
 

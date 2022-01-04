@@ -33,6 +33,6 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('kim10_users');
+        Schema::dropIfExists('students');
     }
 }
