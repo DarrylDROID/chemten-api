@@ -11,7 +11,7 @@
                 <div class="px-5">                    
                     <input name="email" class="border-2 border-gray-300 rounded-md mt-2 w-full p-2"
                         type="text" placeholder="email" required>
-                    <input name="password" class="border-2 border-gray-300 rounded-md mt-4 w-full p-2"
+                    <input name="password" class="border-2 border-gray-300 rounded-md mt-2 w-full p-2"
                         type="text" placeholder="password" required>
                     <input name="name" class="border-2 border-gray-300 rounded-md mt-2 w-full p-2"
                         type="text" placeholder="nama" required>
