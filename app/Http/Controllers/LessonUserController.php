@@ -17,10 +17,9 @@ class LessonUserController extends Controller
     }
     public function lesson($id)
     {
-        $lesson = Lesson::all()->where('id', $id)->first();
-        $sublesson = SubLesson::all()->where('lesson_id', $id);
+        $sublessons = SubLesson::all()->where('lesson_id', $id);
 
-        return view('level.lesson.lessons', compact('lesson', 'sublesson'));
+        return view('level.lesson.lessons', compact('sublessons'));
     }
     public function sublesson($id)
     {

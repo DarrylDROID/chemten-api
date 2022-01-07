@@ -11,12 +11,13 @@ class Exercise extends Model
 
     protected $table = 'kim10_exercise';
     protected $primaryKey = 'id';
-    protected $keyType = 'string';
 
     protected $fillable = [
-        'exercise_topic',
-        'exercise_level',
+        'lesson_id',
+        'exercise_topic',        
         'exercise_image',
         'exercise_description'
     ];
+
+     
 }

@@ -5,13 +5,13 @@ module.exports = {
     colors: {
       white: "#FFFFFF",
       black: "#000000",
-      bluebg: "#010020",
+      bluebg: "#000027",
       pink: {
         100: "#FDCFDE",
         200: "#FA9FBF",
         300: "#FA72A0",
         400: "#F64480",
-        500: "#F61A60"
+        500: "#F74581"
       },
       gray: {
         100: "#E5E9EF",

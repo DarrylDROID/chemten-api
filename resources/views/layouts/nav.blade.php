@@ -1,4 +1,4 @@
-<nav class="bg-bluebg text-white flex items-center justify-between px-5 py-2">
+<nav class="bg-bluebg text-white flex items-center justify-between px-5 py-2" style="z-index: -1">
     <img src="img/logo.png" alt="" width="120">        
     <div class="">
         <a href="/">Home</a>

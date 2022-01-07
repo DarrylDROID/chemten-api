@@ -18,4 +18,9 @@ class SubLesson extends Model
         'sublesson_image',
         'sublesson_description'
     ];
+
+    public function lesson()
+    {
+        return $this->belongsTo(Lesson::class, 'lesson_id', 'id');
+    }
 }

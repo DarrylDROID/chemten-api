@@ -4,9 +4,7 @@
     @php
         $exerciseid = $exercise['id'];  
     @endphp
-    <div style="min-height: 40vh">
-
-    </div>
+    <img src="{{ asset('img/jumbotron/hiasan.svg') }}" alt="" class="w-full">
     <div class="p-5 bg-white">
         <h1 class="font-bold text-2xl">{{ $exercise['exercise_topic'] }}</h1>
         <p class="font-bold">{{ $exercise['exercise_level'] }}</p>

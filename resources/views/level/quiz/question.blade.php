@@ -27,10 +27,8 @@
         }
     @endphp
 
-    <div style="min-height: 40vh">
-
-    </div>
-    <div class="p-5 bg-white" style="min-height: 60vh">
+<img src="{{ asset('img/jumbotron/hiasan.svg') }}" alt="" class="w-full">
+    <div class="p-5 bg-white">
         <p class="">Pertanyaan {{ $nomor }} dari 10</p>
         <h1 class="font-bold text-2xl my-3">{!! $question['question_description'] !!}</h1>
 
@@ -74,7 +72,11 @@
             required>
             <label for="choice4" class="rounded-md bg-pink-500 py-2 px-10 text-white radioquestion">{{ $question['qchoice4'] }}</label>
 
-            <input type="submit" class="rounded-full bg-pink-500 py-2 px-16 text-white text-xl" value="Finish ->">
+            <div class="flex justify-between mt-10">
+                <a href="/quiz/{{ $exercise }}/{{ $nomor-1 }}" class="rounded-full bg-pink-500 py-2 px-12 text-white text-xl"><- Previous</a>
+                <input type="submit" class="rounded-full bg-pink-500 py-2 px-16 text-white text-xl" value="Finish ->">
+            </div>
+            
         </form>
         @else 
         <form class="my-5" action="/answer/{{ $exercise }}/{{ $number }}" method="POST">
@@ -116,12 +118,16 @@
             required>
             <label for="choice4" class="rounded-md bg-pink-500 py-2 px-10 text-white radioquestion">{{ $question['qchoice4'] }}</label>
 
-            <input type="submit" class="rounded-full bg-pink-500 py-2 px-16 text-white text-xl" value="Next ->">
+            <div class="flex justify-between mt-10">                
+                @if ($nomor!=1)
+                    <a href="/quiz/{{ $exercise }}/{{ $nomor-1 }}" class="rounded-full bg-pink-500 py-2 px-12 text-white text-xl"><- Previous</a>
+                @endif
+                <input type="submit" class="rounded-full bg-pink-500 py-2 px-16 text-white text-xl" value="Next ->">
+            </div>
+            
         </form>
         @endif 
-        @if ($nomor!=1)
-            <a href="/quiz/{{ $exercise }}/{{ $nomor-1 }}" class="rounded-full bg-pink-500 py-2 px-16 text-white text-xl"><- Previous</a>
-        @endif
+        
         
     </div>       
 @endsection

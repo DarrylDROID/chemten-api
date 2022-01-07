@@ -12,5 +12,6 @@
     <div class="bg-bluebg" style="min-height: 100vh">
         @yield('main_content')
     </div>
+    @include('layouts.footer')
 </body>
 </html>

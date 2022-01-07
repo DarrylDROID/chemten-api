@@ -19,4 +19,9 @@ class Lesson extends Model
         'lesson_level',
         'lesson_description'
     ];
+
+    public function sublesson()
+    {
+        return $this->hasMany(SubLesson::class, 'lesson_id', 'id');
+    }
 }
