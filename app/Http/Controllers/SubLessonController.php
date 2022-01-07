@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Exercise;
 use App\Models\kim_logs;
+use App\Models\Lesson;
 use App\Models\SubLesson;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -17,12 +19,9 @@ class SubLessonController extends Controller
      */
     public function index()
     {
-        $active_welcome = "";
-        $active_sublessons = "active";
-
         $sublesson = SubLesson::all();
 
-        return view('sublesson', compact('active_welcome', 'active_sublessons', 'sublesson'));
+        return view('sublesson', compact('sublesson'));
     }
 
     /**
@@ -32,8 +31,8 @@ class SubLessonController extends Controller
      */
     public function create()
     {
-        //
-        return view('dashboard.form.createsublesson');
+        $lessons = Lesson::all();
+        return view('dashboard.form.createsublesson', compact('lessons'));
     }
 
     /**
@@ -43,12 +42,7 @@ class SubLessonController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        // $this->validate($request, [
-        //     'sublesson_topic' => 'required|min:5|max:50',
-        // ]);
-
-        //
+    {     
         $lesson_id = $request->lesson_id;
         SubLesson::create([
             'lesson_id' => $request->lesson_id,
@@ -89,7 +83,8 @@ class SubLessonController extends Controller
     public function edit($id)
     {
         $sublesson = SubLesson::findOrFail($id);
-        return view('dashboard.form.editsublessondetail', compact('sublesson'));
+        $lessons = Lesson::all();
+        return view('dashboard.form.editsublessondetail', compact('sublesson', 'lessons'));
     }
 
     /**

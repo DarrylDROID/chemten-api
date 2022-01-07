@@ -26,4 +26,9 @@ class Question extends Model
     {
         return $this->belongsToMany(User::class, 'kim10_quizanswer', 'student_id', 'id');
     }
+
+    public function exercise()
+    {
+        return $this->belongsTo(Exercise::class, 'exercise_id', 'id');
+    } 
 }

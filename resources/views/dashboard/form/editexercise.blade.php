@@ -2,7 +2,7 @@
 
 @section('main_content')
 
-<h1 class="mt-5 ms-5">Edit Exercise</h1>
+<h1 class="mt-5 ms-5">Edit Exercise {{ $exercise->lesson->lesson_topic }}</h1>
 
 <form action="{{ route('exercises.update', $exercise->id) }}" method="POST" class="mt-2 ms-5" enctype="multipart/form-data">
     @csrf
@@ -10,14 +10,6 @@
     <div class="content">
         <div class="row">
             <div class="col-6">
-                <div class="form-group">
-                    <label for="">Exercise Topic</label>
-                    <input type="text" class="form-control" name="exercise_topic" value="{{ $exercise->lesson->lesson_topic }}" required>
-                </div>                
-                <div class="form-group">
-                <label for="">Exercise Level</label>
-                    <input type="text" class="form-control" name="exercise_level" value="{{ $exercise->lesson->lesson_level }}" required>
-                </div>
                 <div class="form-group">
                     <label for="">Exercise Image</label>
                     <input type="hidden" name="oldImage" value="{{ $exercise->exercise_image }}">

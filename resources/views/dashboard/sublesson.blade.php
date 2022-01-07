@@ -3,13 +3,12 @@
 @section('main_content')
 
 <div class="mt-5 mx-5 d-flex justify-content">
-    <h2 class="">Sublesson</h2>
+    <h2 class="">Sublesson {{ $sublessons[0]->lesson->lesson_topic }}</h2>
 </div>
     <div class="mx-5 d-flex justify-content-end">
     <a href="{{ route('sublesson.create') }}" class="btn btn-dark">Create</a>
     <a href="{{ URL('/lessons') }}" class="btn btn-warning ms-3">Go Back</a>
 </div>
-
 
 <div class="mx-5 mt-3">
     <table class="table table-striped">

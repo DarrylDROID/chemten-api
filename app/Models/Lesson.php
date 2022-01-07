@@ -27,6 +27,6 @@ class Lesson extends Model
 
     public function exercise()
     {
-        return $this->hasMany(Exercise::class, 'lesson_id', 'id');
+        return $this->hasOne(Exercise::class, 'lesson_id', 'id');
     }
 }

@@ -11,7 +11,11 @@
             <div class="col-6">
                 <div class="form-group">
                     <label for="">Lesson ID</label>
-                    <input type="text" class="form-control" name="lesson_id" required>
+                    <select name="lesson_id" id="" class="form-control" required>
+                        @foreach ($lessons as $lesson)
+                            <option value="{{ $lesson->id }}">{{ $lesson->lesson_topic }}</option>
+                        @endforeach
+                    </select>
                 </div>  
                 <div class="form-group">
                     <label for="">SubLesson Topic</label>

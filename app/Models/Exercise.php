@@ -22,4 +22,9 @@ class Exercise extends Model
     {
         return $this->belongsTo(Lesson::class, 'lesson_id', 'id');
     } 
+
+    public function questions()
+    {
+        return $this->hasMany(Question::class, 'exercise_id', 'id');
+    } 
 }

@@ -10,8 +10,12 @@
         <div class="row">
             <div class="col-6">
                 <div class="form-group">
-                    <label for="">Exercise ID</label>
-                    <input type="text" class="form-control" name="exercise_id" required>
+                    <label for="">Exercise Topic</label>
+                    <select name="exercise_id" id="" class="form-control" required>
+                        @foreach ($exercises as $exercise)
+                            <option value="{{ $exercise->id }}">{{ $exercise->lesson->lesson_topic }}</option>
+                        @endforeach
+                    </select>
                 </div>                 
                 <div class="form-group">
                     <label for="">Question Description</label>

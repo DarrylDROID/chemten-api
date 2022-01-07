@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Exercise;
 use App\Models\kim_logs;
 use App\Models\Question;
 use Illuminate\Http\Request;
@@ -28,8 +29,8 @@ class QuestionController extends Controller
      */
     public function create()
     {
-        //
-        return view('dashboard.form.createquestion');
+        $exercises = Exercise::all();
+        return view('dashboard.form.createquestion', compact('exercises'));
     }
 
     /**
@@ -92,7 +93,8 @@ class QuestionController extends Controller
     public function edit($id)
     {
         $question = Question::findOrFail($id);
-        return view('dashboard.form.editquestion', compact('question'));
+        $exercises = Exercise::all();
+        return view('dashboard.form.editquestion', compact('question', 'exercises'));
     }
 
     /**

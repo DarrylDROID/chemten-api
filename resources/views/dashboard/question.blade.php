@@ -3,7 +3,7 @@
 @section('main_content')
 
 <div class="mt-5 mx-5 d-flex justify-content">
-    <h2 class="">Question</h2>
+    <h2 class="">Question {{ $questions[0]->exercise->lesson->lesson_topic }}</h2>
 </div>
     <div class="mx-5 d-flex justify-content-end">
     <a href="{{ route('question.create') }}" class="btn btn-primary">Create</a>

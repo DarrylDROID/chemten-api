@@ -18,12 +18,9 @@ class ExerciseController extends Controller
      */
     public function index()
     {
-        $active_welcome = "";
-        $active_exercises = "active";
-
         $exercises = Exercise::all();
 
-        return view('dashboard.exercise', compact('active_welcome', 'active_exercises', 'exercises'));
+        return view('dashboard.exercise', compact('exercises'));
     }
 
     /**
@@ -99,15 +96,11 @@ class ExerciseController extends Controller
         if ($exerciseimage) {
             Storage::delete($request->oldImage);
             $exercise->update([
-                'exercise_topic' => $request->exercise_topic,
-                'exercise_level' => $request->exercise_level,
                 'exercise_image' => $exerciseimage->store('exercise_image'),
                 'exercise_description' => $request->exercise_description
             ]);
         } else {
             $exercise->update([
-                'exercise_topic' => $request->exercise_topic,
-                'exercise_level' => $request->exercise_level,
                 'exercise_description' => $request->exercise_description
             ]);
         }
