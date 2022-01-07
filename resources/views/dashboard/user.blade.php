@@ -4,7 +4,7 @@
 
 <div class="mt-5 mx-5 d-flex justify-content-between">
     <h1>User Account</h1>
-    <a href="{{ route('users.create') }}" class="btn btn-primary">Create</a>
+    {{-- <a href="{{ route('users.create') }}" class="btn btn-primary">Create</a> --}}
 </div>
 
     <div class="mx-5">

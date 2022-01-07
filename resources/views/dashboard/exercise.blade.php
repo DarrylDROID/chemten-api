@@ -18,7 +18,7 @@
             <td>
                 <a href="{{ route('exercises.show', $exercise->id) }}">{{ $exercise['exercise_topic'] }}</a>
             </td>
-            <td>{{ $exercise['exercise_level'] }}</td>
+            <td>{{ $exercise->lesson->lesson_level }}</td>
             <td><img src="{{ asset('storage/'. $exercise['exercise_image']) }}" class="rounded-circle" width="50"></td>
             <td>{{ $exercise['exercise_description'] }}</td>
             <td>

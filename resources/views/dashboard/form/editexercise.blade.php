@@ -12,11 +12,11 @@
             <div class="col-6">
                 <div class="form-group">
                     <label for="">Exercise Topic</label>
-                    <input type="text" class="form-control" name="exercise_topic" value="{{ $exercise['exercise_topic'] }}" required>
+                    <input type="text" class="form-control" name="exercise_topic" value="{{ $exercise->lesson->lesson_topic }}" required>
                 </div>                
                 <div class="form-group">
                 <label for="">Exercise Level</label>
-                    <input type="text" class="form-control" name="exercise_level" value="{{ $exercise['exercise_level'] }}" required>
+                    <input type="text" class="form-control" name="exercise_level" value="{{ $exercise->lesson->lesson_level }}" required>
                 </div>
                 <div class="form-group">
                     <label for="">Exercise Image</label>

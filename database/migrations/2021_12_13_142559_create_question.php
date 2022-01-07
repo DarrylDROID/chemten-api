@@ -16,7 +16,6 @@ class CreateQuestion extends Migration
         Schema::create('kim10_question', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('exercise_id');
-            $table->string('question_topic');
             $table->text('question_description');
             $table->string('qchoice1');
             $table->string('qchoice2');

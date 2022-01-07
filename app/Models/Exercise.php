@@ -13,11 +13,13 @@ class Exercise extends Model
     protected $primaryKey = 'id';
 
     protected $fillable = [
-        'lesson_id',
-        'exercise_topic',        
+        'lesson_id',        
         'exercise_image',
         'exercise_description'
     ];
 
-     
+    public function lesson()
+    {
+        return $this->belongsTo(Lesson::class, 'lesson_id', 'id');
+    } 
 }

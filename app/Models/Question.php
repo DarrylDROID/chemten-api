@@ -14,7 +14,6 @@ class Question extends Model
 
     protected $fillable = [
         'exercise_id',
-        'question_topic',
         'question_description',
         'qchoice1',
         'qchoice2',

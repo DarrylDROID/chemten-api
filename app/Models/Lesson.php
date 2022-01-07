@@ -24,4 +24,9 @@ class Lesson extends Model
     {
         return $this->hasMany(SubLesson::class, 'lesson_id', 'id');
     }
+
+    public function exercise()
+    {
+        return $this->hasMany(Exercise::class, 'lesson_id', 'id');
+    }
 }

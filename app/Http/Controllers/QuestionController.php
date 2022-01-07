@@ -40,29 +40,33 @@ class QuestionController extends Controller
      */
     public function store(Request $request)
     {
-        // $this->validate($request, [
-        //     'question_topic' => 'required|min:5|max:50',
-        // ]);
+        $questions = Question::where('exercise_id', $request->exercise_id)->get();
+        $count = 0;
 
-        //
-        Question::create([
-            'exercise_id' => $request->exercise_id,
-            'question_topic' => $request->question_topic,
-            'question_description' => $request->question_description,
-            'qchoice1' => $request->qchoice1,
-            'qchoice2' => $request->qchoice2,
-            'qchoice3' => $request->qchoice3,
-            'qchoice4' => $request->qchoice4,
-            'correctanswer' => $request->correctanswer
-        ]);
+        foreach ($questions as $question) {
+            $count++;
+        }
 
-        kim_logs::create([
-            "table" => "kim10_question",
-            "userId" => Auth::user()->id,
-            "log_path" => "QuestionController@create",
-            "log_desc" => "Access function create untuk membuat data",
-            "log_ip" => request()->ip(),
-        ]);
+        if ($count < 10) {
+            Question::create([
+                'exercise_id' => $request->exercise_id,
+                'question_topic' => $request->question_topic,
+                'question_description' => $request->question_description,
+                'qchoice1' => $request->qchoice1,
+                'qchoice2' => $request->qchoice2,
+                'qchoice3' => $request->qchoice3,
+                'qchoice4' => $request->qchoice4,
+                'correctanswer' => $request->correctanswer
+            ]);
+    
+            kim_logs::create([
+                "table" => "kim10_question",
+                "userId" => Auth::user()->id,
+                "log_path" => "QuestionController@create",
+                "log_desc" => "Access function create untuk membuat data",
+                "log_ip" => request()->ip(),
+            ]);
+        }        
 
         return redirect(route('exercises.show', ['exercise' => $request->exercise_id]));
     }

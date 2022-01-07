@@ -15,8 +15,7 @@ class CreateExercise extends Migration
     {
         Schema::create('kim10_exercise', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('lesson_id');
-            $table->string('exercise_topic');            
+            $table->unsignedBigInteger('lesson_id');            
             $table->string('exercise_image');
             $table->string('exercise_description');
             $table->timestamps();

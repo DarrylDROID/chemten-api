@@ -12,11 +12,7 @@
                 <div class="form-group">
                     <label for="">Exercise ID</label>
                     <input type="text" class="form-control" name="exercise_id" required>
-                </div>  
-                <div class="form-group">
-                    <label for="">Question Topic</label>
-                    <input type="text" class="form-control" name="question_topic" required>
-                </div>                
+                </div>                 
                 <div class="form-group">
                     <label for="">Question Description</label>
                     <input type="text" class="form-control" name="question_description" required>

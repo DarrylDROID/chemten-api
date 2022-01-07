@@ -9,7 +9,7 @@ class LeaderboardUserController extends Controller
 {
     public function leaderboard()
     {
-        $leaderboards = KimUsers::all();
+        $leaderboards = KimUsers::orderBy('rank_score', 'desc')->get();
 
         return view('leaderboard', compact('leaderboards'));
     }

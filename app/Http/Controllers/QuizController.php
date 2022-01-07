@@ -51,7 +51,7 @@ class QuizController extends Controller
     {
         $question = Question::where('exercise_id', $exercise)->where('id', $questionid-1)->first();
         $temp = Request()->answer;
-        $previous = Quiz::where('student_id', Auth::user()->id)->where('question_id', $questionid)->first();   
+        $previous = Quiz::where('student_id', Auth::user()->id)->where('question_id', $questionid-1)->first();   
 
         if ($questionid != 1) {
             $answer = $question->correctanswer;                 

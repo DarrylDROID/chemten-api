@@ -15,10 +15,6 @@
                     <input type="text" class="form-control" name="exercise_id" value="{{ $question['exercise_id'] }}" required>
                 </div>                
                 <div class="form-group">
-                    <label for="">Question Topic</label>
-                    <input type="text" class="form-control" name="question_topic" value="{{ $question['question_topic'] }}" required>
-                </div>
-                <div class="form-group">
                     <label for="">Question Description</label>
                     <input id="question_description" type="hidden" class="form-control" name="question_description" value="{{ $question['question_description'] }}" required>
                     <trix-editor input="question_description"></trix-editor>

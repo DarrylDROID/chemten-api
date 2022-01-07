@@ -14,7 +14,6 @@
     <table class="table table-striped">
         <tr>
             <th>Exercise ID</th>
-            <th>Topic</th>
             <th>Description</th>
             <th>Qchoice1</th>
             <th>Qchoice2</th>
@@ -26,7 +25,6 @@
         @foreach ($questions as $question)
         <tr>
                 <td>{{ $question['exercise_id'] }}</td>
-                <td>{{ $question['question_topic'] }}</td>
                 <td>{!! $question['question_description'] !!}</td>
                 <td>{{ $question['qchoice1'] }}</td>
                 <td>{{ $question['qchoice2'] }}</td>
@@ -44,9 +42,7 @@
         </tr>
         @endforeach
         
-    </table>
-    
-    
+    </table>    
 </div>
 
 @endsection
