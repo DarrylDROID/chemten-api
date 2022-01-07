@@ -50,7 +50,6 @@ class QuestionController extends Controller
         if ($count < 10) {
             Question::create([
                 'exercise_id' => $request->exercise_id,
-                'question_topic' => $request->question_topic,
                 'question_description' => $request->question_description,
                 'qchoice1' => $request->qchoice1,
                 'qchoice2' => $request->qchoice2,
@@ -109,7 +108,6 @@ class QuestionController extends Controller
         $question = Question::findOrFail($id);
         $question->update([
             'exercise_id' => $request->exercise_id,
-            'question_topic' => $request->question_topic,
             'question_description' => $request->question_description,
             'qchoice1' => $request->qchoice1,
             'qchoice2' => $request->qchoice2,

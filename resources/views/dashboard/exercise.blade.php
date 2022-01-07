@@ -7,7 +7,7 @@
 <div class="mx-5">
     <table class="mt-2 table table-striped">
         <tr>
-            <th>Topic</th>
+            <th>Id</th>
             <th>Level</th>
             <th>Image</th>
             <th>Description</th>
@@ -16,7 +16,7 @@
     @foreach ($exercises as $exercise)
         <tr>
             <td>
-                <a href="{{ route('exercises.show', $exercise->id) }}">{{ $exercise['exercise_topic'] }}</a>
+                <a href="{{ route('exercises.show', $exercise->id) }}">{{ $exercise['lesson_id'] }}</a>
             </td>
             <td>{{ $exercise->lesson->lesson_level }}</td>
             <td><img src="{{ asset('storage/'. $exercise['exercise_image']) }}" class="rounded-circle" width="50"></td>
