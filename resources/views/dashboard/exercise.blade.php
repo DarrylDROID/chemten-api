@@ -20,6 +20,7 @@
             </td>
             <td>{{ $exercise->lesson->lesson_level }}</td>
             <td><img src="{{ asset('storage/'. $exercise['exercise_image']) }}" class="rounded-circle" width="50"></td>
+            {{-- <td><img src="{{ asset('storage/exercise_image/'. $exercise['exercise_image']) }}" class="rounded-circle" width="50"></td> --}}
             <td>{{ $exercise['exercise_description'] }}</td>
             <td>
                 <a href="{{ route('exercises.edit', $exercise->id) }}" class="btn btn-dark mt-3">Edit</a>
