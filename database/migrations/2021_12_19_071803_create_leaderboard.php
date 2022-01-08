@@ -17,7 +17,7 @@ class CreateLeaderboard extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->string('role');
-            $table->string('rank_score');
+            $table->Integer('rank_score');
             $table->timestamps();
         });
     }

@@ -31,5 +31,13 @@ class KimUserSeeder extends Seeder
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
         ]);
+
+        DB::table('kim10_users')->insert([
+            'user_id' => '3',
+            'rank_score' => 200,
+            'role' => 'student',
+            'created_at' => \Carbon\Carbon::now(),
+            'updated_at' => \Carbon\Carbon::now()
+        ]);
     }
 }

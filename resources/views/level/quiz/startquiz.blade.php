@@ -6,7 +6,7 @@
     @endphp
     <img src="{{ asset('img/jumbotron/hiasan.svg') }}" alt="" class="w-full">
     <div class="p-5 bg-white">
-        <h1 class="font-bold text-2xl">{{ $exercise['exercise_topic'] }}</h1>
+        <h1 class="font-bold text-2xl">{{ $exercise->lesson->lesson_topic }}</h1>
         <p class="font-bold">{{ $exercise['exercise_level'] }}</p>
         <p>{{ $exercise['exercise_description'] }}</p>
         <div class="flex justify-end mt-10">
