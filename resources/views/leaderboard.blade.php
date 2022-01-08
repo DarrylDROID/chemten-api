@@ -8,13 +8,13 @@
 
 <img src="{{ asset('img/jumbotron/hiasan.svg') }}" alt="" class="w-full">
 
-<div class="p-5">
-    <p class="font-bold text-bluebg mb-2" style="font-size: 30px">Leaderboard</p>
+<div class="p-2 md:p-5">
+    <p class="font-bold text-bluebg text-center text-xl md:text-3xl">Leaderboard</p>
 
-    <div class="grid grid-cols-3 gap-3">
+    <div class="lg:grid grid-cols-2 xl:grid-cols-3 gap-3 mt-3">
         @foreach ($leaderboards as $leaderboard)    
             @if ($leaderboard->user->kimuser->role == 'student')
-                <div class="rounded-md bg-pink-500 py-4 px-6 text-white">
+                <div class="rounded-md bg-pink-500 py-2 md:py-4 px-3 md:px-6 text-white mt-2">
                     <div class="grid grid-cols-6">
                         <div class="bg-white rounded-full w-12 h-12">
                             <div class="flex items-center justify-center w-full h-full">
@@ -22,8 +22,8 @@
                             </div>
                         </div>
                         <div class="col-span-5">
-                            <p class="text-xl font-bold">{{ $leaderboard->user->name }}</p>
-                            <p class="text-md">{{ $leaderboard['rank_score'] }}</p>
+                            <p class="text-base md:text-xl font-bold">{{ $leaderboard->user->name }}</p>
+                            <p class="text-sm md:text-base">{{ $leaderboard['rank_score'] }}</p>
                         </div>                        
                     </div>
                 </div>

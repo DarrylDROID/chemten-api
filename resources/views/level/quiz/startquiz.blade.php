@@ -11,9 +11,9 @@
         <p>{{ $exercise['exercise_description'] }}</p>
         <div class="flex justify-end mt-10">
             @if ($count == 0)
-                <a href="/quiz/{{ $exerciseid }}/{{ $first->id }}" class="rounded-full bg-pink-500 py-2 px-16 text-white text-xl">Start</a>
+                <a href="/quiz/{{ $exerciseid }}/{{ $first->id }}" class="rounded-full bg-pink-500 py-2 px-16 text-white text-base md:text-xl">Start</a>
             @else
-                <a href="/retryquiz/{{ $exerciseid }}/{{ $first->id }}" class="rounded-full bg-pink-500 py-2 px-16 text-white text-xl">Retry</a>
+                <a href="/retryquiz/{{ $exerciseid }}/{{ $first->id }}" class="rounded-full bg-pink-500 py-2 px-16 text-white text-base md:text-xl">Retry</a>
             @endif            
         </div> 
     </div>       

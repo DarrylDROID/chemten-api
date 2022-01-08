@@ -9,7 +9,7 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="bg-bluebg" style="min-height: 100vh">
+    <div class="bg-bluebg" style="min-height: 96vh">
         @yield('main_content')
     </div>
     @include('layouts.footer')

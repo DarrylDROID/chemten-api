@@ -2,14 +2,15 @@
 
 @section('main_content')
 <img src="{{ asset('img/jumbotron/hiasan.svg') }}" alt="" class="w-full">
-<div class="p-5 bg-white" style="min-height: 50vh">
+<div class="p-5 bg-white">
     <h1 class="font-bold text-2xl">{{$sublessons[0]->lesson->lesson_topic}}</h1>
     <p>{!! $sublessons[0]->lesson->lesson_description !!}</p>
     <br>
-    <div class="grid grid-cols-5 gap-5 text-white text-center">
+    
+    <div class="md:grid grid-cols-2 lg:grid-cols-4 gap-5 text-white text-center w-full md:w-2/3 lg:w-full xl:w-11/12">
 
         @foreach ($sublessons as $sublesson)
-        <div class="w-64 shadow-xl mb-2">
+        <div class="w-full md:w-60 xl:w-64 shadow-xl mb-2">
             <img src="{{ asset('storage/'.$sublesson->sublesson_image) }}" class="w-full h-52" alt="">
             <div class="flex items-center justify-center">
                 <div class="bg-pink-500 w-1/2 p-2 -mt-5 z-10 shadow-lg">
@@ -30,7 +31,7 @@
             </div>
         </div>
         @endforeach
-        <div class="rounded-lg bg-pink-500 pb-5 flex justify-center items-center" onclick="window.location.href='/startquiz/{{$sublesson->lesson->id}}'">
+        <div class="rounded-lg bg-pink-500 py-5 flex justify-center items-center w-full md:w-60 xl:w-64" onclick="window.location.href='/startquiz/{{$sublesson->lesson->id}}'">
             <p class="text-xl font-bold">Let's try some <br>Exercise</p>
         </div>
         
