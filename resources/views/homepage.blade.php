@@ -8,7 +8,7 @@
     @endphp
 
     <div class="p-2 md:p-5 lg:p-2 xl:p-5">
-        <p class="font-bold text-bluebg mb-5 text-xl md:text-3xl text-center">Lessons</p>
+        <p class="font-bold text-bluebg mb-5 text-xl md:text-3xl text-center">List Level</p>
         <div class="flex justify-center items-center">
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-3 xl:gap-8 text-white text-center">
             @foreach ($lesson as $lessonlevel)

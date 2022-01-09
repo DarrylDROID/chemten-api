@@ -10,9 +10,9 @@
                     @csrf
                     <div class="px-5">
                         <input name="email" class="border-2 border-gray-300 rounded-md mt-2 w-full p-2"
-                            type="text" placeholder="Email" required>
+                            type="text" placeholder="Surel" required>
                         <input name="password" class="border-2 border-gray-300 rounded-md mt-4 w-full p-2"
-                            type="password" placeholder="Password" required>
+                            type="password" placeholder="Kata Sandi" required>
                         <button type="submit" class="bg-pink-500 rounded-md mt-4 w-full p-2 text-white">
                             {{ __('Login') }}
                         </button>

@@ -11,7 +11,7 @@
 
         @foreach ($sublessons as $sublesson)
         <div class="w-full md:w-60 xl:w-64 shadow-xl mb-2">
-            <img src="{{ asset('storage/'.$sublesson->sublesson_image) }}" class="w-full h-52" alt="">
+            <img src="{{ asset('storage/sublesson_image/'.$sublesson->sublesson_image) }}" class="w-full h-52" alt="">
             <div class="flex items-center justify-center">
                 <div class="bg-pink-500 w-1/2 p-2 -mt-5 z-10 shadow-lg">
                     <div class="flex items-center justify-center">
@@ -32,7 +32,7 @@
         </div>
         @endforeach
         <div class="rounded-lg bg-pink-500 py-5 flex justify-center items-center w-full md:w-60 xl:w-64" onclick="window.location.href='/startquiz/{{$sublesson->lesson->id}}'">
-            <p class="text-xl font-bold">Let's try some <br>Exercise</p>
+            <p class="text-xl font-bold">Mari mengerjakan <br>Quiz</p>
         </div>
         
     </div>

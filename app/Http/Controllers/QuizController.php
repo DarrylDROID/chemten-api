@@ -48,6 +48,13 @@ class QuizController extends Controller
         $quiz = Quiz::where('student_id', Auth::user()->id)->whereRelation('questions', 'exercise_id', '=', $exercise);
         $quiz->delete();
 
+        $prev = ExerciseScore::where('user_id', Auth::user()->id)->where('exercise_id', $exercise)->first();
+        $poin = KimUsers::where('user_id', Auth::user()->id)->first();
+        $poin->update([
+            'rank_score' => $poin->rank_score-$prev->score
+        ]);
+        ExerciseScore::where('user_id', Auth::user()->id)->where('exercise_id', $exercise)->delete();
+
         return view('level.quiz.question', compact('question', 'answer'));
     }
 

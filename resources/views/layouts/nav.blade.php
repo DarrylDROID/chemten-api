@@ -2,7 +2,7 @@
     <img src="img/logo.png" alt="" class="w-16 md:w-36">        
     <div class="">
         <a href="/" class="text-sm md:text-lg">Home</a>
-        <a href="{{ route('profile.index') }}" class="ml-2 text-sm md:text-lg">Profile</a>
         <a href="/leaderboard" class="ml-2 text-sm md:text-lg">Leaderboard</a>
+        <a href="{{ route('profile.index') }}" class="ml-2 text-sm md:text-lg">Profil</a>        
     </div>
 </nav>

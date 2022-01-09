@@ -14,7 +14,7 @@
                         <p class="font-bold text-bluebg text-2xl text-center my-2">{{ $user['name'] }}</p>
                                  
                         <div class="ml-10">                            
-                            <p>Email: {{ $user['email'] }}</p>
+                            <p>Surel: {{ $user['email'] }}</p>
                             <p>Username: {{ $user['username'] }}</p>
                             <p>Sekolah: {{ $user['school'] }}</p>
                             <p>Kota: {{ $user['city'] }}</p>

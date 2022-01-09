@@ -10,19 +10,19 @@
                 @csrf
                 <div class="px-5">                    
                     <input name="email" class="border-2 border-gray-300 rounded-md mt-2 w-full p-2"
-                        type="text" placeholder="email" required>
+                        type="text" placeholder="Surel" required>
                     <input name="password" class="border-2 border-gray-300 rounded-md mt-2 w-full p-2"
-                        type="text" placeholder="password" required>
+                        type="text" placeholder="Kata Sandi" required>
                     <input name="name" class="border-2 border-gray-300 rounded-md mt-2 w-full p-2"
-                        type="text" placeholder="nama" required>
+                        type="text" placeholder="Nama" required>
                     <input name="username" class="border-2 border-gray-300 rounded-md mt-2 w-full p-2"
-                        type="text" placeholder="username" required>
+                        type="text" placeholder="Username" required>
                     <input name="school" class="border-2 border-gray-300 rounded-md mt-2 w-full p-2"
-                        type="text" placeholder="sekolah" required>
+                        type="text" placeholder="Sekolah" required>
                     <input name="city" class="border-2 border-gray-300 rounded-md mt-2 w-full p-2"
-                        type="text" placeholder="kota" required>
+                        type="text" placeholder="Kota" required>
                     <input name="birthyear" class="border-2 border-gray-300 rounded-md mt-2 w-full p-2"
-                        type="number" placeholder="tahun lahir" required>
+                        type="number" placeholder="Tahun Lahir" required>
 
                     <button type="submit" class="bg-pink-500 rounded-md mt-4 w-full p-2 text-white">
                         {{ __('Register') }}
