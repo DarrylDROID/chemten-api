@@ -12,7 +12,7 @@
             </div>
         </div>
     </div>
-    <p class="text-center mt-4">{{ $score }} telah ditambahkan ke poin anda</p>
+    <p class="text-center mt-4">{{ $score }} poin telah ditambahkan ke poin anda</p>
     <div class="flex justify-center md:justify-end my-5">
         <a class="rounded-md bg-pink-500 py-2 px-10 text-white" href="/startquiz/{{ $exercise }}">Ulangi <i class="fas fa-undo"></i></a>
         <a class="rounded-md bg-pink-500 py-2 px-10 text-white mx-3" href="/">Kembali <i class="fas fa-arrow-right"></i></a>

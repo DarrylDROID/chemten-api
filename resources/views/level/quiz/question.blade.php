@@ -80,8 +80,8 @@
                 <label for="choice4" class="rounded-md bg-pink-500 py-2 px-10 text-white radioquestion">{{ $question['qchoice4'] }}</label>
                 </div>
             <div class="flex justify-between mt-10">
-                <input type="submit" class="rounded-full bg-pink-500 py-2 px-8 md:px-16 text-white text-base md:text-xl" value="<- Previous" formaction="/answerr/{{ $exercise }}/{{ $number-2 }}" method="POST">
-                <input type="submit" class="rounded-full bg-pink-500 py-2 px-16 text-white text-xl" value="Finish ->">
+                <input type="submit" class="rounded-full bg-pink-500 py-2 px-6 md:px-12 text-white text-base md:text-xl" value="<- Sebelumnya" formaction="/answerr/{{ $exercise }}/{{ $number-2 }}" method="POST">
+                <input type="submit" class="rounded-full bg-pink-500 py-2 px-6 md:px-12 text-white text-xl" value="Selesai ->">
             </div>       
         </form>
         
@@ -134,12 +134,12 @@
             </div>
             @if ($nomor==1)
             <div class="flex justify-end mt-10">                
-                <input type="submit" class="rounded-full bg-pink-500 py-2 px-8 md:px-16 text-white text-base md:text-xl" value="Next ->">
+                <input type="submit" class="rounded-full bg-pink-500 py-2 px-6 md:px-12 text-white text-base md:text-xl" value="Selanjutnya ->">
             </div>
             @else
             <div class="flex justify-between mt-10">                
-                <input type="submit" class="rounded-full bg-pink-500 py-2 px-8 md:px-16 text-white text-base md:text-xl" value="<- Previous" formaction="/answerr/{{ $exercise }}/{{ $number-2 }}">
-                <input type="submit" class="rounded-full bg-pink-500 py-2 px-8 md:px-16 text-white text-base md:text-xl" value="Next ->">
+                <input type="submit" class="rounded-full bg-pink-500 py-2 px-6 md:px-12 text-white text-base md:text-xl" value="<- Sebelumnya" formaction="/answerr/{{ $exercise }}/{{ $number-2 }}">
+                <input type="submit" class="rounded-full bg-pink-500 py-2 px-6 md:px-12 text-white text-base md:text-xl" value="Selanjutnya ->">
             </div>
             @endif                    
         </form>
