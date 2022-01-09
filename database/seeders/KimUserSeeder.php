@@ -18,7 +18,7 @@ class KimUserSeeder extends Seeder
         //
         DB::table('kim10_users')->insert([
             'user_id' => '1',
-            'rank_score' => "100",
+            'rank_score' => 100,
             'role' => 'student',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
@@ -26,7 +26,7 @@ class KimUserSeeder extends Seeder
 
         DB::table('kim10_users')->insert([
             'user_id' => '2',
-            'rank_score' => "0",
+            'rank_score' => 0,
             'role' => 'admin',
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now()
