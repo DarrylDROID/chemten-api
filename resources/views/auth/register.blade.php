@@ -25,7 +25,7 @@
                         type="number" placeholder="Tahun Lahir" required>
 
                     <button type="submit" class="bg-pink-500 rounded-md mt-4 w-full p-2 text-white">
-                        {{ __('Register') }}
+                        {{ __('Daftar') }}
                     </button>
                 </div>                
             </form>            
@@ -33,7 +33,7 @@
     </div>
     <div class="flex items-center justify-center pb-3">
         <div class="w-1/2">
-            <p class="text-white text-center">Sudah memiliki akun? <a href="/login" class="text-decoration-none font-bold">Login</a></p>
+            <p class="text-white text-center">Sudah memiliki akun? <a href="/login" class="text-decoration-none font-bold">Masuk</a></p>
         </div>        
     </div>
     

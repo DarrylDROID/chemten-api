@@ -15,7 +15,7 @@
                                  
                         <div class="ml-10">                            
                             <p>Surel: {{ $user['email'] }}</p>
-                            <p>Username: {{ $user['username'] }}</p>
+                            <p>Nama pengguna: {{ $user['username'] }}</p>
                             <p>Sekolah: {{ $user['school'] }}</p>
                             <p>Kota: {{ $user['city'] }}</p>
                             <p>Tahun lahir: {{ $user['birthyear'] }}</p>                    
@@ -24,13 +24,13 @@
                         <div class="text-center my-5">
                             <div class="flex items-center justify-center">
                                 <div class="bg-white rounded-md text-pink-500 w-5/6 py-1 my-2">
-                                    <a href="{{ route('profile.edit', $user['id']) }}">Edit Profil</a>
+                                    <a href="{{ route('profile.edit', $user['id']) }}">Ubah Profil</a>
                                 </div>
                             </div>                            
                             
                             <form action="{{ route('logout') }}" method="POST">
                                 @csrf
-                                <button class="bg-white rounded-md text-pink-500 w-5/6 py-1 mb-1">Logout</button>
+                                <button class="bg-white rounded-md text-pink-500 w-5/6 py-1 mb-1">Keluar</button>
                             </form>
                         </div>                                           
                     </div>               

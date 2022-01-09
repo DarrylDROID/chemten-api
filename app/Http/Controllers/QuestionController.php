@@ -48,7 +48,7 @@ class QuestionController extends Controller
             $count++;
         }
 
-        if ($count < 10) {
+        if ($count < 11) {
             Question::create([
                 'exercise_id' => $request->exercise_id,
                 'question_description' => $request->question_description,

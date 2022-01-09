@@ -14,7 +14,7 @@
                         <input name="password" class="border-2 border-gray-300 rounded-md mt-4 w-full p-2"
                             type="password" placeholder="Kata Sandi" required>
                         <button type="submit" class="bg-pink-500 rounded-md mt-4 w-full p-2 text-white">
-                            {{ __('Login') }}
+                            {{ __('Masuk') }}
                         </button>
                     </div>                
                 </form>            
@@ -22,7 +22,7 @@
         </div>
         <div class="flex items-center justify-center pb-3">
             <div class="w-1/2">
-                <p class="text-white text-center">Tidak memiliki akun? <a href="/register" class="text-decoration-none font-bold">Registrasi</a></p>
+                <p class="text-white text-center">Tidak memiliki akun? <a href="/register" class="text-decoration-none font-bold">Daftar</a></p>
             </div>        
         </div>
 

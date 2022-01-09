@@ -27,7 +27,7 @@
                 </div>
                 <div class="form-group">
                     <label for="">SubLesson Image</label>
-                    <input type="file" class="form-control" name="sublesson_image" required>
+                    <input type="file" class="form-control" name="sublesson_image" required>            
                 </div>
 
                 <div class="form-group mt-3">
