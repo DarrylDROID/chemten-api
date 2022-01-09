@@ -15,7 +15,11 @@ class LeaderboardController extends Controller
      */
     public function index()
     {
-        $skors =  KimUsers::join('students', 'students_id', '-' , 'user_id') -> orderBy('rank_score', 'DESC');        
+        $skors =  KimUsers::join('students', 'students.id', '=' , 'user_id')->orderBy('rank_score', 'DESC')->get();        
+        return ['leaderboard' => LeaderboardResource::collection($skors)];
+    }
+    public function show($id){
+        $skors = KimUsers::join('students', 'students.id', '=' , 'user_id')->where('user_id', $id)->get();
         return ['leaderboard' => LeaderboardResource::collection($skors)];
     }
 

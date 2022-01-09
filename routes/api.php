@@ -33,7 +33,7 @@ Route::group(['middleware' => 'auth:api'], function () {
     Route::apiResource('lesson', LessonController::class);
     Route::apiResource('sublesson', SubLessonController::class);
     Route::apiResource('exercise', ExerciseController::class);
-    Route::apiResource('user', UserController::class);
+    Route::apiResource('users', UserController::class);
     Route::apiResource('question', QuestionController::class);
     Route::apiResource('leaderboard', LeaderboardController::class);
     Route::post('logout', [LoginController::class, 'logout']);

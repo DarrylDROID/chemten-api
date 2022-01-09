@@ -52,9 +52,7 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        //
-        $code = Str::upper($id);
-        $user = User::all()->where('id', $code);
+        $user = User::all()->where('email', $id);
         return ['user' => UserResource::collection($user)];
     }
 
