@@ -12,6 +12,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" type="text/css" href="{{ asset('css/trix.css') }}">
         <script type="text/javascript" src="{{ asset('js/trix.js') }}"></script>
+        <link rel="icon" href="img/logoatas.png">
     </head>
     <body class="sb-nav-fixed">
         @include('dashboard.layouts.nav')

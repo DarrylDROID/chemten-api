@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="stylesheet" href="{{ asset('css/radio.css') }}">
-    <title>Document</title>
+    <link rel="icon" href="img/logoatas.png">
+    <title>Chemten</title>
 </head>
 <body>
     <div class="bg-bluebg" style="min-height: 96vh">
