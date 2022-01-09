@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Exercise;
+use App\Models\KimUsers;
 use App\Models\Question;
 use App\Models\Quiz;
 use App\Models\QuizAnswer;
@@ -39,7 +40,7 @@ class QuizController extends Controller
     public function retryquestion($exercise, $questionid)
     {    
         $question = Question::where('exercise_id', $exercise)->where('id', $questionid)->first();
-        $answer = Quiz::where('student_id', Auth::user()->id)->where('question_id', $questionid)->first(); 
+        $answer = null; 
         
         $quiz = Quiz::where('student_id', Auth::user()->id)->whereRelation('questions', 'exercise_id', '=', $exercise);
         $quiz->delete();
@@ -83,10 +84,66 @@ class QuizController extends Controller
         return redirect()->route('question', ['exercise' => $exercise, 'number' => $questionid]);
     }
 
-    public function finish($exercise, $user, $questionid)
+    public function answerr($exercise, $questionid)
+    {
+        $question = Question::where('exercise_id', $exercise)->where('id', $questionid+1)->first();
+        $temp = Request()->answer;
+        $previous = Quiz::where('student_id', Auth::user()->id)->where('question_id', $questionid+1)->first();   
+
+        if ($questionid != 1) {
+            $answer = $question->correctanswer;                 
+
+            if ($answer == $temp) {
+                $hasil = "benar";
+            } else {
+                $hasil = "salah";
+            }
+            
+            if ($previous) {
+                $previous->update([
+                    'student_id' => Auth::user()->id,
+                    'question_id' => $questionid+1,
+                    'user_answer' => $temp,
+                    'hasil' => $hasil
+                ]);
+            } else {
+                Quiz::create([
+                    'student_id' => Auth::user()->id,
+                    'question_id' => $questionid+1,
+                    'user_answer' => $temp,
+                    'hasil' => $hasil
+                ]);
+            }
+            
+        } 
+
+        return redirect()->route('question', ['exercise' => $exercise, 'number' => $questionid]);
+    }
+
+    public function finish($exercise)
     {    
-        $score = 0;
-        $per = 0;
+        $score = 0;                           
+
+        $temps = Quiz::where('student_id', Auth::user()->id)->whereRelation('questions', 'exercise_id', '=', $exercise)->get();
+        
+            foreach($temps as $temp) {
+                if ($temp->hasil == "benar") {
+                    $score++;
+                }
+            }
+
+        $score = $score * 10;
+
+        $userscore = KimUsers::where('user_id', Auth::user()->id)->first();
+        $userscore->update([
+            'rank_score' => Auth::user()->kimuser->rank_score + $score
+        ]);
+
+        return view('level.quiz.finish', compact('score', 'exercise'));
+    }
+
+    public function answerfinish($exercise, $questionid) 
+    {
         $question = Question::where('exercise_id', $exercise)->where('id', $questionid-1)->first();     
 
         $temp = Request()->answer;
@@ -107,20 +164,15 @@ class QuizController extends Controller
                 'user_answer' => $temp,
                 'hasil' => $hasil
             ]);  
-        }                   
+        } else {
+            $check->update([
+                'student_id' => Auth::user()->id,
+                'question_id' => $questionid-1,
+                'user_answer' => $temp,
+                'hasil' => $hasil
+            ]);
+        }
 
-        $temps = Quiz::where('student_id', $user)->whereRelation('questions', 'exercise_id', '=', $exercise)->get();
-        
-            foreach($temps as $temp) {
-                if ($temp->hasil == "benar") {
-                    $score++;
-                }
-                $per++;
-            }
-
-            $score = $score * 10;
-            $per = $per * 10;
-
-        return view('level.quiz.finish', compact('score', 'per', 'exercise'));
+        return redirect()->route('finish', ['exercise' => $exercise]);
     }
 }

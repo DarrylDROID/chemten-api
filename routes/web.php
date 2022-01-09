@@ -49,7 +49,9 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/quiz/{exercise}/{number}', [QuizController::class, 'question'])->name('question');
         Route::get('/retryquiz/{exercise}/{number}', [QuizController::class, 'retryquestion']);
         Route::post('/answer/{exercise}/{number}', [QuizController::class, 'answer']);
-        Route::get('/finish/{exercise}/{user}/{number}', [QuizController::class, 'finish']);     
+        Route::post('/answerr/{exercise}/{number}', [QuizController::class, 'answerr']);
+        Route::get('/finish/{exercise}', [QuizController::class, 'finish'])->name('finish'); 
+        Route::post('/answerfinish/{exercise}/{number}', [QuizController::class, 'answerfinish']);    
         Route::get('/leaderboard', [LeaderboardUserController::class, 'leaderboard']);       
     });
 

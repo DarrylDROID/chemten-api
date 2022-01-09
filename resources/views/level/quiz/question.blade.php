@@ -33,7 +33,7 @@
         <h1 class="font-bold text-xl md:text-2xl my-3">{!! $question['question_description'] !!}</h1>
 
         @if ($nomor == 10)
-        <form class="my-5" action="/finish/{{ $exercise }}/{{ Auth::user()->id }}/{{ $number }}" method="GET">
+        <form class="my-5" action="/answerfinish/{{ $exercise }}/{{ $number }}" method="POST">
             @csrf
             <div class="flex mt-2">
                 <input type="radio" id="choice1" name="answer" value="{{ $question['qchoice1'] }}" style="display: none"
@@ -80,11 +80,11 @@
                 <label for="choice4" class="rounded-md bg-pink-500 py-2 px-10 text-white radioquestion">{{ $question['qchoice4'] }}</label>
                 </div>
             <div class="flex justify-between mt-10">
-                <a href="/quiz/{{ $exercise }}/{{ $nomor-1 }}" class="rounded-full bg-pink-500 py-2 px-12 text-white text-xl"><- Previous</a>
+                <input type="submit" class="rounded-full bg-pink-500 py-2 px-8 md:px-16 text-white text-base md:text-xl" value="<- Previous" formaction="/answerr/{{ $exercise }}/{{ $number-2 }}" method="POST">
                 <input type="submit" class="rounded-full bg-pink-500 py-2 px-16 text-white text-xl" value="Finish ->">
-            </div>
-            
+            </div>       
         </form>
+        
         @else 
         <form class="my-5" action="/answer/{{ $exercise }}/{{ $number }}" method="POST">
             @csrf
@@ -138,7 +138,7 @@
             </div>
             @else
             <div class="flex justify-between mt-10">                
-                <a href="/quiz/{{ $exercise }}/{{ $number-2 }}" class="rounded-full bg-pink-500 py-2 px-6 md:px-12 text-white text-base md:text-xl"><- Previous</a>
+                <input type="submit" class="rounded-full bg-pink-500 py-2 px-8 md:px-16 text-white text-base md:text-xl" value="<- Previous" formaction="/answerr/{{ $exercise }}/{{ $number-2 }}">
                 <input type="submit" class="rounded-full bg-pink-500 py-2 px-8 md:px-16 text-white text-base md:text-xl" value="Next ->">
             </div>
             @endif                    
