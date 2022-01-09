@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Resources\UserResource;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 
 class UserController extends Controller
@@ -52,7 +53,7 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        $user = User::all()->where('email', $id);
+        $user = User::all()->where('id', Auth::user()->id);
         return ['user' => UserResource::collection($user)];
     }
 
