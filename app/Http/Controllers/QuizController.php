@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Exercise;
+use App\Models\ExerciseScore;
 use App\Models\KimUsers;
 use App\Models\Question;
 use App\Models\Quiz;
@@ -17,16 +18,18 @@ class QuizController extends Controller
     public function index($id)
     {      
         $exercise = Exercise::where('id', $id)->first();
-        $temps = Quiz::where('student_id', Auth::user()->id)->whereRelation('questions', 'exercise_id', '=', $id)->get();
+        $count = Quiz::where('student_id', Auth::user()->id)->whereRelation('questions', 'exercise_id', '=', $id)->count();
+        $prev = ExerciseScore::where('user_id', Auth::user()->id)->where('exercise_id', $id)->first();
 
-        $count = 0;
-        foreach ($temps as $temp) {
-            $count++;
-        }
+        if ($prev) {
+            $prevscore = $prev->score;
+        } else {
+            $prevscore = null;
+        }        
 
         $first = Question::where('exercise_id', $id)->first();
 
-        return view('level.quiz.startquiz', compact('exercise', 'count', 'first'));
+        return view('level.quiz.startquiz', compact('exercise', 'count', 'first', 'prevscore'));
     }
 
     public function question($exercise, $questionid)
@@ -137,6 +140,12 @@ class QuizController extends Controller
         $userscore = KimUsers::where('user_id', Auth::user()->id)->first();
         $userscore->update([
             'rank_score' => Auth::user()->kimuser->rank_score + $score
+        ]);
+
+        ExerciseScore::create([
+            'user_id' => Auth::user()->id,
+            'exercise_id' => $exercise,
+            'score' => $score
         ]);
 
         return view('level.quiz.finish', compact('score', 'exercise'));

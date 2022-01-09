@@ -38,6 +38,7 @@ Route::middleware(['auth'])->group(function () {
         Route::resource('exercises', ExerciseController::class);
         Route::resource('question', QuestionController::class);
         Route::resource('users', UserController::class);
+        Route::resource('leaderboards', LeaderboardController::class);
     });
 
     Route::middleware(['student'])->group(function () {     
@@ -55,11 +56,9 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/leaderboard', [LeaderboardUserController::class, 'leaderboard']);       
     });
 
-    Route::resource('leaderboards', LeaderboardController::class);
-
     Route::get('/logout', function () {
         Auth::logout();
-        redirect('/homepage');
+        redirect('/');
     });
 });
 
