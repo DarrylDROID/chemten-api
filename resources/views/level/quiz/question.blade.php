@@ -5,12 +5,6 @@
         $exercise = $question['exercise_id'];  
         $number = $question['id'] + 1;  
 
-        if ($exercise == 1) {
-            $nomor = $question['id'];
-        } else {
-            $nomor = $question['id'];
-        }
-
         if ($number > 41) {
             $nomor = $question['id'] - 40;
         }            

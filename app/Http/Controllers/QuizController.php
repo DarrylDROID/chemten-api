@@ -64,7 +64,7 @@ class QuizController extends Controller
         $temp = Request()->answer;
         $previous = Quiz::where('student_id', Auth::user()->id)->where('question_id', $questionid-1)->first();   
 
-        if ($questionid != 1) {
+ 
             $answer = $question->correctanswer;                 
 
             if ($answer == $temp) {
@@ -89,7 +89,7 @@ class QuizController extends Controller
                 ]);
             }
             
-        } 
+        
 
         return redirect()->route('question', ['exercise' => $exercise, 'number' => $questionid]);
     }
@@ -100,7 +100,7 @@ class QuizController extends Controller
         $temp = Request()->answer;
         $previous = Quiz::where('student_id', Auth::user()->id)->where('question_id', $questionid+1)->first();   
 
-        if ($questionid != 1) {
+        
             $answer = $question->correctanswer;                 
 
             if ($answer == $temp) {
@@ -125,7 +125,7 @@ class QuizController extends Controller
                 ]);
             }
             
-        } 
+        
 
         return redirect()->route('question', ['exercise' => $exercise, 'number' => $questionid]);
     }
