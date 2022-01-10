@@ -42,7 +42,10 @@ Route::middleware(['auth'])->group(function () {
     });
 
     Route::middleware(['student'])->group(function () {     
-        Route::get('/',[LessonUserController::class, 'index']);    
+        Route::get('/',[LessonUserController::class, 'index']); 
+        Route::get('/rules', function () {
+            return view('rules');
+        });
         Route::resource('profile', ProfileController::class);    
         Route::get('/lesson/{id}', [LessonUserController::class, 'lesson']);
         Route::get('/lesson/sublesson/{id}', [LessonUserController::class, 'sublesson']);
